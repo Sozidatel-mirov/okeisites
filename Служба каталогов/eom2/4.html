@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/place.css">
+</head>
+
+<body>
+    <div class="block">
+        <h2>Развертывание Active Directory</h2>
+        <div class="place__header">
+            <p>Шаг 3</p>
+
+            <span>4/5</span>
+        </div>
+        <hr>
+
+        <div class="place__body">
+            <h3>Развертывание контроллера домена на DC1</h3>
+            <br>
+            <img src="../image/data/practic4.png" alt="">
+            <ol>
+                <br>
+                <li>В оснастке server manager переходим на вкладку manage и выбираем add roles and Features</li>
+                <li>Выбираем тип установки — Role-Based on feature-based installation</li>
+                <li>Выбираем на какой сервер ставим роль — DC1</li>
+                <li>Выбираем роль - Active Directory Domain Services</li>
+                <li>В появившемся окне нажимаем Add Features, чтобы установились необходимые дополнения. </li>
+                <li>Нажимаем Next до окна Confirm installation selections.</li>
+                <li>Ставим галку Restart the destination server automatically if required</li>
+                <li>Сохраняем скрипт настроек для отчета</li>
+                <li>Нажимаем Install</li>
+            </ol>
+            <br>
+            <img src="../image/data/practic5.png" alt="">
+            <p><br>После установки роль настраиваем</p>
+        </div>
+    </div>
+</body>
+
+</html>

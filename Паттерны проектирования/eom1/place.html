@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="../css/place.css">
+</head>
+
+<body>
+  <a href="../index.html" class="back" style="left: -3.5%;">На Главную</a>
+  <div class="container">
+    <div class="block">
+      <h2>Назначение и виды паттернов. Принципы проектирования</h2>
+      <p>Изучите материал о паттернах проектирования, принципах SOLID. Чтобы перейти к учебному материалу, кликните на
+        каждую из иконок.</p>
+      <div class="inner">
+        <a href="#openModal" class="getter__block">
+          <img src="../image/11.png" width="190" height="180" alt="">
+          <p>Методико - теоретический материал</p>
+        </a>
+        <a href="#openModal2" class="getter__block">
+          <img src="../image/22.png" width="190" height="180" alt="">
+          <p>Визуально - ознакомительный материал</p>
+        </a>
+        <a href="#openModal3" class="getter__block">
+          <img src="../image/33.png" width="190" height="190" alt="">
+          <p>Видеоурок</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="line">
+
+  </div>
+
+  <div id="openModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a href="#close" title="Close" class="close">×</a>
+          <h3 class="modal-title">Введение в паттерны проектирования:</h3>
+        </div>
+        <div class="modal-body">
+
+          <p><strong>Шаблон (паттерн) проектирования</strong> – это наиболее часто встречаемое решение какой либо
+            проблемы при проектировании архитектуры программного обеспечения</p>
+          <br>
+          <p><strong>Особенности паттернов:</strong><br>
+
+            - описан в абстрактном виде<br>
+            - реализация может отличаться для разных языков программирования
+
+            <br><br>
+          <p><strong>Паттерн проектирования состоит из:</strong> <br>
+            - проблемы, решаемой паттерном;<br>
+            - структуры классов для реализации решения;<br>
+            - примера на каком то конкретном ЯП;<br>
+            - описания реализации в различных ситуациях;<br>
+            - связи с другими паттернами<br>
+
+            <br>
+          <p><strong>Классификация паттернов</strong><br>
+
+
+            - Порождающие - описывают создание объектов без внесения в ПО лишних зависимостей<br>
+            - Структурные - определяют различные способы построения связей между объектами ПО<br>
+            - Поведенческие - определяют эффективные способы коммуникации между объектами<br>
+
+            <br>
+          <p><strong>Положительные стороны применения паттернов:</strong><br>
+
+            - Проверенные решения<br>
+            - Стандартизация кода<br>
+            - Общий словарь программистов<br>
+
+            <br>
+          <p><strong>Основные принципы проектирования</strong></p>
+
+          <p><strong>1 Инкапсуляция частей кода, которая подвержена изменениям</strong></p>
+
+          <p>Определите аспекты программы, класса или метода, которые меняются чаще всего и отделите их того, что
+            остаётся постоянным.</p>
+
+          <p><strong>2 Программирование на уровне интерфейса</strong></p>
+
+          <p>Программируйте на уровне интерфейса, а не на уровне реализации. Код должен зависеть от абстракций, а не
+            конкретных классов.</p>
+
+          <p><strong>3 Композиция предпочтительней наследования</strong></p>
+
+          <p>Проблемы наследования:<br>
+
+            - невозможность класса потомка отказаться от интерфейсов или реализации родителя<br>
+            - дополнительный контроль при переопределении<br>
+            - наследование нарушает инкапсуляцию класса родителя<br>
+            - подклассы тесно связаны с родителем<br>
+            - быстро разрастается иерархия классов<br>
+
+          <p><strong>Пример предпочтительности композиции и агрегации наследованию</strong></p>
+          <img src="../image/data/composition.PNG" width="800" /><br>
+          <p>Предположим, вам нужно смоделировать модельный ряд автопроизводителя. У вас есть легковые автомобили и
+            грузовики. Причём, они бывают с электрическим двигателем, и с двигателем на бензине. К тому же, они
+            отличаются режимами навигации — есть модели с ручным управлением и автопилотом.
+
+            Как видите, каждый такой параметр приводит к умножению количества классов. Кроме того, возникает проблема
+            дублирования кода, так как подклассы не могут наследовать нескольких родителей одновременно.
+
+            Решить проблему можно с помощью композиции. Вместо того, чтобы объекты сами реализовывали то или иное
+            поведение, они могут делегировать его другим объектам.
+
+            Композиция даёт вам и другое преимущество. К примеру, теперь вы можете заменить тип двигатель автомобиля
+            прямо во время выполнения программы, подставив в объект транспорта другой объект двигателя
+
+            Такая структура свойственна паттерну Стратегия</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="openModal2" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a href="#close" title="Close" class="close">×</a>
+          <h3 class="modal-title">Принципы SOLID. Разбор ситуаций:</h3>
+        </div>
+        <div class="modal-body">
+          <img src="../image/data/SOLID.png" width="700">
+
+          <img src="../image/data/S.PNG" width="800">
+
+          <img src="../image/data//O.PNG" width="800">
+
+          <img src="../image/data/L.PNG" width="800">
+
+          <img src="../image/data/I.PNG" width="800">
+
+          <img src="../image/data/D.PNG" width="800">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="openModal3" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a href="#close" title="Close" class="close">×</a>
+          <h3 class="modal-title">Урок по паттернам проектирования:</h3>
+        </div>
+        <div class="modal-body" style="display: flex; justify-content: center;">
+          <video width="800" controls="controls" poster="../video/duel.jpg">
+            <source src="../video/PatternIntroduction.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var videoPlayer = document.querySelector('#openModal3 video');
+  
+      document.querySelector('#openModal3 .close').addEventListener('click', function() {
+        videoPlayer.pause();
+      });
+    });
+  </script>
+</body>
+
+</html>

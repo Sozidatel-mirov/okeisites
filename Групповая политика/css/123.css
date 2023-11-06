@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url(../image/back.png);
+    background-size: cover;
+}
+
+header {
+    margin: 20px 0px;
+}
+
+
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+}  
+
+nav > a {
+    border-left: 3px solid #473a53;
+    padding-left: 9px;
+    margin: 0px 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.lines {
+    background: #fff;
+    padding: 35px 0px;
+    border-bottom: 3px solid #473a53;
+    border-top: 3px solid #473a53;
+}
+
+.lines__views > h2 {
+    color: #cccccc;
+    font-size: 43px;
+}
+
+.lines__views > p {
+    font-size: 27px;
+    margin: 0px 15px;
+}
+
+.dish {
+    margin: 70px 0px;
+}
+
+.dish__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.dish__text {
+    margin: 35px 0px;
+}
+
+.dish__text > h3 {
+    border-bottom: 3px solid #473a53;
+    padding-bottom: 10px;
+    width: 200px;
+}
+
+.dish__text > h4 {
+    width: 400px;
+    margin: 10px 0px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    padding: 0;
+    z-index: 9999999;
+}
+
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+.modal1 {
+    z-index: 9999999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    padding: 0;
+}
+
+.modal1:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 10px solid #785a95;
+    border-radius: .3rem;
+    outline: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    
+}
+
+
+.modal-title {
+    color: #9670ba;
+    font-size: 44px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 0.5;
+    color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+    background: #000;
+    padding: 10px;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body > p {
+    font-size: 28px;
+}
+
+td,th {
+    border: 1px solid #000;
+    padding: 10px;
+    font-size: 29px;
+}
+
+.eurhgierug {
+    position: relative;
+}
+
+.modal__hg {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: red;
+    opacity: 0.0000001;
+    top: 19px;
+    right: 40px;
+}
+
+.modals__text {
+    background: #fff;
+    position: absolute;
+    z-index: 9999;
+    height: 20px;
+    top: 76px;
+    left: 345px;
+    font-size: 12px;
+    color: #7d7d7d;
+
+}
+
+.ilehufrierg {
+    background: #fff;
+    position: absolute;
+    z-index: 9999;
+    height: 35px;
+    top: 60px;
+    left: 340px;
+    font-size: 12px;
+    width: 300px;
+}
+
+.iehrgie {
+    position: absolute;
+    z-index: 9999;
+    top: 15px;
+    left: 350px;
+}
+
+.ghgwreg {
+    position: absolute;
+    top: 27px;
+    left: 244px;
+    z-index: 9999;
+}
+
+.engoergegr {
+    position: absolute;
+    top: 17px;
+    left: 34px;
+    z-index: 9999;
+    color: #fff;
+}

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #223a76;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+a:hover {
+    background-color: #456db1;
+}

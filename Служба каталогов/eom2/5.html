@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/place.css">
+</head>
+
+<body>
+    <div class="block">
+        <h2>Развертывание Active Directory</h2>
+        <div class="place__header">
+            <p>Шаг 4</p>
+            <span>5/5</span>
+        </div>
+        <hr>
+
+        <div class="place__body">
+            <ol>
+                <li>Для этого нажимаем флажок в верху ServerManager и выбираем Promote this server in domain controller </li>
+                <li>В окне Deployment Configuration Указываем Add a new forest и имя домена Kazan.wsr </li>
+                <li>Указываем пароль для восстановления и удаления базы данных ADDS. Можно указать P@ssw0rd.</li>
+                <li>Соглашаемся с тем, что система установить на DC1 DNS сервер</li>
+                <li>Указываем NetBIOS имя KAZAN.</li>
+                <li>Оставляем пути как есть</li>
+                <li>Сохраняем скрипт настроек для отчета</li>
+                <li>Ждем окончания проверки конфигурации и нажимаем Install</li>
+                <li>После установки и перезагрузки мы сможем входить в систему как пользователь  локального компьютера и пользователь домена</li>
+            </ol>
+            <br>
+            <img src="../image/data/practic6.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

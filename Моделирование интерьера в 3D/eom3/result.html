@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quiz</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/style1.css">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="HandheldFriendly" content="true"/>
+		<link rel="stylesheet" href="../font.css">
+		
+	</head>
+	<body style="background-color: rgb(230,233,237);">
+	<a href="../index.html" class="back">На Главную</a>
+	<div id="wrapper">
+		<div id="container" class="show-green">
+		<header role="banner" class="header" style="display: none;">
+			<div class="title">
+				<h1 id="js-Colontitle" class="title_text title_middle js-title">ОКЭИ</h1>
+			</div>
+		</header>
+		<header role="banner" class="header__result-page" style="">
+			<div class="title">
+				<h1 id="js-Colontitle" class="title_header title_middle js-title">Отчет о выполнении задания</h1>
+			</div>
+		</header><div id="curResultPage" class="content__result-page" style="display: flex;">
+		<div class="resultpage">
+			<div class="resultpage">
+				<div class="item-result row-results">
+					<div class="item-result_desc">
+						<div class="item-result_text">Выполнено задание</div>
+						<div class="item-result_title" id="language-I-check-completed">Моделирование интерьера в 3D</div>
+					</div>
+					<div class="item-result_desc">
+						<div class="wrap-item-result_desc">
+							<div class="item-result_text">Тема</div>
+							<div class="item-result_title">Моделирование интерьера в 3D</div>
+						</div>
+					</div>
+				</div>
+			<div class="item-result row-results">
+				<div class="item-result_desc">
+					<span class="language-Total-questions">Количество шагов</span> 
+					<span id="totalSteps" class="resultpage_desc_element js-answers-total">10</span>
+				</div>
+				<div class="item-result_desc">
+					<span class="language-Time-spent">Затраченное время</span> 
+					<span class="resultpage_desc_element js-time-spent" id="timer">03:52</span>
+				</div>
+				<div class="item-result_desc">
+					<span>Ваша оценка</span> 
+					<span id="balls" class="resultpage_percent js-percent"></span>
+				</div>
+			</div>
+		<div class="item-result" data-result-diagram="">
+			<div class="item-result_desc list-results">
+				<div class="result-answers">
+					<span class="language-Incorrect-answers">Неправильные шаги</span>
+					<span id="incorrectCount" class="resultpage_desc_element js-answers-correct">10</span>
+				</div>	
+				<div class="result-answers rotate">
+					<div class="result-diagram">
+						<div class="part-diagram first-part">
+							<div class="part-diagram middle-part">
+								<div class="part-diagram last-part">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="result-answers">
+					<span class="language-Correct-answers">Правильные шаги</span>
+					<span id="correctCount" class="resultpage_desc_element js-answers-correct">2</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="item-result btn-block">
+			<button id="js-printReport" class="btn-print btn-report" onclick="print();">Печать Отчета</button>
+		</div>
+		<div class="item-result_desc">
+			<a href="quiz.html"  class="btn-retry" data-retry-module="">Повторить</a>
+			
+		
+           </div>
+           
+		   
+			  </div>
+              <!-- <button class="place__back">На шаг назад</button>
+              <button class="place__back">Ответить</button>  -->
+              <div></div>
+           </div>
+		   </main>
+        </div>
+    </div>
+	<div class="place__line" style="bottom: 0; position: absolute; width: 100%;">
+    <div class="line">
+
+    </div>
+ <script>
+
+        // Получение параметров из URL
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        
+        // Получение значений переменных
+        var score = urlParams.get('score');
+        var timeMinute = urlParams.get('timeMinute');
+        var timeSecond = urlParams.get('timeSecond');
+
+        document.getElementById('timer').textContent = timeMinute + ":" + timeSecond;
+        document.getElementById('correctCount').textContent = score;
+        document.getElementById('incorrectCount').textContent = 10 - score;
+        document.getElementById('balls').textContent = Math.round(score/2);
+        
+    </script>
+</body>
+</html>

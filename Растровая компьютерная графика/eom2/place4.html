@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="../css/place.css">
+
+  <script type="text/javascript" defer>
+    var index = 1
+    var maxPages = 5
+    function iframeLoaded() {
+      var iFrameID = document.getElementById('iframe');
+      if (iFrameID) {
+        iFrameID.height = "";
+        iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + 20 + "px";
+      }
+    }
+
+    function next() {
+      console.log('kkk')
+      var iFrameID = document.getElementById('iframe');
+      if (iFrameID) {
+        if (index < maxPages) {
+          index++
+          iFrameID.src = index + '.html'
+        }
+      }
+    }
+    function prev() {
+      console.log('kkk')
+      var iFrameID = document.getElementById('iframe');
+      if (iFrameID) {
+        if (index > 1) {
+          index--
+          iFrameID.src = index + '.html'
+        }
+      }
+    }
+
+    function ok() {
+      var timer = document.getElementById('timer');
+
+      var seconds = 0;
+      var minutes = 0;
+      var hours = 0;
+      var interval;
+
+      function updateTime() {
+        seconds++;
+        if (seconds === 60) {
+          minutes++;
+          seconds = 0;
+        }
+        if (minutes === 60) {
+          hours++;
+          minutes = 0;
+        }
+        timer.innerHTML = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      }
+
+      interval = setInterval(updateTime, 1000);
+    }
+  </script>
+
+</head>
+
+<body onload="ok()">
+  <a href="../index.html" class="back">Назад</a>
+  <div class="container">
+    <div class="block">
+      <iframe id="iframe" style="height: 1000px" onload="iframeLoaded()" src="1.html"></iframe>
+      <div class="">
+        <button class="place__btn" onclick="next()">Далее</button>
+      </div>
+      <div class="place__line">
+        <div id="timer" class="timer">00:00</div>
+        <button class="place__back" onclick="prev()">На шаг назад</button>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <div class="line">
+  </div>
+</body>
+
+</html>

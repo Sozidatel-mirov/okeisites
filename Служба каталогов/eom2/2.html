@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/place.css">
+</head>
+
+<body>
+    <div class="block">
+        <h2>Развертывание Active Directory</h2>
+        <div class="place__header">
+            <p>Шаг 1</p>
+
+            <span>2/5</span>
+        </div>
+        <hr>
+        <div class="place__body">
+            <p>Запускаем ServerManager. Обычно она запускается автоматически</p>
+            <br>
+            <img src="../image/data/practic1.png" alt="">
+            <ol>
+                <br>
+                <li>Переходим в Local Server и нажимаем на текущее имя компьютера. Затем выбираем  Change и вводим новое имя - Настройка IP адреса и других параметров сетевого соединения</li>
+                <li>Нажимаем в строке Ethernet0 на ссылку IPv4 address assigned.</li>
+                <li>Выбираем нужное сетевое подключение и настраиваем</li>
+                <br>
+                <img src="../image/data/practic2.png" alt="">
+            </ol>
+            <br>
+            <p>Для сети 172.16.19.64/26 адрес первого хоста 172.16.19.65 а последнего 172.16.19.126</p>
+            <p><br>Значит IP DC1 172.16.19.65  R1 будет являться последним пограничным устройством в домене Kazan.wsr и будет  являться Default gateway для всех устройств в домене Kazan.wsr  DNS сервером будут виртуальные машины DC1 и SRV1</p>
+        </div>
+    </div>
+</body>
+
+</html>
