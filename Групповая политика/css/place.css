@@ -13,7 +13,8 @@
 .block {
     background: #fff;
     box-shadow: 0px 0px 0px #b5b5b5;
-    padding: 5px 5px 5px 40px;
+    padding: 5px 50px 5px 50px;
+
 }
 
 .block > h2 {
@@ -31,21 +32,37 @@
 }
 
 .inner {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px;
-}
+padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content:space-around flex;
+  flex-wrap: wrap; 
+  margin: 20px 20px 100px 20px;
 
+}
+.getter__block>img {
+    width: 200px;
+     height:190px;
+      alt:"";
+
+}
 .getter__block {
     text-align: center;
+    display: block;
+    margin: 20px 20px 20px 20px;
     width: 392px;
+    height: 261px;;
     border: 2px solid rgb(90, 51, 90);
     padding: 20px 30px;
     text-decoration: none;
 }
 
 .getter__block > p {
-    font-size: 16px;
+    font-size: 17px;
     color: rgb(90, 51, 90);
     font-weight: 700;
 }
@@ -56,10 +73,10 @@
 
 .line {
     width: 100%;
-    height: 80px;
+    height: 60px;
     background: rgb(90, 51, 90);
     margin-top: 400px;
-    position: fixed; 
+    position: fixed;
     bottom: 0;
 }
 
@@ -184,14 +201,15 @@
     -moz-transform: rotate(-90deg);
     transform: rotate(-90deg);
     display: block;
-    position: absolute;
+    position: fixed;
+    left: -50px;
     z-index: 1500;
     top: 40%;
-    left: -2.7%; /* Добавим явное указание left: 0; */
     font-size: 1.2em;
     text-align: center;
     padding: 10px 20px;
     border: 1px solid #fff;
+
 }
 
 .place__header {
