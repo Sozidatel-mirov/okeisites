@@ -2,73 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/place.css">
-    <style>
-        .container {
-            display: flex;
-            justify-content: space-between;
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="../css/place.css">
+  <style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
 
-        .column {
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .column {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .item {
-            position: relative; /* Добавлено */
-            width: 100%;
-            background-color: #f7f7f7;
-            border: 1px solid #ccc;
-            margin: 10px 0;
-            padding: 10px;
-            text-align: center;
-            cursor: pointer;
-            overflow: hidden;
-        }
+    .item {
+        position: relative; /* Добавлено */
+        width: 100%;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+    }
 
-        .dot {
-            position: absolute;
-            background-color: #8d8dff;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    .dot {
+        position: absolute;
+        background-color: #8d8dff;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
-        .dot-left {
-            left: -1%;
-        }
+    .dot-left {
+        left: -1%;
+    }
 
-        .dot-right {
-            right: -1%;
-        }
+    .dot-right {
+        right: -1%;
+    }
 
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
 
-        .line {
-            position: absolute;
-            pointer-events: none;
-            stroke: #8d8dff;
-            stroke-width: 3;
-        }
-    </style>
+    .line {
+        position: absolute;
+        pointer-events: none;
+        stroke: #8d8dff;
+        stroke-width: 3;
+    }
+</style>
 </head>
 
 <body>
-    <div class="block">
-        <h2> тренажер: Работа с порождающими паттернами.</h2>
+  <a href="../index.html" class="back" style="left: -3.5%;">На Главную</a>
+  
+  <div class="block" style="height: 900px; margin-bottom: 10%">
+    <h2> тренажер: Работа с порождающими паттернами.</h2>
         <div class="place__header">
             <p></p>
 
@@ -169,9 +172,17 @@
                     }
                 });
             </script>
-            
-        </div>
+    <a href="place2-6.html"><button class="place__btn" style="position: fixed; bottom: 75px; right: 20px;" onclick="next()">Далее</button></a>
     </div>
+</div>
+      
+        
+      
+      <div class="place__line">
+        <div id="timer" class="timer">00:00</div>
+        <a href="place2-4.html"><button class="place__back" >На шаг назад</button></a>
+        
+  </div>
 </body>
 
 </html>
