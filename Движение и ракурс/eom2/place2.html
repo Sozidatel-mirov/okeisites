@@ -68,21 +68,21 @@
 </head>
 
 <body onload="ok()">
-  <a href="../index.html" class="back" style="left: -2.6%;">На главную</a>
-  <div class="container"  style="width: 100%;">
+  <a href="../index.html" class="back">На Главную</a>
+  <div class="container">
     <div class="block">
-      <iframe id="iframe" onload="iframeLoaded()" src="1.html" style="height: 750px;"></iframe>
+      <iframe id="iframe" onload="iframeLoaded()" src="1.html"></iframe>
       <div class="">
         <button class="place__btn" onclick="next()">Далее</button>
       </div>
       
     </div>
-    <div class="place__line" style=" width: 100%;position: fixed; bottom: 0; height: 60px;">
-      <div id="timer" class="timer">00:00</div>
-      <button class="place__back" onclick="prev()">На шаг назад</button>
-      <div></div>
-    </div>
   </div>
+  </div>
+  <div class="line">
+    <div id="timer" class="timer">00:00</div>
+    <button class="place__back" onclick="prev()">На шаг назад</button>
+    <div></div>
   </div>
 </body>
 
