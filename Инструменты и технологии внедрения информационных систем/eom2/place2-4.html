@@ -68,30 +68,32 @@
 </head>
 
 <body>
-  <a href="../index.html" class="back" style="left: -3.5%;">На Главную</a>
+  <a href="../index.html" class="back">На Главную</a>
   
   <div class="block" style="height: 900px; margin-bottom: 10%">
-    <h2> тренажер: Работа с порождающими паттернами.</h2>
+    <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
-            <p></p>
+            <p>Соотнесите каждую функцию к своей группе</p>
 
-            <span>3/4</span>
+            <span>3/6</span>
         </div>
         <hr>
         <div class="place__body">
 
-            <div class="container" style="margin-top: 5%;">
-                <div class="column" id="column1" style="margin-top: 8%;">
-                    <div class="item" id="item2" draggable="true">Реклама<div class="dot dot-right"></div></div>
-                    <div class="item" id="item1" draggable="true">Социальная реклама<div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true">Интернет-маркетинг<div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true">Рекламное агентсво<div class="dot dot-right"></div></div>
+            <div class="container" style="margin-top: 6%;">
+                <div class="column" id="column1">
+                    <div class="item" id="item2" draggable="true">Функции для работы с базами данных<div class="dot dot-right"></div></div>
+                    <div class="item" id="item1" draggable="true">Функции для управления файлами и папками<div class="dot dot-right"></div></div>
+                    <div class="item" id="item3" draggable="true">Функции для сетевого взаимодействия<div class="dot dot-right"></div></div>
+                    <div class="item" id="item4" draggable="true">Функции для работы с графическим интерфейсом<div class="dot dot-right"></div></div>
+                    <div class="item" id="item5" draggable="true">Функции для работы с аппаратными устройствами<div class="dot dot-right"></div></div>
                 </div>
                 <div class="column" id="column2">
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Распространяемая в любой форме информация о лице, товарах, услугах или общественном движении, оплаченное рекламодателем с целью привлечения внимания к объекту рекламирования и увеличения сбыта</div>
-                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Это коммуникация с помощью СМИ и других средств связи с целью повлиять на установки людей в отношении тех или иных актуальных проблем, таких как преступность, проблема СПИДа, алкоголизма, наркомании, здоровья и благополучия нации, защита окружающей среды и т.п.</div>
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Направление маркетинговой деятель¬ности, инструментом достижения целей в которой служит Интернет. Включает элементы интернет-рекламы, прямых продаж посредством Сети, direct e-mail, мероприятий паблик рилейшнз (участие в интер¬нет-конференциях, рассылки релизов и т. п.) и др.</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Профессиональная организация, предоставляющая своим клиентам полный или ограниченный объем услуг по планированию и проведению рекламы, а также отдельных ее средств, например, по подготовке или размещению (либо того и другого вместе), по оформлению заказов средствах массовой информации – в прессе, на радио и телевидении, заказов на изготовление и прокат рекламных фильмов, видеороликов, видеоклипов и др.</div>
+                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Отправка и получение данных по протоколам HTTP, FTP, SMTP</div>
+                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Выполнение запросов, добавление, удаление, обновление записей</div>
+                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Cоздание, чтение, запись, удаление файлов и папок</div>
+                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Создание и изменение окон, элементов управления, отображение изображений</div>
+                    <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>Управление принтером, сканером, камерой</div>
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
             </div>
@@ -108,6 +110,7 @@
                         ['item1', 'itemA'],
                         ['item2', 'itemB'],
                         ['item3', 'itemC'],
+                        ['item5', 'itemE'],
                         ['item4', 'itemD']
                     ];
         
@@ -172,7 +175,7 @@
                     }
                 });
             </script>
-    <a href="place2-6.html"><button class="place__btn" style="position: fixed; bottom: 75px; right: 20px;" onclick="next()">Далее</button></a>
+    <a href="place2-5.html"><button class="place__btn" style="position: fixed; bottom: 75px; right: 20px;" onclick="next()">Далее</button></a>
     </div>
 </div>
       
@@ -181,7 +184,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-4.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-2.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>
