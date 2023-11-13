@@ -5,15 +5,34 @@
 }
 
 .container {
-    max-width: 2580px;
     margin: 0 auto;
     min-width: 1300px;
-}
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
 
+
+}
+.containerp {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        position: relative;
+    
+    
+
+
+}
 .block {
     background: #fff;
     box-shadow: 0px 0px 0px #b5b5b5;
     padding: 5px 50px 5px 50px;
+    height: auto; 
+    margin: 0 auto;
 
 }
 
@@ -29,6 +48,88 @@
     font-size: 20px;
     padding: 10px 0px;
     border-bottom: 3px solid rgb(90, 51, 90);
+}
+.column {
+   max-width: 100%;
+padding: 10px 40px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+.item {
+flex: 1;
+box-shadow: 0px 0px 7px #cecece;
+text-align: center;
+margin: 15px 20px;
+min-width: 100%; 
+border-radius: 10px;
+border-color: white;
+padding: 30px 50px 30px 30px; 
+font-size: 14pt;
+color: #5a335a;
+position: relative;
+white-space: pre-line;
+left: 50%;
+transform: translate(-50%, 0);
+white-space: normal !important;
+}
+
+.item11 {
+
+flex: 1;
+box-shadow: 0px 0px 7px #cecece;
+text-align: center;
+margin: 15px 20px;
+min-width: 100%; 
+border-radius: 10px;
+border-color: white;
+padding: 30px 10px 30px 90px;  
+font-size: 14pt;
+color: #5a335a;
+position: relative;
+white-space: pre-line;
+left: 50%;
+transform: translate(-50%, 0);
+white-space: normal !important;
+}
+
+.dot {
+    position: absolute;
+    background-color: #8d8dff;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dot-left {
+    left: 5%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #9670ba;
+}
+
+.dot-right {
+
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #9670ba;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.line1 {
+    position: absolute;
+    pointer-events: none;
+    stroke: #8d8dff;
+    stroke-width: 3;
 }
 
 .inner {
@@ -236,9 +337,7 @@ padding: 0;
     font-weight: 700;
 }
 
-.place__body {
-    margin: 15px 0px;
-}
+
 
 .place__btn {
     border: 0px;
@@ -249,6 +348,9 @@ padding: 0;
     font-size: 19px;
     border-radius: 10px;
     float: right;
+    position: fixed;
+     bottom: 75px;
+      right: 20px;
 }
 
 

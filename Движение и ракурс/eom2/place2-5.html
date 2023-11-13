@@ -2,75 +2,17 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site</title>
-  <link rel="stylesheet" href="../css/place.css">
-  <style>
-    .container {
-        display: flex;
-        justify-content: space-between;
-        max-width: 600px;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    .column {
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .item {
-        position: relative; /* Добавлено */
-        width: 100%;
-        background-color: #f7f7f7;
-        border: 1px solid #ccc;
-        margin: 10px 0;
-        padding: 10px;
-        text-align: center;
-        cursor: pointer;
-        overflow: hidden;
-    }
-
-    .dot {
-        position: absolute;
-        background-color: #8d8dff;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .dot-left {
-        left: -1%;
-    }
-
-    .dot-right {
-        right: -1%;
-    }
-
-    .button-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .line1 {
-        position: absolute;
-        pointer-events: none;
-        stroke: #8d8dff;
-        stroke-width: 3;
-    }
-</style>
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="../css/place.css">
+  </head>
 
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block" style="height: 900px; margin-bottom: 10%">
+  <div class="block" >
     <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
             <p>Соотнесите шаги формирования интерфейсов и организации доступа пользователей к информационной системе с их назначением и средствами реализации</p>
@@ -80,8 +22,8 @@
         <hr>
         <div class="place__body">
 
-            <div class="container" style="margin-top: 3%;">
-                <div class="column" id="column1" style="margin-top: 7%;">
+            <div class="containerp" >
+                <div class="column" id="column1" >
                     <div class="item" id="item2" draggable="true">Идентификация и аутентификация пользователей<div class="dot dot-right"></div></div>
                     <div class="item" id="item1" draggable="true">Разграничение прав доступа<div class="dot dot-right"></div></div>
                     <div class="item" id="item3" draggable="true">Разработка интуитивного интерфейса<div class="dot dot-right"></div></div>
@@ -89,11 +31,11 @@
                     <div class="item" id="item5" draggable="true">Обучение пользователей<div class="dot dot-right"></div></div>
                 </div>
                 <div class="column" id="column2">
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Важно определить различные уровни доступа для разных пользовательских групп. Например, администраторы системы могут иметь полный доступ ко всем функциям и данным, в то время как обычные пользователи могут иметь доступ только к определенным функциям или данным</div>
-                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Для обеспечения безопасности и контроля доступа к информационной системе. Это может включать в себя использование логина и пароля, биометрической идентификации, смарт-карт и других методов</div>
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Чтобы сделать использование информационной системы удобным и эффективным для пользователей, интерфейс должен быть простым и интуитивно понятным. Это может включать в себя использование значков и пиктограмм, логического расположения функций, интуитивного оформления и т. д.</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Это может включать в себя проведение тренингов, разработку обучающих материалов и т. д.</div>
-                    <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>Это поможет выявить проблемы и улучшить интерфейс и настройки доступа</div>
+                    <div class="item11" id="itemA" draggable="true"><div class="dot dot-left"></div>Важно определить различные уровни доступа для разных пользовательских групп. Например, администраторы системы могут иметь полный доступ ко всем функциям и данным, в то время как обычные пользователи могут иметь доступ только к определенным функциям или данным</div>
+                    <div class="item11" id="itemB" draggable="true"><div class="dot dot-left"></div>Для обеспечения безопасности и контроля доступа к информационной системе. Это может включать в себя использование логина и пароля, биометрической идентификации, смарт-карт и других методов</div>
+                    <div class="item11" id="itemC" draggable="true"><div class="dot dot-left"></div>Чтобы сделать использование информационной системы удобным и эффективным для пользователей, интерфейс должен быть простым и интуитивно понятным. Это может включать в себя использование значков и пиктограмм, логического расположения функций, интуитивного оформления и т. д.</div>
+                    <div class="item11" id="itemD" draggable="true"><div class="dot dot-left"></div>Это может включать в себя проведение тренингов, разработку обучающих материалов и т. д.</div>
+                    <div class="item11" id="itemE" draggable="true"><div class="dot dot-left"></div>Это поможет выявить проблемы и улучшить интерфейс и настройки доступа</div>
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
             </div>
@@ -175,7 +117,7 @@
                     }
                 });
             </script>
-    <a href="place2-6.html"><button class="place__btn" style="position: fixed; bottom: 75px; right: 20px;" onclick="next()">Далее</button></a>
+    <a href="place2-6.html"><button class="place__btn"  onclick="next()">Далее</button></a>
     </div>
 </div>
       

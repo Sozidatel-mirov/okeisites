@@ -7,70 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
-  <style>
-    .container {
-        display: flex;
-        justify-content: space-between;
-        max-width: 600px;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    .column {
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .item {
-        position: relative; /* Добавлено */
-        width: 100%;
-        background-color: #f7f7f7;
-        border: 1px solid #ccc;
-        margin: 10px 0;
-        padding: 10px;
-        text-align: center;
-        cursor: pointer;
-        overflow: hidden;
-    }
-
-    .dot {
-        position: absolute;
-        background-color: #8d8dff;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .dot-left {
-        left: -1%;
-    }
-
-    .dot-right {
-        right: -1%;
-    }
-
-    .button-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .line1 {
-        position: absolute;
-        pointer-events: none;
-        stroke: #8d8dff;
-        stroke-width: 3;
-    }
-</style>
+  
 </head>
 
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block" style="height: 900px; margin-bottom: 10%">
+  <div class="block">
     <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
             <p>Соотнесите каждую функцию к своей группе</p>
@@ -78,9 +21,9 @@
             <span>3/6</span>
         </div>
         <hr>
-        <div class="place__body">
+        
 
-            <div class="container" style="margin-top: 6%;">
+            <div class="containerp" >
                 <div class="column" id="column1">
                     <div class="item" id="item2" draggable="true">Функции для работы с базами данных<div class="dot dot-right"></div></div>
                     <div class="item" id="item1" draggable="true">Функции для управления файлами и папками<div class="dot dot-right"></div></div>
@@ -89,11 +32,11 @@
                     <div class="item" id="item5" draggable="true">Функции для работы с аппаратными устройствами<div class="dot dot-right"></div></div>
                 </div>
                 <div class="column" id="column2">
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Отправка и получение данных по протоколам HTTP, FTP, SMTP</div>
-                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Выполнение запросов, добавление, удаление, обновление записей</div>
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Cоздание, чтение, запись, удаление файлов и папок</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Создание и изменение окон, элементов управления, отображение изображений</div>
-                    <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>Управление принтером, сканером, камерой</div>
+                    <div class="item11" id="itemC" draggable="true"><div class="dot dot-left"></div>Отправка и получение данных по протоколам HTTP, FTP, SMTP</div>
+                    <div class="item11" id="itemB" draggable="true"><div class="dot dot-left"></div>Выполнение запросов, добавление, удаление, обновление записей</div>
+                    <div class="item11" id="itemA" draggable="true"><div class="dot dot-left"></div>Cоздание, чтение, запись, удаление файлов и папок</div>
+                    <div class="item11" id="itemD" draggable="true"><div class="dot dot-left"></div>Создание и изменение окон, элементов управления, отображение изображений</div>
+                    <div class="item11" id="itemE" draggable="true"><div class="dot dot-left"></div>Управление принтером, сканером, камерой</div>
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
             </div>
@@ -175,8 +118,8 @@
                     }
                 });
             </script>
-    <a href="place2-5.html"><button class="place__btn" style="position: fixed; bottom: 75px; right: 20px;" onclick="next()">Далее</button></a>
-    </div>
+    <a href="place2-5.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    
 </div>
       
         
