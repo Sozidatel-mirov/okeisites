@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,87 @@
         <title>Site</title>
         <link rel="stylesheet" href="../css/place.css">
       </head>
+=======
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="../css/place.css">
+  <style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .column {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        position: relative; /* Добавлено */
+        width: 100%;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+
+        box-shadow: 0px 0px 7px #cecece;
+        border-radius: 10px;
+        border-color: white;
+        height: 50px;
+        width: 330px;
+        
+    }
+
+    .dot {
+        position: absolute;
+        background-color: #8d8dff;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .dot-left {
+        left: 5%;
+    }
+
+    .dot-right {
+        right: 5%;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .line1 {
+        position: absolute;
+        pointer-events: none;
+        stroke: #8d8dff;
+        stroke-width: 3;
+    }
+    #column2 .item{
+        padding-left: 40px;
+        width: 360px;
+    }
+    
+</style>
+</head>
+
+>>>>>>> c5b93dd26e74be7e09207463fa902f4b7faff5b1
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
@@ -27,6 +109,7 @@
                     <div class="item" id="item4" draggable="true">Динамический эффект<div class="dot dot-right"></div></div>
                     <div class="item" id="item5" draggable="true">Взгляд зрителя<div class="dot dot-right"></div></div>
                 </div>
+                
                 <div class="column" id="column2">
                     <div class="item11" id="itemA" draggable="true"><div class="dot dot-left"></div>Передача деталей картины через ракурс</div>
                     <div class="item11" id="itemB" draggable="true"><div class="dot dot-left"></div>Описывает глубину и пространство</div>
