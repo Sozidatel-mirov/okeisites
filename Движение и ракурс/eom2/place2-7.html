@@ -33,24 +33,31 @@
         text-align: center;
         cursor: pointer;
         overflow: hidden;
+
+        box-shadow: 0px 0px 7px #cecece;
+        border-radius: 10px;
+        border-color: white;
+        height: 50px;
+        width: 330px;
+        
     }
 
     .dot {
         position: absolute;
         background-color: #8d8dff;
-        width: 14px;
-        height: 14px;
+        width: 24px;
+        height: 24px;
         border-radius: 50%;
         top: 50%;
         transform: translateY(-50%);
     }
 
     .dot-left {
-        left: -1%;
+        left: 5%;
     }
 
     .dot-right {
-        right: -1%;
+        right: 5%;
     }
 
     .button-container {
@@ -64,6 +71,11 @@
         stroke: #8d8dff;
         stroke-width: 3;
     }
+    #column2 .item{
+        padding-left: 40px;
+        width: 360px;
+    }
+    
 </style>
 </head>
 
@@ -89,6 +101,7 @@
                     <div class="item" id="item4" draggable="true">Динамический эффект<div class="dot dot-right"></div></div>
                     <div class="item" id="item5" draggable="true">Взгляд зрителя<div class="dot dot-right"></div></div>
                 </div>
+                
                 <div class="column" id="column2">
                     <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Передача деталей картины через ракурс</div>
                     <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Описывает глубину и пространство</div>

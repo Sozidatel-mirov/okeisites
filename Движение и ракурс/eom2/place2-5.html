@@ -88,10 +88,23 @@
 
             <div class="container" style="margin-top: 3%;">
                 <div class="column" id="column1" >
-                    <div class="item" id="item1" draggable="true"><img src="../image/gg/5.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
-                    <div class="item" id="item2" draggable="true"><img src="../image/gg/6.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true"><img src="../image/gg/7.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true"><img src="../image/gg/8.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
+                    <div class="item" id="item1" draggable="true">
+                        <img src="../image/gg/5.jpg" width="180" alt="" draggable="false"> <!-- Добавлен атрибут draggable="false" -->
+                        <div class="dot dot-right"></div>
+                    </div>
+                    <div class="item" id="item2" draggable="true">
+                        <img src="../image/gg/6.jpg" width="180" alt="" draggable="false"> <!-- Добавлен атрибут draggable="false" -->
+                        <div class="dot dot-right"></div>
+                    </div>
+                    <div class="item" id="item3" draggable="true">
+                        <img src="../image/gg/7.jpg" width="180" alt="" draggable="false"> <!-- Добавлен атрибут draggable="false" -->
+                        <div class="dot dot-right"></div>
+                    </div>
+                    <div class="item" id="item4" draggable="true">
+                        <img src="../image/gg/8.jpg" width="180" alt="" draggable="false"> <!-- Добавлен атрибут draggable="false" -->
+                        <div class="dot dot-right"></div>
+                    </div>
+     
                   
                 </div>
                 <div class="column" id="column2">
@@ -154,6 +167,13 @@
                 document.addEventListener('dragover', (event) => {
                     event.preventDefault();
                 });
+                document.addEventListener('dragstart', (event) => {
+        // Изменено условие, чтобы учитывать родительский элемент .item
+        if (event.target.classList.contains('item')) {
+            draggedItem = event.target;
+            event.dataTransfer.setData('text/plain', null);
+        }
+    });
         
                 document.addEventListener('drop', (event) => {
                     event.preventDefault();
