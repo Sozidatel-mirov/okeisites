@@ -15,27 +15,27 @@
   <div class="block" >
     <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
-            <p>Соотнесите шаги формирования интерфейсов и организации доступа пользователей к информационной системе с их назначением и средствами реализации</p>
+            <p>Соотнесите названия ракурсов с их изображением</p>
 
             <span>4/6</span>
         </div>
         <hr>
         <div class="place__body">
 
-            <div class="containerp" >
+            <div class="containerp">
                 <div class="column" id="column1" >
-                    <div class="item" id="item2" draggable="true">Идентификация и аутентификация пользователей<div class="dot dot-right"></div></div>
-                    <div class="item" id="item1" draggable="true">Разграничение прав доступа<div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true">Разработка интуитивного интерфейса<div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true">Тестирование и обратная связь пользователей<div class="dot dot-right"></div></div>
-                    <div class="item" id="item5" draggable="true">Обучение пользователей<div class="dot dot-right"></div></div>
+                    <div class="item" id="item1" draggable="true"><img src="../image/gg/5.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
+                    <div class="item" id="item2" draggable="true"><img src="../image/gg/6.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
+                    <div class="item" id="item3" draggable="true"><img src="../image/gg/7.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
+                    <div class="item" id="item4" draggable="true"><img src="../image/gg/8.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
+                  
                 </div>
                 <div class="column" id="column2">
-                    <div class="item11" id="itemA" draggable="true"><div class="dot dot-left"></div>Важно определить различные уровни доступа для разных пользовательских групп. Например, администраторы системы могут иметь полный доступ ко всем функциям и данным, в то время как обычные пользователи могут иметь доступ только к определенным функциям или данным</div>
-                    <div class="item11" id="itemB" draggable="true"><div class="dot dot-left"></div>Для обеспечения безопасности и контроля доступа к информационной системе. Это может включать в себя использование логина и пароля, биометрической идентификации, смарт-карт и других методов</div>
-                    <div class="item11" id="itemC" draggable="true"><div class="dot dot-left"></div>Чтобы сделать использование информационной системы удобным и эффективным для пользователей, интерфейс должен быть простым и интуитивно понятным. Это может включать в себя использование значков и пиктограмм, логического расположения функций, интуитивного оформления и т. д.</div>
-                    <div class="item11" id="itemD" draggable="true"><div class="dot dot-left"></div>Это может включать в себя проведение тренингов, разработку обучающих материалов и т. д.</div>
-                    <div class="item11" id="itemE" draggable="true"><div class="dot dot-left"></div>Это поможет выявить проблемы и улучшить интерфейс и настройки доступа</div>
+                    <div class="item11" id="itemA" draggable="true"><div class="dot dot-left"></div>Боковой ракурс</div>
+                    <div class="item11" id="itemB" draggable="true"><div class="dot dot-left"></div>Вид, с высоты птичьего полёта</div>
+                    <div class="item11" id="itemC" draggable="true"><div class="dot dot-left"></div>Нижний ракурс</div>
+                    <div class="item11" id="itemD" draggable="true"><div class="dot dot-left"></div>Верхний ракурс</div>
+                  
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
             </div>
@@ -49,11 +49,10 @@
         
                 function checkAnswers() {
                     const pairs = [
-                        ['item1', 'itemA'],
+                        ['item1', 'itemD'],
                         ['item2', 'itemB'],
-                        ['item3', 'itemC'],
-                        ['item4', 'itemE'],
-                        ['item5', 'itemD']
+                        ['item3', 'itemA'],
+                        ['item4', 'itemC']
                     ];
         
                     pairs.forEach(pair => {

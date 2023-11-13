@@ -7,127 +7,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
-  
 </head>
 
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block">
-    <h2>Инструменты и технологии внедрения информационных систем</h2>
-        <div class="place__header">
-            <p>Соотнесите каждую функцию к своей группе</p>
-
-            <span>3/6</span>
-        </div>
+  <div class="block" >
+    <h2>Сохраните готовый файл</h2>
+    <div class="place__header">
+      <p>Шаг 4</p>
+                 
+      <span>4/4</span>
+    </div>
         <hr>
+          <div class="place__body">
+            <p>
+              <h3></h3><br>
+              <img src="../image/gg/4.jpg" width="800" alt="">
+            </p><br>
+            <p>1) Во вкладке "Файл" Нажмите на кнопку "Сохранить как...". <br>
+              2) Выберите допустимый формат файла и дайте ему название. <br>
+              3) Нажмите на кнопку - сохранить</p>
+        <div>
+
         
 
-            <div class="containerp" >
-                <div class="column" id="column1">
-                    <div class="item" id="item2" draggable="true">Функции для работы с базами данных<div class="dot dot-right"></div></div>
-                    <div class="item" id="item1" draggable="true">Функции для управления файлами и папками<div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true">Функции для сетевого взаимодействия<div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true">Функции для работы с графическим интерфейсом<div class="dot dot-right"></div></div>
-                    <div class="item" id="item5" draggable="true">Функции для работы с аппаратными устройствами<div class="dot dot-right"></div></div>
-                </div>
-                <div class="column" id="column2">
-                    <div class="item11" id="itemC" draggable="true"><div class="dot dot-left"></div>Отправка и получение данных по протоколам HTTP, FTP, SMTP</div>
-                    <div class="item11" id="itemB" draggable="true"><div class="dot dot-left"></div>Выполнение запросов, добавление, удаление, обновление записей</div>
-                    <div class="item11" id="itemA" draggable="true"><div class="dot dot-left"></div>Cоздание, чтение, запись, удаление файлов и папок</div>
-                    <div class="item11" id="itemD" draggable="true"><div class="dot dot-left"></div>Создание и изменение окон, элементов управления, отображение изображений</div>
-                    <div class="item11" id="itemE" draggable="true"><div class="dot dot-left"></div>Управление принтером, сканером, камерой</div>
-                </div>
-                <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
-            </div>
-        
-            <div class="button-container">
-            
-            </div>
-        
-            <script>
-                let connections = {};
-        
-                function checkAnswers() {
-                    const pairs = [
-                        ['item1', 'itemA'],
-                        ['item2', 'itemB'],
-                        ['item3', 'itemC'],
-                        ['item5', 'itemE'],
-                        ['item4', 'itemD']
-                    ];
-        
-                    pairs.forEach(pair => {
-                        const item1 = pair[0];
-                        const item2 = pair[1];
-        
-                        const element1 = document.getElementById(item1);
-                        const element2 = document.getElementById(item2);
-        
-                        element1.style.backgroundColor = '#f7f7f7';
-                        element2.style.backgroundColor = '#f7f7f7';
-        
-                        if (connections[item1] === item2 && connections[item2] === item1) {
-                            element1.style.backgroundColor = '#8dff8d';
-                            element2.style.backgroundColor = '#8dff8d';
-                        } else {
-                            element1.style.backgroundColor = '#ff8d8d'; // Неверный ответ, красный цвет
-                            element2.style.backgroundColor = '#ff8d8d';
-                        }
-                    });
-                }
-        
-                let draggedItem = null;
-                let lines = document.getElementById('lines');
-        
-                document.addEventListener('drag', (event) => {
-                    event.preventDefault();
-                });
-        
-                document.addEventListener('dragstart', (event) => {
-                    draggedItem = event.target;
-                    event.dataTransfer.setData('text/plain', null);
-                });
-        
-                document.addEventListener('dragover', (event) => {
-                    event.preventDefault();
-                });
-        
-                document.addEventListener('drop', (event) => {
-                    event.preventDefault();
-                    const target = event.target;
-                    if (target.classList.contains('item') && target !== draggedItem) {
-                        // Проверка, что плашки из разных столбцов
-                        if (target.parentElement.id !== draggedItem.parentElement.id && !connections[target.id] && !connections[draggedItem.id]) {
-                            connections[draggedItem.id] = target.id;
-                            connections[target.id] = draggedItem.id;
-        
-                            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        
-                            let startX = draggedItem.offsetLeft + draggedItem.clientWidth;
-                            let startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
-                            let endX = target.offsetLeft;
-                            let endY = target.offsetTop + target.clientHeight / 2;
-        
-                            line.setAttribute("x1", startX.toString()); // начало линии с края плашки
-                            line.setAttribute("y1", startY.toString());
-                            line.setAttribute("x2", endX.toString()); // конец линии с края плашки
-                            line.setAttribute("y2", endY.toString());
-                            lines.appendChild(line);
-                        }
-                    }
-                });
-            </script>
-    <a href="place2-5.html"><button class="place__btn"  onclick="next()">Далее</button></a>
-    
-</div>
-      
-        
+
+        </div></div>
+        <a href="place2-5.html"><button button class="place__btn" onclick="next()">Далее</button></a>
+      </div>
       
       <div class="line">
         <div id="timer" class="timer">00:00</div>
-        <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-2.html"><button class="place__back" >На шаг назад</button></a>
+        
+        <a href="place2-3.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>
