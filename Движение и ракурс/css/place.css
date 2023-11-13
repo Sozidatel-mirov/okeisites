@@ -33,6 +33,8 @@
     padding: 5px 50px 5px 50px;
     height: auto; 
     margin: 0 auto;
+    margin-bottom: 50px;
+    min-height: auto;
 
 }
 
