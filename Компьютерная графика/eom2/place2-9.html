@@ -11,36 +11,35 @@
 </head>
 
 <body>
-  <a href="../index.html" class="back" >На Главную</a>
+  <a href="../index.html" class="back">На Главную</a>
   
   <div class="block" >
-    <h2> Тренажер:  Рекламная компания для фирмы</h2>
+    <h2>Работа с ракурсом и движением</h2>
         <div class="place__header">
-            <p>Соотнесите понятия в соответствии  с их определениями</p>
+            <p>Соотнесите методы анимации движения с их описанием</p>
 
-            <span>2/4</span>
+            <span>9/10</span>
         </div>
         <hr>
         <div class="place__body">
-
-            <div class="containerp" >
+            <div class="containerp">
                 <div class="column" id="column1" >
-                    <div class="item" id="item1" draggable="true">Изучение рынка<div class="dot dot-right"></div></div>
-                    <div class="item" id="item2" draggable="true">Маркетинг<div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true">Маркетинговая концепция<div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true">Аудитория <div class="dot dot-right"></div></div>
+                    <div class="item" id="item1" draggable="true">Принципы анимации по Диснею<div class="dot dot-right"></div></div>
+                    <div class="item" id="item2" draggable="true">Интерполяция<div class="dot dot-right"></div></div>
+                    <div class="item" id="item3" draggable="true">Равномерное и неравномерное движение<div class="dot dot-right"></div></div>
+                    <div class="item" id="item4" draggable="true">Ключевые кадры<div class="dot dot-right"></div></div>
                 </div>
                 <div class="column" id="column2">
-                    <div class="item" id="itemB" draggable="true">Процесс управления, отвечающий за идентифицирование, прогнозирование и удовлетворение потребительских запросов с выгодой для компании<div class="dot dot-left"></div></div>
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Исследования, предпринимаемые фирмой для укрепления своих позиций на потенциальных рынках</div>
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Философия бизнеса, выраженная в виде определения, данного Институтом маркетинга, которая начинается с выявления запросов потребителя</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Группа лиц, до которых конкретный носитель доводит обращение рекламодателя</div>
+                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Определение начала и конца движения объекта в анимации.</div>
+                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Процесс автоматического вычисления промежуточных кадров для создания непрерывного движения между ключевыми кадрами</div>
+                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Характеризуется постоянной скоростью объекта; включает изменение скорости в течение времени</div>
+                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Набор основных правил и приемов, включающих антиципацию и заострение, для создания естественного и выразительного движения в анимации</div>
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
             </div>
         
             <div class="button-container">
-                
+            
             </div>
         
             <script>
@@ -48,10 +47,10 @@
         
                 function checkAnswers() {
                     const pairs = [
-                        ['item1', 'itemA'],
-                        ['item2', 'itemB'],
+                        ['item1', 'itemD'],
                         ['item3', 'itemC'],
-                        ['item4', 'itemD']
+                        ['item2', 'itemB'],
+                        ['item4', 'itemA']
                     ];
         
                     pairs.forEach(pair => {
@@ -115,7 +114,7 @@
                     }
                 });
             </script>
-    <a href="place2-5.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    <a href="place2-10.html"><button class="place__btn"  onclick="next()">Далее</button></a>
     </div>
 </div>
       
@@ -124,7 +123,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-1.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-8.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>

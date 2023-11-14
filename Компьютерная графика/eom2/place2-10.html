@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
-</head>
-<style>
+  <style>
     .containero {
         display: flex;
         justify-content: center;
@@ -83,31 +82,33 @@
         background-color: #ff6666; /* Красный цвет для неиспользованных плашек и мест */
     }
 </style>
+</head>
+
 <body>
-  <a href="../index.html" class="back" >На Главную</a>
+  <a href="../index.html" class="back">На Главную</a>
   
   <div class="block" >
-    <h2> Тренажер: Работа с порождающими паттернами.</h2>
+    <h2>Работа с ракурсом и движением</h2>
     <div class="place__header">
-        <p></p>
+        <p>Расположите этапы создания скелетной анимации в правильном порядке</p>
 
-        <span>4/4</span>
+        <span>10/10</span>
     </div>
     <hr>
     <div class="place__body">
 
         <div class="containero">
             <div class="placeholders">
-                <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)">1</div>
+                <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)">2</div>
+                <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)">3</div>
+                <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)">4</div>
             </div>
             <div class="tiles">
-                <div class="tile tile1" id="tile1" draggable="true" ondragstart="drag(event)">Плашка 1</div>
-                <div class="tile tile2" id="tile2" draggable="true" ondragstart="drag(event)">Плашка 2</div>
-                <div class="tile tile3" id="tile3" draggable="true" ondragstart="drag(event)">Плашка 3</div>
-                <div class="tile tile4" id="tile4" draggable="true" ondragstart="drag(event)">Плашка 4</div>
+                <div class="tile tile1" id="tile2" draggable="true" ondragstart="drag(event)">Привязка объекта к скелету</div>
+                <div class="tile tile2" id="tile3" draggable="true" ondragstart="drag(event)">Анимация движения костей</div>
+                <div class="tile tile3" id="tile4" draggable="true" ondragstart="drag(event)">Интерполяция и добавление деталей</div>
+                <div class="tile tile4" id="tile1" draggable="true" ondragstart="drag(event)">Создание скелета</div>
             </div>
             
         </div>
@@ -170,16 +171,16 @@
                 });
             }
         </script>
-    
+   
     </div>
 </div>
       
-        
+<a href="place2-11.html"><button class="place__btn"  onclick="next()">Далее</button></a>
       
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-5.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-9.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>
