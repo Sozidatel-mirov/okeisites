@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
-    <link rel="stylesheet" href="../css/place.css">
-  </head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="../css/place.css">
+ 
+</head>
 
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block">
+  <div class="block" style="height: 900px; margin-bottom: 10%">
     <h2>Работа с ракурсом и движением</h2>
         <div class="place__header">
             <p>Соотнесите названия ракурсов с их изображением</p>
@@ -22,19 +23,32 @@
         <hr>
         <div class="place__body">
 
-            <div class="containerp">
+            <div class="containerp" >
                 <div class="column" id="column1" >
-                    <div class="item" id="item1" draggable="true"><img src="../image/gg/5.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
-                    <div class="item" id="item2" draggable="true"><img src="../image/gg/6.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true"><img src="../image/gg/7.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true"><img src="../image/gg/8.jpg" width="180" alt=""><div class="dot dot-right"></div></div>
+                    <div class="item" id="item1" draggable="true">
+                        <img src="../image/gg/5.jpg" width="180" alt="" draggable="false"> <!-- Добавлен атрибут draggable="false" -->
+                        <div class="dot dot-right"></div>
+                    </div>
+                    <div class="item" id="item2" draggable="true">
+                        <img src="../image/gg/6.jpg" width="180" alt="" draggable="false"> <!-- Добавлен атрибут draggable="false" -->
+                        <div class="dot dot-right"></div>
+                    </div>
+                    <div class="item" id="item3" draggable="true">
+                        <img src="../image/gg/7.jpg" width="180" alt="" draggable="false"> <!-- Добавлен атрибут draggable="false" -->
+                        <div class="dot dot-right"></div>
+                    </div>
+                    <div class="item" id="item4" draggable="true">
+                        <img src="../image/gg/8.jpg" width="180" alt="" draggable="false"> <!-- Добавлен атрибут draggable="false" -->
+                        <div class="dot dot-right"></div>
+                    </div>
+     
                   
                 </div>
                 <div class="column" id="column2">
-                    <div class="item11" id="itemA" draggable="true"><div class="dot dot-left"></div>Боковой ракурс</div>
-                    <div class="item11" id="itemB" draggable="true"><div class="dot dot-left"></div>Вид, с высоты птичьего полёта</div>
-                    <div class="item11" id="itemC" draggable="true"><div class="dot dot-left"></div>Нижний ракурс</div>
-                    <div class="item11" id="itemD" draggable="true"><div class="dot dot-left"></div>Верхний ракурс</div>
+                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Боковой ракурс</div>
+                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Вид, с высоты птичьего полёта</div>
+                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Нижний ракурс</div>
+                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Верхний ракурс</div>
                   
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
@@ -90,6 +104,13 @@
                 document.addEventListener('dragover', (event) => {
                     event.preventDefault();
                 });
+                document.addEventListener('dragstart', (event) => {
+        // Изменено условие, чтобы учитывать родительский элемент .item
+        if (event.target.classList.contains('item')) {
+            draggedItem = event.target;
+            event.dataTransfer.setData('text/plain', null);
+        }
+    });
         
                 document.addEventListener('drop', (event) => {
                     event.preventDefault();
