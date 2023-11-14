@@ -8,27 +8,25 @@
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
   <style>
-    .containero  {
+    .container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 50px;
     }
 
     .placeholders {
         display: flex;
         box-sizing: border-box;
-        margin: 0;
     }
 
     .placeholder {
         position: relative;
         width: 300px;
-    border-radius: 10px;
     height: 150px;
     border: 2px solid #888;
-    margin: 100px;
+    margin: 10px;
     background-color: #ddd;
     border-radius: 10px;
     box-shadow: 0px 0px 7px #cecece;
@@ -40,16 +38,15 @@
 
     .tiles {
         display: flex;
-        background-color: #888;
-        border-radius: 10px;
+       
     }
 
     .tile {
-    width: 300px;
-    border-radius: 10px;
+        width: 300px;
+        border-radius: 10px;
     height: 150px;
     border: 2px solid #888;
-    margin: 40px 50px;
+    margin: 10px;
     cursor: pointer;
     background-color: #fff;
     transition: background-color 0.3s;
@@ -57,12 +54,11 @@
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    z-index: 19999px;
     box-sizing: content-box;
     justify-content: center;
     align-items: center;
     text-align: center;
-     color: #5a335a;
+    box-shadow: 0px 0px 7px #cecece;
     }
 
     button {
@@ -91,7 +87,7 @@
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block">
+  <div class="block" style="height: 900px; margin-bottom: 10%">
     <h2>Работа с ракурсом и движением</h2>
     <div class="place__header">
         <p>Расположите этапы создания скелетной анимации в правильном порядке</p>
@@ -101,7 +97,7 @@
     <hr>
     <div class="place__body">
 
-        <div class="containero">
+        <div class="container">
             <div class="placeholders">
                 <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)">1</div>
                 <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)">2</div>
