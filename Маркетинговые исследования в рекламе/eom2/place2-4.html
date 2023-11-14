@@ -16,108 +16,31 @@
   <div class="block" >
     <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
-            <p>Соотнесите каждую функцию к своей группе</p>
+            <p>Ознакомьтесь с теоретическим материалом</p>
 
             <span>3/10</span>
         </div>
         <hr>
         <div class="place__body">
 
-            <div class="containerp" >
-                <div class="column" id="column1">
-                    <div class="item" id="item2" draggable="true">Функции для работы с базами данных<div class="dot dot-right"></div></div>
-                    <div class="item" id="item1" draggable="true">Функции для управления файлами и папками<div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true">Функции для сетевого взаимодействия<div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true">Функции для работы с графическим интерфейсом<div class="dot dot-right"></div></div>
-                    <div class="item" id="item5" draggable="true">Функции для работы с аппаратными устройствами<div class="dot dot-right"></div></div>
-                </div>
-                <div class="column" id="column2">
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Отправка и получение данных по протоколам HTTP, FTP, SMTP</div>
-                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Выполнение запросов, добавление, удаление, обновление записей</div>
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Cоздание, чтение, запись, удаление файлов и папок</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Создание и изменение окон, элементов управления, отображение изображений</div>
-                    <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>Управление принтером, сканером, камерой</div>
-                </div>
-                <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
-            </div>
-        
-            <div class="button-container">
-            
-            </div>
-        
-            <script>
-                let connections = {};
-        
-                function checkAnswers() {
-                    const pairs = [
-                        ['item1', 'itemA'],
-                        ['item2', 'itemB'],
-                        ['item3', 'itemC'],
-                        ['item5', 'itemE'],
-                        ['item4', 'itemD']
-                    ];
-        
-                    pairs.forEach(pair => {
-                        const item1 = pair[0];
-                        const item2 = pair[1];
-        
-                        const element1 = document.getElementById(item1);
-                        const element2 = document.getElementById(item2);
-        
-                        element1.style.backgroundColor = '#f7f7f7';
-                        element2.style.backgroundColor = '#f7f7f7';
-        
-                        if (connections[item1] === item2 && connections[item2] === item1) {
-                            element1.style.backgroundColor = '#8dff8d';
-                            element2.style.backgroundColor = '#8dff8d';
-                        } else {
-                            element1.style.backgroundColor = '#ff8d8d'; // Неверный ответ, красный цвет
-                            element2.style.backgroundColor = '#ff8d8d';
-                        }
-                    });
-                }
-        
-                let draggedItem = null;
-                let lines = document.getElementById('lines');
-        
-                document.addEventListener('drag', (event) => {
-                    event.preventDefault();
-                });
-        
-                document.addEventListener('dragstart', (event) => {
-                    draggedItem = event.target;
-                    event.dataTransfer.setData('text/plain', null);
-                });
-        
-                document.addEventListener('dragover', (event) => {
-                    event.preventDefault();
-                });
-        
-                document.addEventListener('drop', (event) => {
-                    event.preventDefault();
-                    const target = event.target;
-                    if (target.classList.contains('item') && target !== draggedItem) {
-                        // Проверка, что плашки из разных столбцов
-                        if (target.parentElement.id !== draggedItem.parentElement.id && !connections[target.id] && !connections[draggedItem.id]) {
-                            connections[draggedItem.id] = target.id;
-                            connections[target.id] = draggedItem.id;
-        
-                            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        
-                            let startX = draggedItem.offsetLeft + draggedItem.clientWidth;
-                            let startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
-                            let endX = target.offsetLeft;
-                            let endY = target.offsetTop + target.clientHeight / 2;
-        
-                            line.setAttribute("x1", startX.toString()); // начало линии с края плашки
-                            line.setAttribute("y1", startY.toString());
-                            line.setAttribute("x2", endX.toString()); // конец линии с края плашки
-                            line.setAttribute("y2", endY.toString());
-                            lines.appendChild(line);
-                        }
-                    }
-                });
-            </script>
+            <p>
+
+                <strong>Рынок (в маркетинговом понимании)</strong> — это совокупность существующих или потенциальных продавцов и покупателей каких-то продуктов либо место, где совершаются сделки. Именно на рынке произведенный продукт и затраченный на него труд приобретают (или не приобретают) признание у потребителей.<br>
+                <strong>Анализ рынка</strong> – это сбор и структурирование информации о рынках (продавцов, покупателей, поставщиков финансовых и других услуг, поставщиков сырья и товаров) с целью повышения конкурентоспособности компании или продукта и повышения уровня удовлетворенности конечного потребителя.<br>
+                <strong>Мониторинг рынка</strong> – это плановое систематическое наблюдение за состоянием рынка в целях его изучения и оценки, анализа тенденций (трендов) его развития, а также исследования конкурентной среды. В системе маркетинга под мониторингом рынка в общем смысле принято понимать непрерывный методический процесс сбора, анализа и распространения информации о внешней деловой среде.
+                <strong>Целевой рынок</strong> — это совокупность потенциальных клиентов, которые могут быть заинтересованы в продуктах или услугах вашей компании.<br><br>
+                
+                В маркетинге много методов анализа рынка, а применение конкретных инструментов зависит от сферы деятельности и «возраста» компании, цели анализа, особенностей продуктов и других факторов. Обычно изучают ключевые показатели рынка: ёмкость, объём, структуру, динамику. Полезно посмотреть на рынок под другим углом и проанализировать макросреду, то есть и внешние факторы, и тенденции, и микросреду: конкурентов, потребителей, посредников и партнёров.
+                Чтобы получить достоверные и информативные результаты анализа рынка, нужно действовать по этапам:<br><br>
+                1. <strong>Определить цели исследования.</strong> Перед началом анализа рынка маркетологу или владельцу компании нужно понять, как цели анализа соотносятся с целями и задачами бизнеса и маркетинга. Например, у строительной компании есть участок земли, который можно поделить на мелкие участки и продавать под застройку или строить дома и продавать «два в одном». Цель бизнеса — получить максимальную прибыль. Цель маркетинга — спланировать продвижение и продажи таким образом, чтобы привлечь нужную целевую аудиторию. Цель исследования — понять, кому продавать и какие варианты недвижимости интересны потенциальным покупателям. После того как сформировали чёткую цель, переходят к следующему этапу.<br><br>
+                2. <strong>Составить план маркетингового анализа.</strong> На этом этапе общие цели и задачи анализа рынка разбивают на более мелкие: какие исследования понадобится провести, где брать данные для анализа. Например, строительной компании нужно собрать информацию по рынку в конкретном регионе, изучить конкурентов и их предложения, оценить спрос и особенности потребления.<br><br>
+                3. <strong>Определить методы исследования.</strong> Чтобы получить информацию о конкурентах и рынке в целом, строительная компания может провести вторичные исследования: например, заказать обзор рынка у маркетингового агентства. А вот для изучения потребителей понадобится провести первичные количественные исследования или качественные: например, собрать фокус-группу из представителей целевой аудитории.<br><br>
+                4. <strong>Провести исследование.</strong> Чтобы процесс анализа не растягивался во времени, нужно определить чёткие сроки, бюджет и исполнителей: силами компании или с привлечением специалистов маркетингового агентства. Допустим, строительной компании из примера выше для полного анализа понадобится около месяца. <br><br>
+                5. <strong>Проанализировать данные исследования.</strong> После того как маркетолог получает все результаты разных видов анализа рынка, нужно резюмировать информацию и соотнести её с теми целями, которые ставили в начале исследования. Для этого уточняют, получены ли ответы на вопросы и проверены ли гипотезы. Бывает, что выводы не совпадают с целью. В этом случае нужно вернуться на этап исследования и ещё раз проверить гипотезы, качество собранных данных. Например, может оказаться, что при опросах были неверно заполнены анкеты или анализ рынка оказался поверхностным. <br><br>
+                6. <strong>Презентовать результаты.</strong> Этот этап важен не меньше, чем само исследование. Для представления анализа нужно презентовать его команде, инвесторам или кредиторам. Презентацию выстроить так, чтобы выводы логично вытекали из аналитики, которую собрали.
+                
+                
+                </p>
     <a href="place2-51.html"><button class="place__btn" onclick="next()">Далее</button></a>
     </div>
 </div>

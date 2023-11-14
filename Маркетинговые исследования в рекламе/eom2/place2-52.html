@@ -13,7 +13,7 @@
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block" style="height: 600px; margin-bottom: 10%">
+  <div class="block" >
     <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
             <p>Ознакомьтесь с теоретическим материалом</p>
@@ -22,36 +22,105 @@
         </div>
       <hr>
       <div class="place__body">
-        <p>
-        <h3>Теоретический материал:</h3>
-        </p>
-        <br>
-        <p><strong>Интерфейс</strong> — это своеобразное связующее звено между веб-сайтом и пользователем.
-           Благодаря нему посетитель может «рассказать» системе, что он от нее ожидает, и получить ответную
-            реакцию. Но что делать, если этого понимания между пользователем и сайтом не состоялось? Первый просто уйдет на поиски
-             более удобного ресурса. Чтобы этого не случилось, мы решили разобраться в базовых принципах интуитивно понятного интерфейса.<br></p>
-             <br><p><strong>Каким должен быть хороший интерфейс:</strong></p>
-             <ol style="margin-left: 15px;">
-              <li>Кнопки с понятными обозначениями</li>
-              <li>Помощь в поиске «верного пути»</li>
-              <li>Понятный, неперегруженный дизайн</li>
-              <li>Быстрая загрузка</li>
-              <li>Коммуникация с пользователем</li>
-              <li>Различие кнопок по типу действия</li>
-              <li>Привлекательный дизайн</li>
-             </ol><br><br>
-        <p><strong>Тестирование программного обеспечения</strong> — процесс исследования, испытания программного продукта, имеющий своей целью проверку соответствия между 
-          реальным поведением программы и её ожидаемым поведением на конечном наборе тестов, выбранных определённым образом.<br><br>
-          <strong>Обучение пользователей</strong> - обучение пользователей помогает пользователю эффективно управлять системой. Во время обучения 
-          каждому пользователю выдается руководство, чтобы он мог понять проблему и решить ее. <br>Содержание обучения - об использовании данных,
-           о том, как они могут редактировать, добавлять, запрашивать и удалять записи.<br><br>
-           <strong>Права доступа</strong> — совокупность правил, регламентирующих порядок и условия доступа субъекта к объектам информационной системы 
-          (её носителям, процессам и другим ресурсам) установленных правовыми документами или собственником, владельцем информации.<br><br>
-          Права доступа определяют набор действий (например, чтение, запись, выполнение), разрешённых для выполнения субъектам 
-          (например, пользователям системы) над объектами данных. <br>Для этого требуется некая система для предоставления субъектам различных прав доступа 
-          к объектам. <br>Это система разграничения доступа субъектов к объектам, которая рассматривается в качестве главного средства защиты от 
-          несанкционированного доступа к информации или порчи самой системы.</p>
-        <br>
+        
+        <div class="containerp">
+          <div class="column" id="column1">
+              <div class="item" id="item1" draggable="true">Интернет-маркетинг<div class="dot dot-right"></div></div>
+              <div class="item" id="item2" draggable="true"> Маркетинговые исследования в рекламе<div class="dot dot-right"></div></div>
+              <div class="item" id="item3" draggable="true"> Маркетинговая гипотеза<div class="dot dot-right"></div></div>
+              <div class="item" id="item4" draggable="true"> Мониторинг рынка<div class="dot dot-right"></div></div>
+              
+          </div>
+          <div class="column" id="column2">
+              <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>это предположения о бизнесе, маркетинге, продажах и клиентах, которое может подтвердиться или опровергнуться в процессе исследования</div>
+              <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>практика использования всех аспектов традиционного маркетинга в Интернете, с целью продажи продукта или услуги покупателям и 
+              управления взаимоотношениями с ними</div>
+              <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>это плановое систематическое наблюдение за состоянием рынка в целях его изучения и оценки, анализа тенденций (трендов) его развития, а 
+              также исследования конкурентной среды</div>
+              <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>систематизированный сбор, анализ и представление определенного круга данных, полученных посредством специально проводимых для этого 
+              процедур и необходимых для принятия соответствующих решений</div>
+              
+          </div>
+          <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+      </div>
+  
+      <div class="button-container">
+      
+      </div>
+  
+      <script>
+          let connections = {};
+  
+          function checkAnswers() {
+              const pairs = [
+                  ['item1', 'itemB'],
+                  ['item2', 'itemD'],
+                  ['item3', 'itemA'],
+                  ['item4', 'itemC'],
+                  ['item5', 'itemA']
+              ];
+  
+              pairs.forEach(pair => {
+                  const item1 = pair[0];
+                  const item2 = pair[1];
+  
+                  const element1 = document.getElementById(item1);
+                  const element2 = document.getElementById(item2);
+  
+                  element1.style.backgroundColor = '#f7f7f7';
+                  element2.style.backgroundColor = '#f7f7f7';
+  
+                  if (connections[item1] === item2 && connections[item2] === item1) {
+                      element1.style.backgroundColor = '#8dff8d';
+                      element2.style.backgroundColor = '#8dff8d';
+                  } else {
+                      element1.style.backgroundColor = '#ff8d8d'; // Неверный ответ, красный цвет
+                      element2.style.backgroundColor = '#ff8d8d';
+                  }
+              });
+          }
+  
+          let draggedItem = null;
+          let lines = document.getElementById('lines');
+  
+          document.addEventListener('drag', (event) => {
+              event.preventDefault();
+          });
+  
+          document.addEventListener('dragstart', (event) => {
+              draggedItem = event.target;
+              event.dataTransfer.setData('text/plain', null);
+          });
+  
+          document.addEventListener('dragover', (event) => {
+              event.preventDefault();
+          });
+  
+          document.addEventListener('drop', (event) => {
+              event.preventDefault();
+              const target = event.target;
+              if (target.classList.contains('item') && target !== draggedItem) {
+                  // Проверка, что плашки из разных столбцов
+                  if (target.parentElement.id !== draggedItem.parentElement.id && !connections[target.id] && !connections[draggedItem.id]) {
+                      connections[draggedItem.id] = target.id;
+                      connections[target.id] = draggedItem.id;
+  
+                      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  
+                      let startX = draggedItem.offsetLeft + draggedItem.clientWidth;
+                      let startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
+                      let endX = target.offsetLeft;
+                      let endY = target.offsetTop + target.clientHeight / 2;
+  
+                      line.setAttribute("x1", startX.toString()); // начало линии с края плашки
+                      line.setAttribute("y1", startY.toString());
+                      line.setAttribute("x2", endX.toString()); // конец линии с края плашки
+                      line.setAttribute("y2", endY.toString());
+                      lines.appendChild(line);
+                  }
+              }
+          });
+      </script>
         <a href="place2-5.html"><button style="position: fixed; bottom: 75px; right: 20px;" class="place__btn" onclick="next()">Далее</button></a>
       </div>
 </div>

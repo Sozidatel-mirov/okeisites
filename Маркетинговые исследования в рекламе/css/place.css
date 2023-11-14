@@ -1,7 +1,7 @@
 
 * {
     padding: 0;
-
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -22,6 +22,7 @@
         justify-content: space-between;
         margin: 0 auto;
         position: relative;
+        min-height: auto;
         
 }
 .column {
@@ -39,14 +40,14 @@
     
     background-color: #f7f7f7;
     border: 1px solid #ccc;
-    margin: 10px 0;
+    margin: 8px 0;
     text-align: center;
     cursor: pointer;
     overflow: hidden;
     box-shadow: 0px 0px 7px #cecece;
     border-radius: 10px;
     border-color: white;
-    min-height: 150px;
+    min-height: 170px;
     min-width: 500px;
     flex: 1;
     justify-content: space-between;

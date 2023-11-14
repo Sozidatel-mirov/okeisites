@@ -7,6 +7,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
+  <style>
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .placeholders {
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .placeholder {
+        position: relative;
+        width: 300px;
+    height: 150px;
+    border: 2px solid #888;
+    margin: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #cecece;
+    box-sizing: content-box;
+    display: flex; /* Добавьте это свойство */
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    }
+
+    .tiles {
+        display: flex;
+       
+    }
+
+    .tile {
+        width: 300px;
+        border-radius: 10px;
+    height: 150px;
+    border: 2px solid #888;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-sizing: content-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 7px #cecece;
+    }
+
+    button {
+        background-color: #fff;
+        border: 2px solid #888;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .correct {
+        background-color: #8cff66; /* Зелёный цвет при правильном ответе */
+    }
+
+    .incorrect {
+        background-color: #ff6666; /* Красный цвет при неправильном ответе */
+    }
+
+    .unused {
+        background-color: #ff6666; /* Красный цвет для неиспользованных плашек и мест */
+    }
+</style>
 </head>
 
 <body>
@@ -15,111 +91,91 @@
   <div class="block">
     <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
-            <p>Соотнесите шаги формирования интерфейсов и организации доступа пользователей к информационной системе с их назначением и средствами реализации</p>
+            <p>Перенесите в таблицу все фразы, относящиеся к понятию «Целевая аудитория»</p>
 
             <span>6/10</span>
         </div>
         <hr>
         <div class="place__body">
 
-            <div class="containerp">
-                <div class="column" id="column1">
-                    <div class="item" id="item2" draggable="true">Идентификация и аутентификация пользователей<div class="dot dot-right"></div></div>
-                    <div class="item" id="item1" draggable="true">Разграничение прав доступа<div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true">Разработка интуитивного интерфейса<div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true">Тестирование и обратная связь пользователей<div class="dot dot-right"></div></div>
-                    <div class="item" id="item5" draggable="true">Обучение пользователей<div class="dot dot-right"></div></div>
+            <div class="container">
+                <div class="placeholders">
+                    <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)">1</div>
+                        <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)">2</div>
+                        <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)">3</div>
+                    
+                    
+                    
+                    
                 </div>
-                <div class="column" id="column2">
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Важно определить различные уровни доступа для разных пользовательских групп. Например, администраторы системы могут иметь полный доступ ко всем функциям и данным, в то время как обычные пользователи могут иметь доступ только к определенным функциям или данным</div>
-                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Для обеспечения безопасности и контроля доступа к информационной системе. Это может включать в себя использование логина и пароля, биометрической идентификации, смарт-карт и других методов</div>
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Чтобы сделать использование информационной системы удобным и эффективным для пользователей, интерфейс должен быть простым и интуитивно понятным. Это может включать в себя использование значков и пиктограмм, логического расположения функций, интуитивного оформления и т. д.</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Это может включать в себя проведение тренингов, разработку обучающих материалов и т. д.</div>
-                    <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>Это поможет выявить проблемы и улучшить интерфейс и настройки доступа</div>
+                <div class="tiles">
+                    <div class="tile tile1" id="tile4" draggable="true" ondragstart="drag(event)">группа людей, которым интересен продукт или услуга компании</div>
+                    <div class="tile tile2" id="tile1" draggable="true" ondragstart="drag(event)">группа людей, объединённых общей идеей</div>
+                    <div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)">группа людей, у которых есть потребность в продукте и возможность его купить</div>
+                    <div class="tile tile4" id="tile3" draggable="true" ondragstart="drag(event)">группа людей, на которых направлено рекламное сообщение, которое формируют маркетологи в рамках рекламной кампании продукта</div>
+                    
                 </div>
-                <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
-            </div>
-        
-            <div class="button-container">
-            
+                
             </div>
         
             <script>
-                let connections = {};
+                function allowDrop(ev) {
+                    ev.preventDefault();
+                }
+        
+                function drag(ev) {
+                    ev.dataTransfer.setData("text", ev.target.id);
+                }
+        
+                function drop(ev) {
+                    ev.preventDefault();
+                    var data = ev.dataTransfer.getData("text");
+                    var draggedElement = document.getElementById(data);
+                    var placeholder = ev.target;
+                    placeholder.appendChild(draggedElement);
+        
+                    draggedElement.style.position = 'absolute';
+                    draggedElement.style.top = '0';
+                    draggedElement.style.left = '0';
+        
+                    var rect = placeholder.getBoundingClientRect();
+                    var tileRect = draggedElement.getBoundingClientRect();
+                    draggedElement.style.top = (rect.top - tileRect.top) + 'px';
+                    draggedElement.style.left = (rect.left - tileRect.left) + 'px';
+                }
         
                 function checkAnswers() {
-                    const pairs = [
-                        ['item1', 'itemA'],
-                        ['item2', 'itemB'],
-                        ['item3', 'itemC'],
-                        ['item4', 'itemE'],
-                        ['item5', 'itemD']
-                    ];
+                    var placeholders = document.querySelectorAll('.placeholder');
+                    var tiles = document.querySelectorAll('.tile');
         
-                    pairs.forEach(pair => {
-                        const item1 = pair[0];
-                        const item2 = pair[1];
+                    // Сначала перекрашиваем все плашки и места в красный
+                    tiles.forEach(function(tile) {
+                        tile.classList.add('incorrect');
+                    });
         
-                        const element1 = document.getElementById(item1);
-                        const element2 = document.getElementById(item2);
+                    placeholders.forEach(function(placeholder) {
+                        placeholder.classList.add('incorrect');
+                    });
         
-                        element1.style.backgroundColor = '#f7f7f7';
-                        element2.style.backgroundColor = '#f7f7f7';
+                    // Затем перекрашиваем правильные в зелёный
+                    placeholders.forEach(function(placeholder, index) {
+                        var tile = placeholder.querySelector('.tile');
         
-                        if (connections[item1] === item2 && connections[item2] === item1) {
-                            element1.style.backgroundColor = '#8dff8d';
-                            element2.style.backgroundColor = '#8dff8d';
-                        } else {
-                            element1.style.backgroundColor = '#ff8d8d'; // Неверный ответ, красный цвет
-                            element2.style.backgroundColor = '#ff8d8d';
+                        if (tile && tile.id === 'tile' + (index + 1) && tile.parentElement) {
+                            tile.classList.remove('incorrect');
+                            tile.classList.add('correct');
+                            placeholder.classList.remove('incorrect');
+                        }
+                    });
+        
+                    // Перекрашиваем неиспользованные плашки в красный
+                    tiles.forEach(function(tile) {
+                        if (!tile.parentElement) {
+                            tile.classList.add('unused');
                         }
                     });
                 }
-        
-                let draggedItem = null;
-                let lines = document.getElementById('lines');
-        
-                document.addEventListener('drag', (event) => {
-                    event.preventDefault();
-                });
-        
-                document.addEventListener('dragstart', (event) => {
-                    draggedItem = event.target;
-                    event.dataTransfer.setData('text/plain', null);
-                });
-        
-                document.addEventListener('dragover', (event) => {
-                    event.preventDefault();
-                });
-        
-                document.addEventListener('drop', (event) => {
-                    event.preventDefault();
-                    const target = event.target;
-                    if (target.classList.contains('item') && target !== draggedItem) {
-                        // Проверка, что плашки из разных столбцов
-                        if (target.parentElement.id !== draggedItem.parentElement.id && !connections[target.id] && !connections[draggedItem.id]) {
-                            connections[draggedItem.id] = target.id;
-                            connections[target.id] = draggedItem.id;
-        
-                            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        
-                            let startX = draggedItem.offsetLeft + draggedItem.clientWidth;
-                            let startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
-                            let endX = target.offsetLeft;
-                            let endY = target.offsetTop + target.clientHeight / 2;
-        
-                            line.setAttribute("x1", startX.toString()); // начало линии с края плашки
-                            line.setAttribute("y1", startY.toString());
-                            line.setAttribute("x2", endX.toString()); // конец линии с края плашки
-                            line.setAttribute("y2", endY.toString());
-                            lines.appendChild(line);
-                        }
-                    }
-                });
             </script>
-    <a href="place2-61.html"><button class="place__btn" onclick="next()">Далее</button></a>
-    </div>
-</div>
       
         
       
