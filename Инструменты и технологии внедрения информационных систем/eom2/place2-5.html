@@ -7,70 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
-  <style>
-    .container {
-        display: flex;
-        justify-content: space-between;
-        max-width: 600px;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    .column {
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .item {
-        position: relative; /* Добавлено */
-        width: 100%;
-        background-color: #f7f7f7;
-        border: 1px solid #ccc;
-        margin: 10px 0;
-        padding: 10px;
-        text-align: center;
-        cursor: pointer;
-        overflow: hidden;
-    }
-
-    .dot {
-        position: absolute;
-        background-color: #8d8dff;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .dot-left {
-        left: -1%;
-    }
-
-    .dot-right {
-        right: -1%;
-    }
-
-    .button-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .line1 {
-        position: absolute;
-        pointer-events: none;
-        stroke: #8d8dff;
-        stroke-width: 3;
-    }
-</style>
 </head>
 
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block" style="height: 900px; margin-bottom: 10%">
+  <div class="block">
     <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
             <p>Соотнесите шаги формирования интерфейсов и организации доступа пользователей к информационной системе с их назначением и средствами реализации</p>
@@ -80,8 +22,8 @@
         <hr>
         <div class="place__body">
 
-            <div class="container" style="margin-top: 3%;">
-                <div class="column" id="column1" style="margin-top: 7%;">
+            <div class="containerp">
+                <div class="column" id="column1">
                     <div class="item" id="item2" draggable="true">Идентификация и аутентификация пользователей<div class="dot dot-right"></div></div>
                     <div class="item" id="item1" draggable="true">Разграничение прав доступа<div class="dot dot-right"></div></div>
                     <div class="item" id="item3" draggable="true">Разработка интуитивного интерфейса<div class="dot dot-right"></div></div>
@@ -175,7 +117,7 @@
                     }
                 });
             </script>
-    <a href="place2-61.html"><button class="place__btn" style="position: fixed; bottom: 75px; right: 20px;" onclick="next()">Далее</button></a>
+    <a href="place2-61.html"><button class="place__btn" onclick="next()">Далее</button></a>
     </div>
 </div>
       
