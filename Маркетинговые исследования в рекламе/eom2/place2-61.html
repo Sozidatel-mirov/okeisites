@@ -7,7 +7,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
+  <style>
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
 
+    .placeholders {
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .placeholder {
+        position: relative;
+        width: 300px;
+    height: 150px;
+    border: 2px solid #888;
+    margin: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #cecece;
+    box-sizing: content-box;
+    display: flex; /* Добавьте это свойство */
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    }
+
+    .tiles {
+        display: flex;
+       
+    }
+
+    .tile {
+        width: 300px;
+        border-radius: 10px;
+    height: 150px;
+    border: 2px solid #888;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-sizing: content-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 7px #cecece;
+    }
+
+    button {
+        background-color: #fff;
+        border: 2px solid #888;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .correct {
+        background-color: #8cff66; /* Зелёный цвет при правильном ответе */
+    }
+
+    .incorrect {
+        background-color: #ff6666; /* Красный цвет при неправильном ответе */
+    }
+
+    .unused {
+        background-color: #ff6666; /* Красный цвет для неиспользованных плашек и мест */
+    }
+    </style>
 </head>
 
 <body>
@@ -16,39 +91,100 @@
   <div class="block" style="height: 600px; margin-bottom: 10%">
     <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
-            <p>Ознакомьтесь с теоретическим материалом</p>
+            <p>Выберите из предложенных вариантов слова и вставьте их в предложение</p>
 
             <span>7/10</span>
         </div>
       <hr>
       <div class="place__body">
-        <p>
-        <h3>Теоретический материал:</h3>
-        </p>
-        <br>
-        <p>Сегодня в мире тысячи программ и приложений, имеющих разное назначение. Главная задача любого ПО – решение потребности конкретной целевой группы. И для решения этой задачи выделено пять основных этапов
 
-          <br><br><strong>1. Сбор требований и их анализ</strong>
-          Самый ответственный, важный этап, от которого зависит успех
-           программного обеспечения. Специалисты собирают первичные данные, что позволяет создать основу. Параллельно анализируются риски, связанные с проектом. Это определяет возможность использования разных технических подходов, в основе которых лежит минимизации финансовых расходов.
-          <br>Специалисты создают макеты и прототипы, определяют требования к проекту. Следующим шагом данного этапа является документирование требований со стороны клиента. Это дает полную правовую защищенность обеих сторон - разработчика и заказчика. В документе прописываются требования, которым должен соответствовать софт.
-          <br><br><strong>2. Разработка дизайна для программного продукта</strong>
-          Создаваемый софт должен быть не только функциональным, но также удобным, понятным для пользователя. Для этого требуется правильно разработать архитектуру, способ представления программы, его пользовательский интерфейс, графическое решение.
-          <br><br><strong>3. Непосредственная разработка программного обеспечения</strong>
-          После того, как разобрались с архитектурой, согласовали функционал, дизайн и концепцию, приступают к разработке софта. Пишут программный код, выполняют сборку, последовательно создают необходимые модули и дополнения согласно утвержденному техническому заданию.
-          <br><br><strong>4. Тестирование продукта</strong>
-          После разработки софта, специалисты приступают к тестированию. Этот процесс затрагивает все этапы жизненного цикла. Все баги и недочеты фиксируются, регистрируются и отслеживаются. Недочеты исправляются, программный продукт тестируется заново. Это процесс происходит до тех пор, пока готовый информационный продукт не достигнет необходимых стандартов качества.
-          <br><br><strong>5. Внедрение и поддержка продукта</strong>
-          После устранения всех багов, ПО выходит в релиз. Начинается поэтапное внедрение программы согласно выбранной бизнес-стратегии. Изначально софт может быть выпущен в ограниченном сегменте, протестирован в конкретной бизнес-среде.</p>
-        <br>
-        <a href="place2-6.html"><button style="position: fixed; bottom: 75px; right: 20px;" class="place__btn" onclick="next()">Далее</button></a>
-      </div>
-</div>
-      
-        
+        <div class="container">
+            <div class="placeholders">
+              <p><strong>Анализ рынка</strong> – это сбор и <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                 информации о рынках (продавцов, <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>,
+                  поставщиков финансовых и других услуг, поставщиков сырья и 
+                23
+                товаров) с целью повышения <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                 компании или продукта и повышения уровня <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div> конечного потребителя.</p>
+                
+                    
+                    
+                    
+            </div>
+            <div class="tiles">
+                <div class="tile tile1" id="tile1" draggable="true" ondragstart="drag(event)">удовлетворенности</div>
+                <div class="tile tile2" id="tile2" draggable="true" ondragstart="drag(event)">конкурентоспособности</div>
+                <div class="tile tile3" id="tile3" draggable="true" ondragstart="drag(event)">покупателей</div>
+                <div class="tile tile4" id="tile4" draggable="true" ondragstart="drag(event)">структурирование</div>
+                
+            </div>
+            
+        </div>
+    
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+    
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+    
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                var draggedElement = document.getElementById(data);
+                var placeholder = ev.target;
+                placeholder.appendChild(draggedElement);
+    
+                draggedElement.style.position = 'absolute';
+                draggedElement.style.top = '0';
+                draggedElement.style.left = '0';
+    
+                var rect = placeholder.getBoundingClientRect();
+                var tileRect = draggedElement.getBoundingClientRect();
+                draggedElement.style.top = (rect.top - tileRect.top) + 'px';
+                draggedElement.style.left = (rect.left - tileRect.left) + 'px';
+            }
+    
+            function checkAnswers() {
+                var placeholders = document.querySelectorAll('.placeholder');
+                var tiles = document.querySelectorAll('.tile');
+    
+                // Сначала перекрашиваем все плашки и места в красный
+                tiles.forEach(function(tile) {
+                    tile.classList.add('incorrect');
+                });
+    
+                placeholders.forEach(function(placeholder) {
+                    placeholder.classList.add('incorrect');
+                });
+    
+                // Затем перекрашиваем правильные в зелёный
+                placeholders.forEach(function(placeholder, index) {
+                    var tile = placeholder.querySelector('.tile');
+    
+                    if (tile && tile.id === 'tile' + (index + 1) && tile.parentElement) {
+                        tile.classList.remove('incorrect');
+                        tile.classList.add('correct');
+                        placeholder.classList.remove('incorrect');
+                    }
+                });
+    
+                // Перекрашиваем неиспользованные плашки в красный
+                tiles.forEach(function(tile) {
+                    if (!tile.parentElement) {
+                        tile.classList.add('unused');
+                    }
+                });
+            }
+        </script>
+      <a href="place2-6.html"><button class="place__btn" onclick="next()">Далее</button></a>
+      </div></div>
       
       <div class="line">
         <div id="timer" class="timer">00:00</div>
+        <button onclick="checkAnswers()" class="place__back">Ответить</button>
         <a href="place2-5.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
