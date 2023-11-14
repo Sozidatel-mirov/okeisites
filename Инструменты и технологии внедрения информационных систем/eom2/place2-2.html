@@ -16,40 +16,122 @@
   <div class="block" >
     <h2>Инструменты и технологии внедрения информационных систем</h2>
         <div class="place__header">
-            <p>Ознакомьтесь с теоретическим материалом и выполните практические задание</p>
+            <p>Соотнесите основные элементы управления интерфейса с их описанием</p>
 
             <span>2/10</span>
         </div>
       <hr>
       <div class="place__body">
-        <p>
-        <h3>Теоретический материал:</h3>
-        </p>
-        <br>
-        <p>Элементы интерфейса, их еще называют элементы управления, которые используются при разработке пользовательского интерфейса.</p>
-        <br>
-        <p>Основые элементы пользовательского интерфейса:</p>
-        <br>
-        <ol style="list-style: none">
-            <li>- Главное меню - это элемент управления информационной системы, предназначенный для быстрого доступа к основным функциям и элементам окон программы.</li>
-            <li>- Окно авторизации - это элемент  процесса проверки прав пользователя на осуществление определенных действий</li>
-            <li>-Окно обратной связи - это диалоговое окно для отправки ответной реакции пользователей</li>
-            <li>- Диалоговые окна - это элемент пользовательского интерфейса, тип окна, который используется для обеспечения связи и взаимодействия между пользователем и программным обеспечением</li>
-            <li>- Система навигации - это часть пользовательского интерфейса, элементы , котороц обеспечивают возможность переходов между окнами.</li>
-        </ol>
-        <br>
-        <h3>Практический задание:</h3>
-        <br>
-        <p>Дайте подробное детальное описание назначения основных элементов управления интерфейса пользователя.</p>
+        
+        <p></p>
         <a href="place2-4.html"><button class="place__btn" onclick="next()">Далее</button></a>
-        <br><Textarea style="height: 200px; width: 750px;"></Textarea> 
+      
+      
+        <div class="containerp" >
+          <div class="column" id="column1">
+              <div class="item" id="item2" draggable="true">Главное меню<div class="dot dot-right"></div></div>
+              <div class="item" id="item1" draggable="true">Окно авторизации<div class="dot dot-right"></div></div>
+              <div class="item" id="item3" draggable="true">Окно обратной связи<div class="dot dot-right"></div></div>
+              <div class="item" id="item4" draggable="true">Диалоговые окна<div class="dot dot-right"></div></div>
+              <div class="item" id="item5" draggable="true">Система навигации<div class="dot dot-right"></div></div>
+          </div>
+          <div class="column" id="column2">
+              <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Элемент управления информационной системы, предназначенный для быстрого доступа к основным функциям и элементам окон программы</div>
+              <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Элемент  процесса проверки прав пользователя на осуществление определенных действий</div>
+              <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Диалоговое окно для отправки ответной реакции пользователей</div>
+              <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Элемент пользовательского интерфейса, тип окна, который используется для обеспечения связи и взаимодействия между пользователем и программным обеспечением</div>
+              <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>Это часть пользовательского интерфейса, элементы , котороц обеспечивают возможность переходов между окнами</div>
+          </div>
+          <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
       </div>
+  
+      <div class="button-container">
+      
+      </div>
+  
+
+      <script>
+          let connections = {};
+  
+          function checkAnswers() {
+              const pairs = [
+                  ['item1', 'itemC'],
+                  ['item2', 'itemB'],
+                  ['item3', 'itemA'],
+                  ['item5', 'itemE'],
+                  ['item4', 'itemD']
+              ];
+  
+              pairs.forEach(pair => {
+                  const item1 = pair[0];
+                  const item2 = pair[1];
+  
+                  const element1 = document.getElementById(item1);
+                  const element2 = document.getElementById(item2);
+  
+                  element1.style.backgroundColor = '#f7f7f7';
+                  element2.style.backgroundColor = '#f7f7f7';
+  
+                  if (connections[item1] === item2 && connections[item2] === item1) {
+                      element1.style.backgroundColor = '#8dff8d';
+                      element2.style.backgroundColor = '#8dff8d';
+                  } else {
+                      element1.style.backgroundColor = '#ff8d8d'; // Неверный ответ, красный цвет
+                      element2.style.backgroundColor = '#ff8d8d';
+                  }
+              });
+          }
+  
+          let draggedItem = null;
+          let lines = document.getElementById('lines');
+  
+          document.addEventListener('drag', (event) => {
+              event.preventDefault();
+          });
+  
+          document.addEventListener('dragstart', (event) => {
+              draggedItem = event.target;
+              event.dataTransfer.setData('text/plain', null);
+          });
+  
+          document.addEventListener('dragover', (event) => {
+              event.preventDefault();
+          });
+  
+          document.addEventListener('drop', (event) => {
+              event.preventDefault();
+              const target = event.target;
+              if (target.classList.contains('item') && target !== draggedItem) {
+                  // Проверка, что плашки из разных столбцов
+                  if (target.parentElement.id !== draggedItem.parentElement.id && !connections[target.id] && !connections[draggedItem.id]) {
+                      connections[draggedItem.id] = target.id;
+                      connections[target.id] = draggedItem.id;
+  
+                      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  
+                      let startX = draggedItem.offsetLeft + draggedItem.clientWidth;
+                      let startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
+                      let endX = target.offsetLeft;
+                      let endY = target.offsetTop + target.clientHeight / 2;
+  
+                      line.setAttribute("x1", startX.toString()); // начало линии с края плашки
+                      line.setAttribute("y1", startY.toString());
+                      line.setAttribute("x2", endX.toString()); // конец линии с края плашки
+                      line.setAttribute("y2", endY.toString());
+                      lines.appendChild(line);
+                  }
+              }
+          });
+      </script>
+      </div>
+
 </div>
       
         
       
       <div class="line">
         <div id="timer" class="timer">00:00</div>
+        <button onclick="checkAnswers()" class="place__back">Ответить</button>
         <a href="place2-1.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>

@@ -1,19 +1,113 @@
+
 * {
     padding: 0;
-    margin: 0;
+
     box-sizing: border-box;
 }
 
 .container {
-    max-width: 2580px;
     margin: 0 auto;
     min-width: 1300px;
+    min-height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+}
+.containerp {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        position: relative;
+        
+}
+.column {
+    max-width: 100%;
+    padding: 10px 40px 30px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        
 }
 
+.item {
+    position: relative; /* Добавлено */
+    width: 100%;
+    
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 0px 7px #cecece;
+    border-radius: 10px;
+    border-color: white;
+    min-height: 150px;
+    min-width: 500px;
+    flex: 1;
+    justify-content: space-between;
+    font-size: 14pt;
+    white-space: pre-line;
+    white-space: normal !important;
+    padding-bottom: 5px;
+}
+#column1 .item{
+    padding: 30px 50px 30px 30px;  
+    margin: 15px 20px;
+}
+#column2 .item{
+    padding: 30px 30px 30px 60px; 
+    margin: 15px 20px;
+}
+
+.dot {
+    position: absolute;
+    background-color: #8d8dff;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dot-left {
+    left: 5%;
+    width: 30px;
+    height: 30px;
+}
+
+.dot-right {
+
+    right: 5%;
+    width: 30px;
+    height: 30px;
+}
+
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.line1 {
+    position: absolute;
+    pointer-events: none;
+    stroke: #8d8dff;
+    stroke-width: 3;
+}
 .block {
     background: #fff;
     box-shadow: 0px 0px 0px #b5b5b5;
-    padding: 5px 50px 5px 50px;
+    padding: 5px 5px 5px 5px;
+    height: auto; 
+    margin: 0 auto;
+    margin-bottom: 50px;
+    min-height: auto;
+    margin-left: 40px;
 
 }
 
@@ -22,6 +116,7 @@
   padding: 14px;
   border-radius: 10px;
   color: white;
+  
 }
 
 .block > p {
@@ -55,7 +150,7 @@ padding: 0;
     display: block;
     margin: 20px 20px 20px 20px;
     width: 392px;
-    height: 261px;;
+    height: 275px;
     border: 2px solid rgb(90, 51, 90);
     padding: 20px 30px;
     text-decoration: none;
@@ -249,6 +344,9 @@ padding: 0;
     font-size: 19px;
     border-radius: 10px;
     float: right;
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
 }
 
 
