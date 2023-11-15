@@ -15,6 +15,8 @@ margin-top: 3px;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
+   
+   
 }
 .containerp {
     margin: 0 auto;
@@ -37,7 +39,6 @@ margin-top: 3px;
 .item {
     position: relative; /* Добавлено */
     width: 100%;
-    
     background-color: #f7f7f7;
     border: 1px solid #ccc;
     margin: 10px 0;
@@ -47,8 +48,8 @@ margin-top: 3px;
     box-shadow: 0px 0px 7px #cecece;
     border-radius: 10px;
     border-color: white;
-    height: 150px;
-    width: 300px;
+    min-height: 150px;
+    min-width: 300px;
     flex: 1;
     justify-content: space-between;
     font-size: 14pt;
@@ -105,9 +106,12 @@ margin-top: 3px;
     padding: 5px 5px 5px 5px;
     height: auto; 
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     min-height: auto;
     margin-left: 45px;
+    margin-right: 20px;
+    
+
 }
 
 .block > h2 {
