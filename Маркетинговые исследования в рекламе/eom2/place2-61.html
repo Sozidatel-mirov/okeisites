@@ -20,17 +20,17 @@
     .placeholders {
         display: flex;
         box-sizing: border-box;
+        text-align: left;
     }
-
     .placeholder {
         position: relative;
-        width: 300px;
-    height: 150px;
+        width: 200px;
+    height: 20px;
     border: 2px solid #888;
-    margin: 10px;
+    margin: 2px;
     background-color: #ddd;
-    border-radius: 10px;
-    box-shadow: 0px 0px 7px #cecece;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px #cecece;
     box-sizing: content-box;
     display: flex; /* Добавьте это свойство */
     justify-content: center; /* Выравнивание по горизонтали */
@@ -43,9 +43,9 @@
     }
 
     .tile {
-        width: 300px;
-        border-radius: 10px;
-    height: 150px;
+        width: 200px;
+        border-radius: 5px;
+    height: 20px;
     border: 2px solid #888;
     margin: 10px;
     cursor: pointer;
@@ -59,7 +59,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: 0px 0px 7px #cecece;
+    box-shadow: 0px 0px 5px #cecece;
     }
 
     button {
@@ -89,7 +89,7 @@
   <a href="../index.html" class="back">На Главную</a>
   
   <div class="block" style="height: 600px; margin-bottom: 10%">
-    <h2>Инструменты и технологии внедрения информационных систем</h2>
+    <h2>Маркетинговые исследования в рекламе</h2>
         <div class="place__header">
             <p>Выберите из предложенных вариантов слова и вставьте их в предложение</p>
 
@@ -98,24 +98,32 @@
       <hr>
       <div class="place__body">
 
-        <div class="container">
+        <div class="container" style="margin-top: 250px;">
             <div class="placeholders">
-              <p><strong>Анализ рынка</strong> – это сбор и <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                 информации о рынках (продавцов, <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>,
-                  поставщиков финансовых и других услуг, поставщиков сырья и 
-                23
-                товаров) с целью повышения <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                 компании или продукта и повышения уровня <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div> конечного потребителя.</p>
+              <p><strong  style="font-size: 20px;">Анализ рынка </strong> </p><p style="font-size: 20px;"> – это сбор и </p><div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+              <p style="font-size: 20px;"> информации о рынках (продавцов, </p><div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+              <p style="font-size: 20px;">, поставщиков финансовых и других услуг, поставщиков сырья и 
+                 23
+                 товаров) с целью повышения </p>
                 
                     
                     
                     
             </div>
+            <div class="placeholders">
+                
+                   <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <p style="font-size: 20px;">компании или продукта и повышения уровня</p> <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div><p style="font-size: 20px;"> конечного потребителя.</p>
+                  
+                      
+                      
+                      
+              </div>
             <div class="tiles">
-                <div class="tile tile1" id="tile1" draggable="true" ondragstart="drag(event)">удовлетворенности</div>
-                <div class="tile tile2" id="tile2" draggable="true" ondragstart="drag(event)">конкурентоспособности</div>
-                <div class="tile tile3" id="tile3" draggable="true" ondragstart="drag(event)">покупателей</div>
-                <div class="tile tile4" id="tile4" draggable="true" ondragstart="drag(event)">структурирование</div>
+                <div class="tile tile1" id="tile4" draggable="true" ondragstart="drag(event)">удовлетворенности</div>
+                <div class="tile tile2" id="tile3" draggable="true" ondragstart="drag(event)">конкурентоспособности</div>
+                <div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)">покупателей</div>
+                <div class="tile tile4" id="tile1" draggable="true" ondragstart="drag(event)">структурирование</div>
                 
             </div>
             
