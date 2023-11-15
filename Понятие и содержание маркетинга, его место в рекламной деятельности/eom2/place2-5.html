@@ -87,12 +87,12 @@
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block">
-    <h2>Инструменты и технологии внедрения информационных систем</h2>
+  <div class="block" style="height: 900px; margin-bottom: 10%">
+    <h2>Понятие и содержание маркетинга, его место в рекламной деятельности</h2>
         <div class="place__header">
-            <p>Соотнесите элементы управления интерфейса пользователя с их детальным описанием назначения</p>
+            <p>Соотнесите названия ракурсов с их изображением</p>
 
-            <span>10/10</span>
+            <span>5/10</span>
         </div>
         <hr>
         <div class="place__body">
@@ -105,21 +105,19 @@
                     <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
                     <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
                     <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                    <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                    <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
                 </div>
                 <div class="tiles">
-                    <div class="tile tile1" id="tile2" draggable="true" ondragstart="drag(event)">Кнопка</div>
-                    <div class="tile tile4" id="tile55" draggable="true" ondragstart="drag(event)">Элемент управления</div>
-                    <div class="tile tile4" id="tile551" draggable="true" ondragstart="drag(event)">Сообщение</div>
-                    <div class="tile tile4" id="tile6" draggable="true" ondragstart="drag(event)">Меню</div>
+                    <div class="tile tile1" id="tile2" draggable="true" ondragstart="drag(event)">Качество</div>
+                    <div class="tile tile4" id="tile55" draggable="true" ondragstart="drag(event)">Вина</div>
+                    <div class="tile tile4" id="tile551" draggable="true" ondragstart="drag(event)">Юмор</div>
+                    <div class="tile tile4" id="tile555" draggable="true" ondragstart="drag(event)">Гордость</div>
                 </div>
                 <div class="tiles">
-                    <div class="tile tile4" id="tile1" draggable="true" ondragstart="drag(event)">Ссылка</div>
-                    <div class="tile tile4" id="tile5" draggable="true" ondragstart="drag(event)">Поле ввода</div>     
-                    <div class="tile tile2" id="tile3" draggable="true" ondragstart="drag(event)">Вкладка</div>
-                    <div class="tile tile3" id="tile4" draggable="true" ondragstart="drag(event)">Выпадающий список</div>
-                    <div class="tile tile4" id="tile556" draggable="true" ondragstart="drag(event)">Ошибка</div>
+                    <div class="tile tile4" id="tile1" draggable="true" ondragstart="drag(event)">Страх</div>
+                    <div class="tile tile4" id="tile554" draggable="true" ondragstart="drag(event)">Ирония</div>     
+                    <div class="tile tile2" id="tile3" draggable="true" ondragstart="drag(event)">Экономичность</div>
+                    <div class="tile tile3" id="tile4" draggable="true" ondragstart="drag(event)">Эффективность</div>
+                    <div class="tile tile4" id="tile556" draggable="true" ondragstart="drag(event)">Сочувствие</div>
                     
                 </div>
             </div>
@@ -172,7 +170,6 @@
                     ||(tile && tile.id === 'tile' + (index + 3) && tile.parentElement)
                     ||(tile && tile.id === 'tile' + (index + 4) && tile.parentElement)
                     ||(tile && tile.id === 'tile' + (index + 5) && tile.parentElement)
-                    ||(tile && tile.id === 'tile' + (index + 6) && tile.parentElement)
                     ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
                     ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
                     ||(tile && tile.id === 'tile' + (index - 1) && tile.parentElement)
@@ -180,7 +177,6 @@
                     ||(tile && tile.id === 'tile' + (index - 3) && tile.parentElement)
                     ||(tile && tile.id === 'tile' + (index - 4) && tile.parentElement)
                     ||(tile && tile.id === 'tile' + (index - 5) && tile.parentElement)
-                    ||(tile && tile.id === 'tile' + (index - 6) && tile.parentElement)
                     ||(tile && tile.id === 'tile' + (index) && tile.parentElement)) {
                             tile.classList.remove('incorrect');
                             tile.classList.add('correct');
@@ -196,6 +192,7 @@
                     });
                 }
             </script>
+    <a href="place2-6.html"><button class="place__btn"  onclick="next()">Далее</button></a>
     </div>
 </div>
       
@@ -204,7 +201,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-71.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-4.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>
