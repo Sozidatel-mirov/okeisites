@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="../css/place.css">
+
+</head>
+
+<body>
+  <a href="../index.html" class="back">На Главную</a>
+  
+  <div class="block">
+    <h2>Сетевые протоколы и коммуникации</h2>
+    <div class="place__header">
+      <p>Выполните действия, указанные на странице</p>
+                 
+      <span>2/10</span>
+    </div>
+      <hr>
+        <div class="place__body">
+          <p>
+            <h3 style="text-align: center;">Шаг 3: Изучите содержимое HTTP-пакета.</h3>
+            <h3 style="text-align: left;">a.</h3> Щелкните первый цветной квадрат в столбце Info (Информация) списка событий Event List. Вам 
+может понадобиться развернуть панель симуляции или использовать полосу прокрутки
+непосредственно под списком событий Event List.  Откроется окно PDU Information at Device: Web 
+Client (Информация о PDU на устройстве: вебклиент). В этом окне есть только две вкладки: OSI 
+Model (Модель OSI) и Outbound PDU Details (Сведения об исходящей PDU), поскольку это только 
+начало передачи. По мере изучения новых событий станут видны три вкладки, включая новую 
+вкладку Inbound PDU Details (Сведения о входящей PDU). Когда событие является последним в 
+потоке трафика, отображаются только вкладки OSI Model и Inbound PDU Details.<br>
+
+<h4 style="text-align: left;">b.</h4> Убедитесь, что выбрана вкладка OSI Model. Убедитесь, что в столбце Out Layers (Исходящие
+уровни) выделено поле Layer 7 (Уровень 7). <br>
+ Нажмите кнопку Next Layer (Следующий уровень). Должен быть выделен уровень 4. <br>
+Нажмите кнопку Next Layer (Следующий уровень). Должен быть выделен уровень 3.<br>
+<p>Какой текст отображается рядом с меткой Layer 7?<br><textarea style="width: 275px; height: 25px;"></textarea> </p> <p>
+
+  Какая информация перечислена в пронумерованных шагах непосредственно под полями In Layers (Входящие уровни) и Out Layers (Исходящие уровни)? <br><textarea style="width: 275px; height: 25px;"></textarea>
+  
+  
+  <br>Нажмите кнопку Next Layer (Следующий уровень). Должен быть выделен уровень 4. Какое
+  значение имеет параметр Dst Port (Порт назначения)?<br>   <textarea style="width: 275px; height: 25px;"></textarea><br>
+  
+  Нажмите кнопку Next Layer (Следующий уровень). Должен быть выделен уровень 3. Какое
+  значение имеет параметр Dest. IP (IP-адрес назначения)? <br>  <textarea style="width: 275px; height: 25px;"></textarea><br>
+  
+  Нажмите кнопку Next Layer (Следующий уровень). Какая информация отображается на этом
+  уровне?<br>
+  <textarea style="width: 275px; height: 25px;"></textarea><br>
+  Если сравнить сведения в разделе IP вкладки PDU Details со сведениями на вкладке OSI Model,
+  какая информация является для них общей? К какому уровню она относится?<br>
+  <textarea style="width: 275px; height: 25px;"></textarea><br>
+  Если сравнить сведения в разделе TCP вкладки PDU Details со сведениями на вкладке OSI Model,
+  какая информация является для них общей и к какому уровню она относится?<br>
+  <textarea style="width: 275px; height: 25px;"></textarea><br>
+  Какой Host (узел) указан в разделе HTTP вкладки PDU Details? C каким уровнем будут связаны
+  эти сведения на вкладке OSI Model?<br>
+  <textarea style="width: 275px; height: 25px;"></textarea></p>
+
+<h4 style="text-align: left;">c.</h4>  Щелкните вкладку Outbound PDU Details (Сведения об исходящей PDU).
+Сведения на вкладке PDU Details (Сведения о PDU) отражают уровни модели TCP/IP.
+Примечание. Сведения в разделе Ethernet II представляют собой еще более подробные данные,
+чем показанные в разделе уровня 2 на вкладке OSI Model. Вкладка Outbound PDU Details
+содержит более описательные и подробные сведения. Значения DEST MAC (MAC-адрес
+назначения) и SRC MAC (MAC-адрес источника) в разделе Ethernet II на вкладке PDU Details
+отображаются на вкладке OSI Model в разделе Layer 2, но не указаны в качестве таковых.<br>
+<h4 style="text-align: left;">d.</h4>  Щелкните следующий цветной квадрат в столбце Info списка Event List. Активен только 
+уровень 1
+(не отображается серым цветом). Устройство извлекает кадр из буфера и помещает его в сеть.<br>
+
+
+<h4" style="text-align: left;">e.</h4>  Перейдите к следующему полю HTTP Info в списке событий Event List и щелкните цветной
+квадрат. В этом окне есть два столбца: In Layers и Out Layers. Обратите внимание на
+направление стрелки непосредственно под столбцом In Layers. Она смотрит вверх, показывая
+направление перемещения данных. Пролистайте эти уровни, обращая внимание на
+просмотренные ранее элементы. В верхней части столбца стрелка указывает вправо. Это
+означает, что сервер теперь отправляет данные обратно клиенту.
+            </p>
+        <div style="margin-bottom: 150px;">
+
+        
+
+
+        </div></div>
+        <a href="place2-3.html"><button class="place__btn" onclick="next()">Далее</button></a>
+      </div>
+      
+      <div class="line">
+        <div id="timer" class="timer">00:00</div>
+        
+        <a href="place2-1.html"><button class="place__back" >На шаг назад</button></a>
+        
+  </div>
+</body>
+
+</html>
