@@ -36,6 +36,20 @@
     justify-content: center; /* Выравнивание по горизонтали */
     align-items: center; /* Выравнивание по вертикали */
     }
+    .placeholder1 {
+        position: relative;
+        width: 300px;
+    height: 150px;
+    border: 2px solid #888;
+    margin: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #cecece;
+    box-sizing: content-box;
+    display: flex; /* Добавьте это свойство */
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    }
 
     .tiles {
         display: flex;
@@ -89,7 +103,7 @@
   <a href="../index.html" class="back">На Главную</a>
   
   <div class="block">
-    <h2>Инструменты и технологии внедрения информационных систем</h2>
+    <h2>Маркетинговые исследования в рекламе</h2>
         <div class="place__header">
             <p>Перенесите в таблицу все фразы, относящиеся к понятию «Целевая аудитория»</p>
 
@@ -99,14 +113,15 @@
         <div class="place__body">
 
             <div class="container">
-                <div class="placeholders">
+                <div class="placeholders" style="outline: black; outline-style: solid;" >
+                    <div class="placeholder1" id="plac">Целевая аудитория</div>
                     <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
                         <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
                         <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
                 </div>
                 <div class="tiles">
                     <div class="tile tile1" id="tile4" draggable="true" ondragstart="drag(event)">группа людей, которым интересен продукт или услуга компании</div>
-                    <div class="tile tile2" id="tile1" draggable="true" ondragstart="drag(event)">группа людей, объединённых общей идеей</div>
+                    <div class="tile tile2" id="tile124" draggable="true" ondragstart="drag(event)">группа людей, объединённых общей идеей</div>
                     <div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)">группа людей, у которых есть потребность в продукте и возможность его купить</div>
                     <div class="tile tile4" id="tile3" draggable="true" ondragstart="drag(event)">группа людей, на которых направлено рекламное сообщение, которое формируют маркетологи в рамках рекламной кампании продукта</div>
                     
@@ -157,7 +172,21 @@
                     placeholders.forEach(function(placeholder, index) {
                         var tile = placeholder.querySelector('.tile');
         
-                        if (tile && tile.id === 'tile' + (index + 1) && tile.parentElement) {
+                        if ((tile && tile.id === 'tile' + (index + 1) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 2) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 3) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 4) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 5) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 6) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 1) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 2) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 3) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 4) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 5) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 6) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index) && tile.parentElement)) {
                             tile.classList.remove('incorrect');
                             tile.classList.add('correct');
                             placeholder.classList.remove('incorrect');
@@ -179,7 +208,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-52.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-52.html"><button class="place__back">На шаг назад</button></a>
         
   </div>
 </body>

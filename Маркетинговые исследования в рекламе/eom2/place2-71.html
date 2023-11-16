@@ -89,7 +89,7 @@
   <a href="../index.html" class="back">На Главную</a>
   
   <div class="block" style="height: 600px; margin-bottom: 10%">
-    <h2>Инструменты и технологии внедрения информационных систем</h2>
+    <h2>Маркетинговые исследования в рекламе</h2>
         <div class="place__header">
             <p>Выберите направления маркетингового анализа</p>
 
@@ -109,9 +109,9 @@
               <div class="tiles">
                   <div class="tile tile1" id="tile4" draggable="true" ondragstart="drag(event)">Анализ целевой аудитории</div>
                   <div class="tile tile2" id="tile1" draggable="true" ondragstart="drag(event)">Анализ конкурентов</div>
-                  <div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)">Анализ социальных сетей</div>
+                  <div class="tile tile3" id="tile244" draggable="true" ondragstart="drag(event)">Анализ социальных сетей</div>
                   <div class="tile tile4" id="tile3" draggable="true" ondragstart="drag(event)">Анализ рынка</div>
-                  <div class="tile tile2" id="tile1" draggable="true" ondragstart="drag(event)">Анализ финансовой отчетности компании</div>
+                  <div class="tile tile2" id="tile144" draggable="true" ondragstart="drag(event)">Анализ финансовой отчетности компании</div>
               </div>
               
           </div>
@@ -159,7 +159,21 @@
                   placeholders.forEach(function(placeholder, index) {
                       var tile = placeholder.querySelector('.tile');
       
-                      if (tile && tile.id === 'tile' + (index + 1) && tile.parentElement) {
+                      if ((tile && tile.id === 'tile' + (index + 1) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 2) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 3) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 4) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 5) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index + 6) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 1) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 2) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 3) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 4) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 5) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index - 6) && tile.parentElement)
+                    ||(tile && tile.id === 'tile' + (index) && tile.parentElement)) {
                           tile.classList.remove('incorrect');
                           tile.classList.add('correct');
                           placeholder.classList.remove('incorrect');
@@ -182,6 +196,7 @@
       
       <div class="line">
         <div id="timer" class="timer">00:00</div>
+        <button onclick="checkAnswers()" class="place__back">Ответить</button>
         <a href="place2-6.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
