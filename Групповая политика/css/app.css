@@ -47,7 +47,7 @@ h2  {
     transform: rotate(-90deg);
     display: block;
     position: fixed;
-    left: -50px;
+    left:-59px;
     z-index: 1500;
     top: 40%;
     font-size: 1.2em;
@@ -306,12 +306,14 @@ transform: translate(-50%, 0);
 white-space:normal !important;
     word-wrap:break-word;
 }
-
+quiz__body>{
+    margin-top:65px;
+}
 .buttons__content> div {
     box-shadow: 0px 0px 7px #cecece;
     min-width: 650px;
     min-height: 105px;
-    margin: 50px 10px;
+    margin: 60px 10px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
