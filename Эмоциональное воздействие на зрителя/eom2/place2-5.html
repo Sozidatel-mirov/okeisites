@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="../css/place.css">
+ 
+</head>
+
+<body>
+  <a href="../index.html" class="back">На Главную</a>
+  
+  <div class="block" style="height: 900px; margin-bottom: 10%">
+    <h2>Эмоциональное воздействие на зрителя</h2>
+        <div class="place__header">
+            <p>Сопоставьте каждую концепцию с соответствующим действием или описанием в контексте эмпатии и идентификации с персонажами</p>
+
+            <span>5/10</span>
+        </div>
+        <hr>
+        <div class="place__body">
+
+            <div class="containerp" >
+                <div class="column" id="column1" >
+                    <div class="item" id="item1" draggable="true">
+                        Базовые Эмоции по Критерию Универсальности
+                        <div class="dot dot-right"></div>
+                    </div>
+                    <div class="item" id="item2" draggable="true">
+                        Функции Эмоций
+                        <div class="dot dot-right" draggable="false"></div>
+                    </div>
+                    <div class="item" id="item3" draggable="true">
+                        Эмоциональные Состояния
+                        <div class="dot dot-right" draggable="false"></div>
+                    </div>
+                    <div class="item" id="item4" draggable="true">
+                        Эмоциональные Выражения Лиц
+                        <div class="dot dot-right" draggable="false"></div>
+                    </div>
+     
+                  
+                </div>
+                <div class="column" id="column2">
+                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Основные эмоции: гнев, страх, радость, печаль</div>
+                    
+                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Выражение симпатии и сочувствия к персонажу</div>
+                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Участие в переживаниях и судьбе персонажа</div>
+                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Направление к действию и блокировка мышления</div>
+                </div>
+                <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+            </div>
+        
+            <div class="button-container">
+            
+            </div>
+        
+            <script>
+                let connections = {};
+        
+                function checkAnswers() {
+                    const pairs = [
+                        ['item1', 'itemA'],
+                        ['item2', 'itemB'],
+                        ['item3', 'itemC'],
+                        ['item4', 'itemD']
+                    ];
+        
+                    pairs.forEach(pair => {
+                        const item1 = pair[0];
+                        const item2 = pair[1];
+        
+                        const element1 = document.getElementById(item1);
+                        const element2 = document.getElementById(item2);
+        
+                        element1.style.backgroundColor = '#f7f7f7';
+                        element2.style.backgroundColor = '#f7f7f7';
+        
+                        if (connections[item1] === item2 && connections[item2] === item1) {
+                            element1.style.backgroundColor = '#8dff8d';
+                            element2.style.backgroundColor = '#8dff8d';
+                        } else {
+                            element1.style.backgroundColor = '#ff8d8d'; // Неверный ответ, красный цвет
+                            element2.style.backgroundColor = '#ff8d8d';
+                        }
+                    });
+                }
+        
+                let draggedItem = null;
+                let lines = document.getElementById('lines');
+        
+                document.addEventListener('drag', (event) => {
+                    event.preventDefault();
+                });
+        
+                document.addEventListener('dragstart', (event) => {
+                    draggedItem = event.target;
+                    event.dataTransfer.setData('text/plain', null);
+                });
+        
+                document.addEventListener('dragover', (event) => {
+                    event.preventDefault();
+                });
+                document.addEventListener('dragstart', (event) => {
+        // Изменено условие, чтобы учитывать родительский элемент .item
+        if (event.target.classList.contains('item')) {
+            draggedItem = event.target;
+            event.dataTransfer.setData('text/plain', null);
+        }
+    });
+        
+                document.addEventListener('drop', (event) => {
+                    event.preventDefault();
+                    const target = event.target;
+                    if (target.classList.contains('item') && target !== draggedItem) {
+                        // Проверка, что плашки из разных столбцов
+                        if (target.parentElement.id !== draggedItem.parentElement.id && !connections[target.id] && !connections[draggedItem.id]) {
+                            connections[draggedItem.id] = target.id;
+                            connections[target.id] = draggedItem.id;
+        
+                            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        
+                            let startX = draggedItem.offsetLeft + draggedItem.clientWidth;
+                            let startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
+                            let endX = target.offsetLeft;
+                            let endY = target.offsetTop + target.clientHeight / 2;
+        
+                            line.setAttribute("x1", startX.toString()); // начало линии с края плашки
+                            line.setAttribute("y1", startY.toString());
+                            line.setAttribute("x2", endX.toString()); // конец линии с края плашки
+                            line.setAttribute("y2", endY.toString());
+                            lines.appendChild(line);
+                        }
+                    }
+                });
+            </script>
+    <a href="place2-6.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    </div>
+</div>
+      
+        
+      
+      <div class="line">
+        <div id="timer" class="timer">00:00</div>
+        <button onclick="checkAnswers()" class="place__back">Ответить</button>
+        <a href="place2-4.html"><button class="place__back" >На шаг назад</button></a>
+        
+  </div>
+</body>
+
+</html>
