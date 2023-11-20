@@ -1,14 +1,13 @@
 
 * {
     padding: 0;
-    margin: 0;
-    margin-top: 10px;
+margin: 0;
     box-sizing: border-box;
 }
 
 .container {
     margin: 0 auto;
-    min-width: 500px;
+    min-width: 600px;
     min-height: auto;
     display: flex;
     justify-content: space-between;
@@ -48,13 +47,12 @@
     border-radius: 10px;
     border-color: white;
     min-height: 150px;
-    min-width: 500px;
+    min-width: 300px;
     flex: 1;
     justify-content: space-between;
     font-size: 14pt;
     white-space: pre-line;
     white-space: normal !important;
-    padding-bottom: 5px;
 }
 #column1 .item{
     padding: 30px 50px 30px 30px;  
@@ -108,9 +106,7 @@
     margin: 0 auto;
     margin-bottom: 50px;
     min-height: auto;
-    margin-left: 40px;
-    box-sizing: border-box;
-
+    margin-left: 45px;
 }
 
 .block > h2 {
@@ -118,7 +114,6 @@
   padding: 14px;
   border-radius: 10px;
   color: white;
-  
 }
 
 .block > p {
@@ -152,7 +147,7 @@ padding: 0;
     display: block;
     margin: 20px 20px 20px 20px;
     width: 392px;
-    height: 275px;
+    height: 261px;;
     border: 2px solid rgb(90, 51, 90);
     padding: 20px 30px;
     text-decoration: none;
@@ -179,7 +174,6 @@ padding: 0;
     position: fixed; 
     bottom: 0;
     width: 100%;
-   
 }
 
 .modal {
