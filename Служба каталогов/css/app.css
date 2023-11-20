@@ -212,6 +212,24 @@ h2  {
     font-weight: 700;
     width-left: 0px;
 }
+.back {
+    background: #785a95;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: block;
+    position: fixed;
+    left: -50px;
+    z-index: 1500;
+    top: 40%;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+
+}
 
 .place__body {
     margin: 15px 0px;
@@ -226,6 +244,9 @@ h2  {
     font-size: 19px;
     border-radius: 10px;
     float: right;
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
 }
 
 .place__line {
