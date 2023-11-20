@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="../css/place.css">
+</head>
+
+<body>
+  <a href="../index.html" class="back">На Главную</a>
+  
+  <div class="block">
+    <h2>Администрирование сетевых ОС. Служба каталогов</h2>
+    <div class="place__header">
+      <p>Создание учетных записей</p>
+                 
+      <span>4/10</span>
+    </div>
+        <hr>
+          <div class="place__body">
+            
+            
+            <p>Для создания новых учетных записей и администраторов откройте оснастку Active Directory Users and Computers, для этого откройте Диспетчер серверов и перейдите в раздел AD DS. В контекстном меню сервера выберете соответствующую оснастку.</p>
+            <img src="../image/data/practic/20.png" style="width: 450px;">
+            <p>В новом окне разверните дерево вашего домена и найдите каталог с пользователями Users. Правой кнопкой мыши нажмите на каталог и выберете Создать -> Пользователь.</p>
+            <img src="../image/data/practic/21.png" style="width: 750px;">
+            <p>Для нового пользователя задайте личные данные и имя входа.</p>
+            <img src="../image/data/practic/22.png">
+            <p>Далее введите пароль, который должен быть достаточно сложным и содержать буквы разного регистра и цифры. Дополнительные опции выберите на свое усмотрение.</p>
+            <img src="../image/data/practic/23.png">
+            <p>Создайте нового пользователя.</p>
+            <img src="../image/data/practic/24.png">
+            <p>Чтобы пользователь мог управлять службами Active Directory, его необходимо добавить в группу Domain Admins. Для этого с помощью правой кнопки мыши откройте свойства пользователя и перейдите во вкладку Member Of. Нажмите кнопку Add для добавления в группу.</p>
+            <img src="../image/data/practic/25.png">
+            <p>Выполните поиск группы Domain Admins с помощью кнопки Check Names. Нажмите OK.</p>
+            <img src="../image/data/practic/26.png">
+            <p>Сохраните изменения кнопкой Apply.</p>
+            <img src="../image/data/practic/27.png">
+            <p>Теперь созданный пользователь сможет подключиться к контроллеру домена.</p>
+            <p>Рекомендуется сразу убедиться, что для публичного сетевого адаптера включен Firewall, а для доменной/частной сетей - отключен.</p>
+            <img src="../image/data/practic/28.png" style="border: 1px solid black; ">
+        
+
+
+        </div></div>
+        <a href="place2-5.html"><button button class="place__btn" onclick="next()">Далее</button></a>
+      </div>
+      
+      <div class="line">
+        <div id="timer" class="timer">00:00</div>
+        
+        <a href="place2-3.html"><button class="place__back" >На шаг назад</button></a>
+        
+  </div>
+</body>
+
+</html>

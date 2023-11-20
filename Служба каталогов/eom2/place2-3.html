@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="../css/place.css">
+
+</head>
+
+<body>
+  <a href="../index.html" class="back">На Главную</a>
+  
+  <div class="block">
+    <h2>Администрирование сетевых ОС. Служба каталогов</h2>
+    <div class="place__header">
+      <p>Создание учетных записей</p>
+                 
+      <span>3/10</span>
+    </div>
+        <hr>
+          <div class="place__body">
+            <p>В поиске введите dcpromo и откройте одноименную утилиту</p>
+            <img src="../image/data/practic/9.png">
+            <p>Откройте Диспетчер серверов, в вертикальном меню у вас появится вкладка AD DS </p>
+            
+            <img src="../image/data/practic/11.png"  style="width: 600px;">
+            <p>В горизонтальном меню нажмите на восклицательный знак и выберете Promote this server to a domain controller (Повыситьроль этого сервера до уровня контроллера).</p>
+            <img src="../image/data/practic/12.png"  style="width: 300px;">
+            <p>В появившемся окне настроек выберите Добавить новый лес (т.к. действия выполняются впервые) и введите ваше доменное имя.</p>
+            <img src="../image/data/practic/13.png"  style="width: 600px;">
+            <p>На следующем шаге введите и подтвердите пароль для режима восстановления служб каталогов.</p>
+            <img src="../image/data/practic/14.png" style="width: 600px;">
+            <p>На этом шаге просто нажмите Next.</p>
+            <img src="../image/data/practic/15.png" style="width: 600px;">
+            <p>Укажите удобное имя домена NetBIOS.</p>
+            <img src="../image/data/practic/16.png" style="width: 600px;">
+            <p>Укажите пути до базы данных AD DS, файлов журналов и папки SYSVOL. Рекомендуем оставить значения по умолчанию.</p>
+            <img src="../image/data/practic/17.png" style="width: 600px;">
+            <p>Проверьте настроенные параметры.</p>
+            <img src="../image/data/practic/18.png" style="width: 600px;">
+            <p>Дождитесь проверки предварительных требований после чего нажмите Установить.</p>
+            <img src="../image/data/practic/19.png" style="width: 600px;">
+            <p>После установки сервер будет перезагружен.</p>
+            
+        <div>
+
+        
+
+
+        </div></div>
+        <a href="place2-4.html"><button  class="place__btn" onclick="next()">Далее</button></a>
+      </div>
+      
+      <div class="line">
+        <div id="timer" class="timer">00:00</div>
+        
+        <a href="place2-2.html"><button class="place__back" >На шаг назад</button></a>
+        
+  </div>
+</body>
+
+</html>
