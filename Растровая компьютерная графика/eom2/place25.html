@@ -42,8 +42,8 @@
     }
 
     .tile {
-        width: 300px;
-        border-radius: 10px;
+    width: 300px;
+    border-radius: 10px;
     height: 150px;
     border: 2px solid #888;
     margin: 10px;
@@ -90,8 +90,8 @@
   <div class="block" >
     <h2>Тренажер: Работа с растровой графикой.</h2>
     <div class="place__header">
-        <p>Упорядочьте шаги сжатия растрового изображения по возрастанию потери качества:</p>
-        <span>9/10</span>
+        <p>Расставьте в правильной последовательности этапы обработки растрового изображения в графическом редакторе:</p>
+        <span>10/10</span>
     </div>
     <hr>
     <div class="place__body">
@@ -104,10 +104,10 @@
                 <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)">4</div>
             </div>
             <div class="tiles">
-                <div class="tile tile1" id="tile1" draggable="true" ondragstart="drag(event)">Использование формата JPEG </div>
-                <div class="tile tile2" id="tile2" draggable="true" ondragstart="drag(event)">Использование формата PNG </div>
-                <div class="tile tile3" id="tile3" draggable="true" ondragstart="drag(event)">Использование формата JPEG </div>
-                <div class="tile tile4" id="tile4" draggable="true" ondragstart="drag(event)">Использование формата BMP</div>
+                <div class="tile tile1" id="tile3" draggable="true" ondragstart="drag(event)">Регулировка яркости и контраста</div>
+                <div class="tile tile2" id="tile2" draggable="true" ondragstart="drag(event)">Выделение и ретушь дефектов изображения</div>
+                <div class="tile tile3" id="tile1" draggable="true" ondragstart="drag(event)">Применение фильтров и эффектов</div>
+                <div class="tile tile4" id="tile4" draggable="true" ondragstart="drag(event)">Переход к режиму рисования и добавление элементов</div>
             </div>
         </div>
         <script>
@@ -168,7 +168,6 @@
                 });
             }
         </script>
-        <a href="place25.html"><button class="place__btn"  onclick="next()">Далее</button></a>
 </div>
   
    
@@ -178,7 +177,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place23.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place24.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>
