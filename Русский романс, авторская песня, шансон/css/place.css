@@ -107,6 +107,7 @@ margin: 0;
     margin-bottom: 50px;
     min-height: auto;
     margin-left: 45px;
+    width: 100%;
 }
 
 .block > h2 {
