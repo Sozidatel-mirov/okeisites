@@ -197,10 +197,12 @@
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var videoPlayer = document.querySelector('#openModal3 video');
+      var videos = document.querySelectorAll('#openModal3 video');
   
       document.querySelector('#openModal3 .close').addEventListener('click', function() {
-        videoPlayer.pause();
+        videos.forEach(function(video) {
+          video.pause();
+        });
       });
     });
   </script>
