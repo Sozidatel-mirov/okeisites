@@ -17,15 +17,15 @@
       <p>Изучите материал о жанрах музыки. Чтобы перейти к учебному материалу, кликните на
         каждую из иконок.</p>
       <div class="inner">
-        <a href="#openModal" class="getter__block">
+        <a href="#openModal" class="getter__block" onclick="changeBorderColor(1)">
           <img src="../image/11.png"  >
           <p>Методико - теоретический материал</p>
         </a>
-        <a href="#openModal2" class="getter__block">
+        <a href="#openModal2" class="getter__block" onclick="changeBorderColor(2)">
           <img src="../image/22.png" >
           <p>Визуально - ознакомительный материал</p>
         </a>
-        <a href="#openModal3" class="getter__block">
+        <a href="#openModal3" class="getter__block" onclick="changeBorderColor(3)">
           <img src="../image/33.png" >
           <p>Видеоурок</p>
         </a>
@@ -195,6 +195,15 @@
       </div>
     </div>
   </div>
+  <script>
+    function changeBorderColor(blockNumber) {
+      var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
+      var blockText = getterBlock.querySelector('p');
+  
+      getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+      blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
+    }
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var videos = document.querySelectorAll('#openModal3 video');

@@ -137,7 +137,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <a href="#close" title="Close" class="close">×</a>
-          <h3 class="modal-title">Урок по видам компьютерной графики:</h3>
+          <h3 class="modal-title">Ознакомительное видео:</h3>
         </div>
         <div class="modal-body" style="display: flex; justify-content: center;">
           <video width="800" controls="controls" poster="../video/duel.jpg">
@@ -150,7 +150,10 @@
   <script>
     function changeBorderColor(blockNumber) {
       var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
-      getterBlock.style.border = '2px solid rgb(179, 179, 181)'; // Замените 'red' на желаемый цвет
+      var blockText = getterBlock.querySelector('p');
+  
+      getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+      blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
     }
   </script>
   <script>

@@ -14,37 +14,37 @@
             <h2>Основные правила построения кадра</h2>
             <p>Формирование новых знаний и способов деятельности (изложение нового материала)</p>
             <div class="inner">
-                <a href="#openModal" class="getter__block">
+                <a href="#openModal" class="getter__block" onclick="changeBorderColor(1)">
                     <img src="../image//fghtuoj/1.png">
                     <p>Принципы анимации</p>
                 </a>
-                <a href="#openModal2" class="getter__block">
+                <a href="#openModal2" class="getter__block" onclick="changeBorderColor(2)">
                     <img src="../image/fghtuoj/2.png">
                     <p>Типы планов</p>
                 </a>
-                <a href="#openModal3" class="getter__block">
+                <a href="#openModal3" class="getter__block" onclick="changeBorderColor(3)">
                   <img src="../image/fghtuoj/3.png">
                   <p>Групповой план</p>
               </a>
-              <a href="#openModal343" class="getter__block">
+              <a href="#openModal343" class="getter__block" onclick="changeBorderColor(4)">
                 <img src="../image//fghtuoj/1 — копия.png">
                 <p>Съемка с уровня глаз</p>
             </a>
-            <a href="#openModal242" class="getter__block">
+            <a href="#openModal242" class="getter__block" onclick="changeBorderColor(5)">
                 <img src="../image/fghtuoj/2 — копия.png">
                 <p>Съемка с высоты птичьего полета
                 </p>
-                <a href="#openModal2222" class="getter__block">
+                <a href="#openModal2222" class="getter__block" onclick="changeBorderColor(6)">
                   <img src="../image//fghtuoj/4.png">
                   <p>Нижний ракурс</p>
               </a>
-              <a href="#openModal3333" class="getter__block">
+              <a href="#openModal3333" class="getter__block" onclick="changeBorderColor(7)">
                   <img src="../image/fghtuoj/5 — копия.jpg">
                   <p>Верхний ракурс</p>
               </a>
               
             </a>
-            <a href="#openModal252" class="getter__block">
+            <a href="#openModal252" class="getter__block" onclick="changeBorderColor(8)">
               <img src="../image/fghtuoj/4 — копия.jpg">
               <p>Нейтральный ракурс</p>
           </a>
@@ -428,6 +428,15 @@
           transform: rotate(90deg);
         }
       </style>
+      <script>
+        function changeBorderColor(blockNumber) {
+          var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
+          var blockText = getterBlock.querySelector('p');
+      
+          getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+          blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
+        }
+      </script>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           var videoPlayer = document.querySelector('#openModal3 video');

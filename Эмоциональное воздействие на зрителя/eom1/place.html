@@ -14,35 +14,35 @@
             <h2>Эмоциональное воздействие на зрителя</h2>
             <p>Формирование новых знаний и способов деятельности (изложение нового материала)</p>
             <div class="inner">
-                <a href="#openModal" class="getter__block">
+                <a href="#openModal" class="getter__block" onclick="changeBorderColor(1)">
                     <img src="../image/duck/1.png">
                     <p>Эмоциональное воздействие на зрителя</p>
                 </a>
-                <a href="#openModal2" class="getter__block">
+                <a href="#openModal2" class="getter__block" onclick="changeBorderColor(2)">
                     <img src="../image/duck/2.png">
                     <p>Функции эмоций</p>
                 </a>
-                <a href="#openModal3" class="getter__block">
+                <a href="#openModal3" class="getter__block" onclick="changeBorderColor(3)">
                   <img src="../image/duck/3.png">
                   <p>Эмоциональные ходы в сценарии</p>
               </a>
-              <a href="#openModal4" class="getter__block">
+              <a href="#openModal4" class="getter__block" onclick="changeBorderColor(4)">
                   <img src="../image/duck/4.png">
                   <p>Эмоциональные ловушки в рекламе</p>
               </a>
-              <a href="#openModal5" class="getter__block">
+              <a href="#openModal5" class="getter__block" onclick="changeBorderColor(5)">
                 <img src="../image/duck/4.jpg">
                 <p>Психология цвета и звука</p>
             </a>
-            <a href="#openModal6" class="getter__block">
+            <a href="#openModal6" class="getter__block" onclick="changeBorderColor(6)">
                 <img src="../image/duck/5.jpg">
                 <p>Эмоциональные реакции в социальных медиа</p>
             </a>
-            <a href="#openModal7" class="getter__block">
+            <a href="#openModal7" class="getter__block" onclick="changeBorderColor(7)">
               <img src="../image/duck/6.jpg">
               <p>Эмпатия и идентификация с персонажами</p>
           </a>
-          <a href="#openModal8" class="getter__block">
+          <a href="#openModal8" class="getter__block" onclick="changeBorderColor(8)">
               <img src="../image/duck/7.jpg">
               <p>Эмоциональные тренды в телевидении</p>
           </a>
@@ -370,6 +370,15 @@
           transform: rotate(90deg);
         }
       </style>
+      <script>
+        function changeBorderColor(blockNumber) {
+          var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
+          var blockText = getterBlock.querySelector('p');
+      
+          getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+          blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
+        }
+      </script>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           var videoPlayer = document.querySelector('#openModal3 video');

@@ -14,24 +14,24 @@
             <h2>Инструменты и технологии внедрения информационных систем</h2>
             <p>Изучите теоретический материал об инструментах и технологиях внедрения информационных систем. Чтобы перейти к изучению материала кликните на каждую из иконок.</p>
             <div class="inner">
-                <a href="#openModal" class="getter__block">
+                <a href="#openModal" class="getter__block" onclick="changeBorderColor(1)">
                     <img src="../image/11.png">
                     <p>Внедрение информационных систем</p>
                 </a>
-                <a href="#openModal2" class="getter__block">
+                <a href="#openModal2" class="getter__block" onclick="changeBorderColor(2)">
                     <img src="../image/22.png">
                     <p>Основные фазы внедрения информационной системы</p>
                 </a>
-                <a href="#openModal3" class="getter__block">
+                <a href="#openModal3" class="getter__block" onclick="changeBorderColor(3)">
                     <img src="../image/33.png">
                     <p>Основные технологии и средства внедрения информационных систем</p>
                 </a>
 
-              <a href="#openModal7" class="getter__block">
+              <a href="#openModal7" class="getter__block" onclick="changeBorderColor(4)">
                   <img src="../image/55.png">
                   <p>Применение технологии RUP в процессе внедрения</p>
               </a>
-              <a href="#openModal8" class="getter__block">
+              <a href="#openModal8" class="getter__block" onclick="changeBorderColor(5)">
                   <img src="../image/55.png" >
                   <p>CALS технологии</p>
               </a>
@@ -359,6 +359,15 @@
           </div>
         </div>
       </div>
+      <script>
+        function changeBorderColor(blockNumber) {
+          var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
+          var blockText = getterBlock.querySelector('p');
+      
+          getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+          blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
+        }
+      </script>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           var videoPlayer = document.querySelector('#openModal3 video');

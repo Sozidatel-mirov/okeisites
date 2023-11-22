@@ -14,35 +14,35 @@
             <h2>Введение в сетевые технологии</h2>
             <p>Изучите материал по данной теме. Чтобы перейти к учебному материалу, кликните на каждую из иконок.</p>
             <div class="inner">
-                <a href="#openModal" class="getter__block">
+                <a href="#openModal" class="getter__block" onclick="changeBorderColor(1)">
                     <img src="../image/33.png">
                     <p>Основные понятия</p>
                 </a>
-                <a href="#openModal2" class="getter__block">
+                <a href="#openModal2" class="getter__block" onclick="changeBorderColor(2)">
                     <img src="../image/11.webp">
                     <p>Протоколы и их роль</p>
                 </a>
-                <a href="#openModal3" class="getter__block">
+                <a href="#openModal3" class="getter__block" onclick="changeBorderColor(3)">
                     <img src="../image/33.jpg" >
                     <p>Модели межсетевого взаимодействия</p>
                 </a>
-              <a href="#openModal4" class="getter__block">
+              <a href="#openModal4" class="getter__block" onclick="changeBorderColor(4)">
                   <img src="../image/55.png">
                   <p>Модель OSI</p>
               </a>
-              <a href="#openModal5" class="getter__block">
+              <a href="#openModal5" class="getter__block" onclick="changeBorderColor(5)">
                   <img src="../image/77.webp">
                   <p>Модель TCP/IP</p>
               </a>
-              <a href="#openModal6" class="getter__block">
+              <a href="#openModal6" class="getter__block" onclick="changeBorderColor(6)">
                   <img src="../image/66.webp">
                   <p>Преимущества стека протоколов TCP/IP</p>
               </a>
-              <a href="#openModal7" class="getter__block">
+              <a href="#openModal7" class="getter__block" onclick="changeBorderColor(7)">
                 <img src="../image/88.png">
                 <p>Разновидности протоколов</p>
             </a>
-            <a href="#openModal8" class="getter__block">
+            <a href="#openModal8" class="getter__block" onclick="changeBorderColor(8)">
               <img src="../image/99.png">
               <p>Протокол HTTP</p>
           </a>
@@ -493,6 +493,15 @@ SLIP, PPP
           </div>
         </div>
       </div>
+      <script>
+        function changeBorderColor(blockNumber) {
+          var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
+          var blockText = getterBlock.querySelector('p');
+      
+          getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+          blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
+        }
+      </script>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           var videoPlayer = document.querySelector('#openModal3 video');
