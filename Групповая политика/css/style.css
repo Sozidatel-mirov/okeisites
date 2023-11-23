@@ -17,6 +17,8 @@ header {
 .container {
     max-width: 96%;
     margin: 0 auto;
+    height: auto;
+    width: auto;
     min-width: 1300px;
 }
 
