@@ -155,12 +155,12 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("Что представляют собой пиксели в растровой графике?",
+  new Question("Основная и наиболее протяженная часть компьютерной сети.", 
   [
-    new Answer("Математические функции", 0),
-    new Answer("Векторы направления", 0),
-    new Answer("Отдельные точки на изображении", 1),
-    new Answer("Слои редактирования", 0)
+    new Answer("сегмент", 0),
+    new Answer("структурированная кабельная система", 0),
+    new Answer("телефонная линия связи", 1),
+    new Answer("патч - панель", 0),
   ])
 ];
 
@@ -176,11 +176,10 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Далее";
-  quiz.score = quiz.score + score12;
+  nextButton.innerHTML = "Показать результат";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz5.html?score=" + score12 + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -214,7 +213,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = "5 / 10";
+    pagesElem.innerHTML = "10 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -228,17 +227,17 @@ function Update()
 function Init()
 {
   var queryString = window.location.search;
-  var urlParams = new URLSearchParams(queryString);
-  
-  // Получение значений переменных
-  var score = parseInt(urlParams.get('score'));;
-  var timeMinute = urlParams.get('timeMinute');
-  var timeSecond = urlParams.get('timeSecond');
-
-  quiz.score = score;
-  document.getElementById('minutes').textContent = timeMinute;
-  document.getElementById('seconds').textContent = timeSecond;
-//Находим все кнопки
+			var urlParams = new URLSearchParams(queryString);
+			
+			// Получение значений переменных
+			var score = parseInt(urlParams.get('score'));;
+			var timeMinute = urlParams.get('timeMinute');
+			var timeSecond = urlParams.get('timeSecond');
+	
+      quiz.score = score;
+			document.getElementById('minutes').textContent = timeMinute;
+			document.getElementById('seconds').textContent = timeSecond;
+  //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
   for(let i = 0; i < btns.length; i++)
