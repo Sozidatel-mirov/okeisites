@@ -90,7 +90,7 @@
 		
         <div class="block" hidden>
 		<a href="../index.html" class="back">На Главную</a>	
-	       <h2>Интерактивный тренажер по выполнению заданий</h2>
+	       <h2>Движение и ракурс</h2>
 		<main class="main">
 		
 			
@@ -130,9 +130,9 @@
 	<a href="../index.html" class="back">На Главную</a>
   
 	<div class="block" >
-	  <h2>Администрирование Windows Server 2019</h2>
+	  <h2>Движение и ракурс</h2>
 	  <div class="place__header">
-		<p>Администрирование Windows Server 2019</p>
+		<p>Какова правильная последовательность действий при создании горизонтального панорамного эффекта в видео?</p>
 				   
 		<span>5/10</span>
 	  </div>
@@ -147,11 +147,11 @@
 				</div>
 				<div class="tiles">
 					
-					<div class="tile tile1" id="tile2" draggable="true" ondragstart="drag(event)">Установите роль DNS на сервере</div>
-					<div class="tile tile3" id="tile1" draggable="true" ondragstart="drag(event)">Настройте записи DNS для нужных ресурсов</div>
-					<div class="tile tile4" id="tile3" draggable="true" ondragstart="drag(event)">Задайте настройки DNS для сетевых подключений</div>
+					<div class="tile tile1" id="tile2" draggable="true" ondragstart="drag(event)">Применить эффект кадрирования</div>
+					<div class="tile tile4" id="tile3" draggable="true" ondragstart="drag(event)">Использовать горизонтальный долли</div>
+					<div class="tile tile3" id="tile1" draggable="true" ondragstart="drag(event)">Задать горизонтальный ракурс</div>
 				
-					<div class="tile tile2" id="tile4" draggable="true" ondragstart="drag(event)">Создайте новую зону</div>
+					<div class="tile tile2" id="tile4" draggable="true" ondragstart="drag(event)">Произвести плавное вращение камеры вправо</div>
 				</div>
 				
 			</div>
@@ -241,14 +241,14 @@ console.log('Score:', score12);
 }
 			</script>
 
-    <footer><div class="place__line" style="bottom: 0; position: absolute; width: 100%; left: 0px;">
+    <footer><div class="place__line" style="bottom: 0; position: fixed; width: 100%; left: 0px;">
 		<div class="timer">
 		<p id="timer"><span id="minutes">00</span>:<span id="seconds">00</span></p>
 		
 		</div>
 		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
 		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn" id="nextButton">Далее</button>
+		<button class="place__btn" id="nextButton" style="position: fixed; bottom: 80px; right: 50px;">Далее</button>
 		
 		
 
