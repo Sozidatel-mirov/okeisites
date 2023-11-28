@@ -153,16 +153,16 @@ const results =
   new Result("Вы в совершенстве знаете тему", 6)
 ];
 
-//Массив с вопросами
-const questions = 
-[
-  new Question("Кто является яркими представителями «чикагского джаза»?", 
-  [
-    new Answer("Фрэнк Синатра, Сара Вон, Бинг Кросби", 0),
-    new Answer("Элла Фицджеральд, Билли Холидей, Нора Джонс", 0),
-    new Answer("Джо Кинг Оливер, Кэррол Диккерсон, Луи Армстронг.", 1),
-    new Answer("Нина Симон, Чет Бейкер, Кэб Кэллоуэй", 0)
-  ])
+// Массив с вопросами
+const questions = [
+  new Question(
+    "Основной инструмент в поп музыке...",
+    [
+      new Answer("Гитара", 0),
+      new Answer("Человеческий голос", 1),
+      new Answer("Ударная партия", 0),
+      new Answer("Саксофон", 0)
+    ])
 ];
 
 //Сам тест
@@ -177,10 +177,11 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Показать результат";
+  nextButton.innerHTML = "Далее";
+  quiz.score = quiz.score + score12;
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz7.html?score=" + score12 + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -214,7 +215,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = (8) + " / " + quiz.questions.length;
+    pagesElem.innerHTML = "3 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -227,6 +228,18 @@ function Update()
 
 function Init()
 {
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  
+  // Получение значений переменных
+  var score = parseInt(urlParams.get('score'));;
+  var timeMinute = urlParams.get('timeMinute');
+  var timeSecond = urlParams.get('timeSecond');
+
+  quiz.score = score;
+  document.getElementById('minutes').textContent = timeMinute;
+  document.getElementById('seconds').textContent = timeSecond;
+//Находим все кнопки
   //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
@@ -276,9 +289,14 @@ function Click(index)
 
 }
 // Функция для обновления таймера
+
         function updateTimer() {
+          
+
             const minutesElement = document.getElementById('minutes');
             const secondsElement = document.getElementById('seconds');
+
+            
             
             let minutes = parseInt(minutesElement.textContent);
             let seconds = parseInt(secondsElement.textContent);

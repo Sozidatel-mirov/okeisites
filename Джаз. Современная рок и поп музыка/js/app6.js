@@ -156,12 +156,12 @@ const results =
 // Массив с вопросами
 const questions = [
   new Question(
-    "Композиция «New York, New York» написана в 1977 году. Исполнялась выдающимся американским певцом Френка Синатрой. Кто был композитором?",
+    "Рок - это",
     [
-      new Answer("Рэя Чарльза", 0),
-      new Answer("Джонам Кандером", 1),
-      new Answer("Луи Армстронгом", 0),
-      new Answer("Дюком Эллингтоном", 0)
+      new Answer("музыка протеста против общества, власти или чего-то другого - музыка контркультур.", 1),
+      new Answer("общедоступная музыка, музыка массовых жанров.", 0),
+      new Answer("направление в музыке, которое возникло в США в самом начале XX века.", 0),
+      new Answer("один из танцевальных жанров, которому присущи четко выделенные доминирующие над всеми остальными инструментами ударники, низкая мелодичность, «неряшливый» пульсирующий ритм и кричащий вокал.", 0)
     ])
 ];
 
@@ -175,13 +175,12 @@ function Update()
 {
   //Проверяем, есть ли ещё вопросы
   if(quiz.current < quiz.questions.length) 
-  { 
+  {
     if (quiz.current >= quiz.questions.length - 1) {
   nextButton.innerHTML = "Далее";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    
-    window.location.href = "quiz2.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz3.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -215,7 +214,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = "2 / 10";
+    pagesElem.innerHTML = "3 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();

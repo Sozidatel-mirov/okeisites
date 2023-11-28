@@ -153,16 +153,16 @@ const results =
   new Result("Вы в совершенстве знаете тему", 6)
 ];
 
-// Массив с вопросами
-const questions = [
-  new Question(
-    "Композиция «New York, New York» написана в 1977 году. Исполнялась выдающимся американским певцом Френка Синатрой. Кто был композитором?",
-    [
-      new Answer("Рэя Чарльза", 0),
-      new Answer("Джонам Кандером", 1),
-      new Answer("Луи Армстронгом", 0),
-      new Answer("Дюком Эллингтоном", 0)
-    ])
+//Массив с вопросами
+const questions = 
+[
+  new Question("Кто является яркими представителями «чикагского джаза»?", 
+  [
+    new Answer("Фрэнк Синатра, Сара Вон, Бинг Кросби", 0),
+    new Answer("Элла Фицджеральд, Билли Холидей, Нора Джонс", 0),
+    new Answer("Джо Кинг Оливер, Кэррол Диккерсон, Луи Армстронг.", 1),
+    new Answer("Нина Симон, Чет Бейкер, Кэб Кэллоуэй", 0)
+  ])
 ];
 
 //Сам тест
@@ -175,13 +175,12 @@ function Update()
 {
   //Проверяем, есть ли ещё вопросы
   if(quiz.current < quiz.questions.length) 
-  { 
+  {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Далее";
+  nextButton.innerHTML = "Показать результат";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    
-    window.location.href = "quiz2.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -215,7 +214,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = "2 / 10";
+    pagesElem.innerHTML = (8) + " / " + quiz.questions.length;
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -228,17 +227,6 @@ function Update()
 
 function Init()
 {
-  var queryString = window.location.search;
-			var urlParams = new URLSearchParams(queryString);
-			
-			// Получение значений переменных
-			var score = parseInt(urlParams.get('score'));;
-			var timeMinute = urlParams.get('timeMinute');
-			var timeSecond = urlParams.get('timeSecond');
-	
-      quiz.score = score;
-			document.getElementById('minutes').textContent = timeMinute;
-			document.getElementById('seconds').textContent = timeSecond;
   //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
@@ -288,14 +276,9 @@ function Click(index)
 
 }
 // Функция для обновления таймера
-
         function updateTimer() {
-          
-
             const minutesElement = document.getElementById('minutes');
             const secondsElement = document.getElementById('seconds');
-
-            
             
             let minutes = parseInt(minutesElement.textContent);
             let seconds = parseInt(secondsElement.textContent);

@@ -156,12 +156,12 @@ const results =
 // Массив с вопросами
 const questions = [
   new Question(
-    "Композиция «New York, New York» написана в 1977 году. Исполнялась выдающимся американским певцом Френка Синатрой. Кто был композитором?",
+    "Выберите правильное понятие для термина 'new wave'",
     [
-      new Answer("Рэя Чарльза", 0),
-      new Answer("Джонам Кандером", 1),
-      new Answer("Луи Армстронгом", 0),
-      new Answer("Дюком Эллингтоном", 0)
+      new Answer("был самым популярным жанром танцевальной поп-музыки. Ему присуще обилие эффектов, ведущая роль ритм-секции ударных и баса, а также второстепенное, фоновое звучание струнных и духовых инструментов", 0),
+      new Answer("Один из танцевальных жанров, которому присущи четко выделенные доминирующие над всеми остальными инструментами ударники, низкая мелодичность, «неряшливый» пульсирующий ритм и кричащий вокал.", 0),
+      new Answer("характеризуют: короткие песни энергичного ритма, зачастую аранжированные с обильным использованием синтезаторов при сохранении жёсткого звучания гитар.", 1),
+      new Answer("жанр музыки, в котором синтезатор является доминирующим инструментом.", 0)
     ])
 ];
 
@@ -175,13 +175,12 @@ function Update()
 {
   //Проверяем, есть ли ещё вопросы
   if(quiz.current < quiz.questions.length) 
-  { 
+  {
     if (quiz.current >= quiz.questions.length - 1) {
   nextButton.innerHTML = "Далее";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    
-    window.location.href = "quiz2.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz6.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -215,7 +214,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = "2 / 10";
+    pagesElem.innerHTML = "6 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -229,17 +228,17 @@ function Update()
 function Init()
 {
   var queryString = window.location.search;
-			var urlParams = new URLSearchParams(queryString);
-			
-			// Получение значений переменных
-			var score = parseInt(urlParams.get('score'));;
-			var timeMinute = urlParams.get('timeMinute');
-			var timeSecond = urlParams.get('timeSecond');
-	
-      quiz.score = score;
-			document.getElementById('minutes').textContent = timeMinute;
-			document.getElementById('seconds').textContent = timeSecond;
-  //Находим все кнопки
+  var urlParams = new URLSearchParams(queryString);
+  
+  // Получение значений переменных
+  var score = parseInt(urlParams.get('score'));;
+  var timeMinute = urlParams.get('timeMinute');
+  var timeSecond = urlParams.get('timeSecond');
+
+  quiz.score = score;
+  document.getElementById('minutes').textContent = timeMinute;
+  document.getElementById('seconds').textContent = timeSecond;
+//Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
   for(let i = 0; i < btns.length; i++)
