@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quiz</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/app.css">
+		<link rel="stylesheet" href="../css/place.css">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="HandheldFriendly" content="true"/>
+		<link rel="stylesheet" href="../fonts/font.css">
+		<style>
+			.containero {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				margin-top: 50px;
+			}
+		
+			.placeholders {
+				display: flex;
+				box-sizing: border-box;
+			}
+		
+			.placeholder {
+				position: relative;
+				width: 300px;
+			height: 150px;
+			border: 2px solid #888;
+			margin: 10px;
+			background-color: #ddd;
+			border-radius: 10px;
+			box-shadow: 0px 0px 7px #cecece;
+			box-sizing: content-box;
+			display: flex; /* Добавьте это свойство */
+			justify-content: center; /* Выравнивание по горизонтали */
+			align-items: center; /* Выравнивание по вертикали */
+			}
+		
+			.tiles {
+				display: flex;
+			   
+			}
+		
+			.tile {
+				width: 300px;
+				border-radius: 10px;
+			height: 150px;
+			border: 2px solid #888;
+			margin: 10px;
+			cursor: pointer;
+			background-color: #fff;
+			transition: background-color 0.3s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 18px;
+			box-sizing: content-box;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			box-shadow: 0px 0px 7px #cecece;
+			}
+		
+			button {
+				background-color: #fff;
+				border: 2px solid #888;
+				padding: 10px 20px;
+				cursor: pointer;
+				font-size: 16px;
+				margin-top: 20px;
+			}
+		
+			.correct {
+				background-color: #8cff66; /* Зелёный цвет при правильном ответе */
+			}
+		
+			.incorrect {
+				background-color: #ff6666; /* Красный цвет при неправильном ответе */
+			}
+		
+			.unused {
+				background-color: #ff6666; /* Красный цвет для неиспользованных плашек и мест */
+			}
+		</style>
+		</head>
+	<body>
+		
+        <div class="block" hidden>
+		<a href="../index.html" class="back">На Главную</a>	
+	       <h2>Движение и ракурс</h2>
+		<main class="main">
+		
+			
+            <div class="place__header">
+			
+					<div class="head__content" id="head"><h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus odit accusamus, illum quas magni provident odio praesentium commodi sint, porro harum, minus cupiditate architecto culpa aut ex dolore officia.</h2></div>
+				<div class="quiz__footer">
+						<div class="footer__content" id="pages">0 / 0</div>
+					</div>
+				</div>
+              
+            
+            <hr >
+           
+				<div class="quiz__body" style="margin-top: 170px;">
+					<div class="buttons"><!--<div class="inner">-->
+						<div class="buttons__content" id="buttons">
+							<button class="button">Default button</button><br>
+							<button class="button button_wrong">Wrong answer</button><br>
+							<button class="button button_correct">Correct answer</button><br>
+							<button class="button button_passive">Unclicked button</button><br>
+						</div>
+					</div>
+
+					
+				</div>
+            
+           </div>
+           
+              <!-- <button class="place__back">На шаг назад</button>
+              <button class="place__back">Ответить</button>  -->
+              <div></div>
+           
+		   </main>
+       
+    </div>
+	<a href="../index.html" class="back">На Главную</a>
+  
+	<div class="block" >
+	  <h2>Компьютерная графика</h2>
+	  <div class="place__header">
+		<p>Какова правильная последовательность этапов создания трехмерной анимации в программе Autodesk Maya?</p>
+				   
+		<span>5/10</span>
+	  </div>
+		  <hr>
+			<div class="place__body">
+			  <div class="containero">
+				<div class="placeholders">
+					<div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)">1</div>
+					<div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)">2</div>
+					<div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)">3</div>
+					<div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)">4</div>
+				</div>
+				<div class="tiles">
+					
+					<div class="tile tile1" id="tile3" draggable="true" ondragstart="drag(event)">Установка освещения и камер</div>
+					<div class="tile tile4" id="tile4" draggable="true" ondragstart="drag(event)">Рендеринг анимации</div>
+					<div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)">Моделирование объектов и сцены</div>
+				
+					<div class="tile tile2" id="tile1" draggable="true" ondragstart="drag(event)">Работа с текстурами и материалами</div>
+				</div>
+				
+			</div>
+		
+			<script>
+				let score12 = 0;
+				var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+
+var additionalScore = parseInt(urlParams.get('score')) || 0;
+if(score12 ===0)
+	{
+		score12 = additionalScore;
+	}
+				
+				function allowDrop(ev) {
+					ev.preventDefault();
+				}
+		
+				function drag(ev) {
+					ev.dataTransfer.setData("text", ev.target.id);
+				}
+		
+				function drop(ev) {
+					ev.preventDefault();
+					var data = ev.dataTransfer.getData("text");
+					var draggedElement = document.getElementById(data);
+					var placeholder = ev.target;
+					placeholder.appendChild(draggedElement);
+		
+					draggedElement.style.position = 'absolute';
+					draggedElement.style.top = '0';
+					draggedElement.style.left = '0';
+		
+					var rect = placeholder.getBoundingClientRect();
+					var tileRect = draggedElement.getBoundingClientRect();
+					draggedElement.style.top = (rect.top - tileRect.top) + 'px';
+					draggedElement.style.left = (rect.left - tileRect.left) + 'px';
+				}
+		
+				function checkAnswers() {
+					var allAnswersCorrect = true;
+					var placeholders = document.querySelectorAll('.placeholder');
+					var tiles = document.querySelectorAll('.tile');
+		
+					// Сначала перекрашиваем все плашки и места в красный
+					tiles.forEach(function(tile) {
+						tile.classList.add('incorrect');
+					});
+		
+					placeholders.forEach(function(placeholder) {
+						placeholder.classList.add('incorrect');
+					});
+		
+					// Затем перекрашиваем правильные в зелёный
+					placeholders.forEach(function(placeholder, index) {
+						var tile = placeholder.querySelector('.tile');
+		
+						if (tile && tile.id === 'tile' + (index + 1) && tile.parentElement) {
+							tile.classList.remove('incorrect');
+							tile.classList.add('correct');
+							placeholder.classList.remove('incorrect');
+							
+						}
+						else {
+           
+            allAnswersCorrect = false;
+		}
+		
+		
+});
+if (allAnswersCorrect) {
+        score12++;
+    }
+console.log('Score:', score12);
+					// Перекрашиваем неиспользованные плашки в красный
+					tiles.forEach(function(tile) {
+						if (!tile.parentElement) {
+							tile.classList.add('unused');
+						}
+					});
+					document.getElementById('clek').hidden = true;
+	document.getElementById('clek1').hidden = false;
+				}
+				function restartPage() {
+    location.reload(true); // true - для обновления с использованием кэширования
+}
+			</script>
+
+    <footer><div class="place__line" style="bottom: 0; position: fixed; width: 100%; left: 0px;">
+		<div class="timer">
+		<p id="timer"><span id="minutes">00</span>:<span id="seconds">00</span></p>
+		
+		</div>
+		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
+		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
+		<button class="place__btn" id="nextButton" style="position: fixed; bottom: 80px; right: 50px;">Далее</button>
+		
+		
+
+		<script type="text/javascript" src="../js/app4.js"></script></footer>
+		
+
+</body></html>

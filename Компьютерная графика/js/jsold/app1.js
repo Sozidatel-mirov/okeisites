@@ -153,13 +153,15 @@ const results =
   new Result("Вы в совершенстве знаете тему", 6)
 ];
 
-// Массив с вопросами
-const questions = [
-  new Question("Компьютерная графика –", 
+//Массив с вопросами
+const questions = 
+[
+  new Question("Какая главная особенность Джаза?", 
   [
-    new Answer("Особенности отображения информации программно-аппаратными средствами", 0),
-    new Answer("раздел информатики, занимающийся проблемами создания и обработки на компьютереграфических изображений", 1),
-    new Answer("наука, изучающая особенности создания и обработки изображений с помощьюпрограммно-аппаратных средств", 0),
+    new Answer("Правильное исполнение написанного нотного текста", 0),
+    new Answer("Импровизация", 1),
+    new Answer("Точное исполнение пассажей", 0),
+    new Answer("Ритмический рисунок", 0)
   ])
 ];
 
@@ -175,10 +177,10 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Далее";
+  nextButton.innerHTML = "Показать результат";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz1.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -212,7 +214,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML =  "1 / 10";
+    pagesElem.innerHTML = (8) + " / " + quiz.questions.length;
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();

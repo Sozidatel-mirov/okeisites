@@ -155,11 +155,12 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("Компьютерная графика –", 
+  new Question("Где используется векторное компьютерное изображение?", 
   [
-    new Answer("Особенности отображения информации программно-аппаратными средствами", 0),
-    new Answer("раздел информатики, занимающийся проблемами создания и обработки на компьютереграфических изображений", 1),
-    new Answer("наука, изучающая особенности создания и обработки изображений с помощьюпрограммно-аппаратных средств", 0),
+    new Answer("Для создания вывесок, этикеток, логотипов, эмблем и пр. символьных изображений", 1),
+    new Answer("Для обработки фотографий, создания фотоколлажа, создания иллюстраций.", 0),
+    new Answer("В математике и искусстве.", 0),
+    new Answer("В архитектуре, в рекламных видеороликах, компьютерном моделирование физическихобъектов.", 0),
   ])
 ];
 
@@ -178,7 +179,7 @@ function Update()
   nextButton.innerHTML = "Далее";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz1.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz9.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -212,7 +213,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML =  "1 / 10";
+    pagesElem.innerHTML = "9 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -225,7 +226,18 @@ function Update()
 
 function Init()
 {
-  //Находим все кнопки
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  
+  // Получение значений переменных
+  var score = parseInt(urlParams.get('score'));;
+  var timeMinute = urlParams.get('timeMinute');
+  var timeSecond = urlParams.get('timeSecond');
+
+  quiz.score = score;
+  document.getElementById('minutes').textContent = timeMinute;
+  document.getElementById('seconds').textContent = timeSecond;
+//Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
   for(let i = 0; i < btns.length; i++)
@@ -274,9 +286,14 @@ function Click(index)
 
 }
 // Функция для обновления таймера
+
         function updateTimer() {
+          
+
             const minutesElement = document.getElementById('minutes');
             const secondsElement = document.getElementById('seconds');
+
+            
             
             let minutes = parseInt(minutesElement.textContent);
             let seconds = parseInt(secondsElement.textContent);
