@@ -8,53 +8,21 @@ h2  {
     padding: 14px;
     border-radius: 10px;
     color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 .footer__content{
     min-width: 60px;
 }
 
 .container {
+    max-width: 3280px;
     margin: 0 auto;
-    min-width: 600px;
-    min-height: auto;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    position: relative;
-    box-sizing: border-box;
-   
-   
 }
+
 .block {
     background: #fff;
     box-shadow: 0px 0px 0px #b5b5b5;
-    padding: 5px 5px 5px 5px;
-    height: auto; 
-    margin: 0 auto;
-    margin-bottom: 60px;
-    min-height: auto;
-    margin-left: 45px;
-    margin-right: 20px;
-    
-
-}
-.back {
-    background: #785a95;
-    color: #fff;
-    text-decoration: none;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    display: block;
-    position: fixed;
-    left:-59px;
-    z-index: 1500;
-    top: 40%;
-    font-size: 1.2em;
-    text-align: center;
-    padding: 10px 20px;
-    border: 1px solid #fff;
-
+    padding:  5px 5px 5px 40px;
 }
 
 
@@ -200,13 +168,33 @@ h2  {
     font-size: 28px;
 }
 
+.back {
+    background: #785a95;
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        display: block;
+        position: fixed;
+        z-index: 1500;
+        top: 40%;
+        font-size: 1.2em;
+        text-align: center;
+        padding: 10px 20px;
+        border: 1px solid #fff;
+        font-family: 'Times New Roman', Times, serif;
+    }
 
 .place__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 10px 0px;
+    font-family: 'Times New Roman', Times, serif;
 }
+
 .titles{
     background: #fff;
     box-shadow: 1px 1px 7px #b5b5b5;
@@ -228,6 +216,24 @@ h2  {
     font-weight: 700;
     width-left: 0px;
 }
+.back {
+    background: #785a95;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    display: block;
+    position: fixed;
+    left: -50px;
+    z-index: 1500;
+    top: 40%;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+
+}
 
 .place__body {
     margin: 15px 0px;
@@ -242,6 +248,9 @@ h2  {
     font-size: 19px;
     border-radius: 10px;
     float: right;
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
 }
 
 .place__line {
@@ -306,14 +315,12 @@ transform: translate(-50%, 0);
 white-space:normal !important;
     word-wrap:break-word;
 }
-quiz__body>{
-    margin-top:65px;
-}
+
 .buttons__content> div {
     box-shadow: 0px 0px 7px #cecece;
     min-width: 650px;
     min-height: 105px;
-    margin: 60px 10px;
+    margin: 50px 10px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;

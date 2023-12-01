@@ -155,12 +155,12 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("Метод анализа SWOT используется для", 
+  new Question("Одной из задач интернет-маркетинга является составление стратегии продвижения продукта на интернет-рынке. В чем суть данной задачи? Выберите верный ответ:", 
   [
-    new Answer("Тестирования идеи будущего продукта", 0),
-    new Answer("Описания продукта с точки зрения силы, слабостей, возможностей и потенциальных", 1),
-    new Answer("Анализа внешней среды, влияющей на бизнес", 0),
-    new Answer("Тестирования идеи текущего продукта", 0)
+    new Answer("Показать преимущества продукта и его положение на рынке", 0),
+    new Answer("Изучить все площадки и выбрать только те, которые реально покажут результат", 0),
+    new Answer("Подключить все возможные веб-аналитики, которые помогут качественно и количественно отслеживать результат", 0),
+    new Answer("Составить план, по которому ваш продукт начнет развиваться и масштабироваться", 1)
   ])
 ];
 
@@ -177,9 +177,10 @@ function Update()
   {
     if (quiz.current >= quiz.questions.length - 1) {
   nextButton.innerHTML = "Далее";
+  quiz.score = quiz.score + score12;
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz1.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz5.html?score=" + score12 + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -213,7 +214,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML =  "1 / 10";
+    pagesElem.innerHTML = "5 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -226,7 +227,18 @@ function Update()
 
 function Init()
 {
-  //Находим все кнопки
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  
+  // Получение значений переменных
+  var score = parseInt(urlParams.get('score'));;
+  var timeMinute = urlParams.get('timeMinute');
+  var timeSecond = urlParams.get('timeSecond');
+
+  quiz.score = score;
+  document.getElementById('minutes').textContent = timeMinute;
+  document.getElementById('seconds').textContent = timeSecond;
+//Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
   for(let i = 0; i < btns.length; i++)
@@ -275,9 +287,14 @@ function Click(index)
 
 }
 // Функция для обновления таймера
+
         function updateTimer() {
+          
+
             const minutesElement = document.getElementById('minutes');
             const secondsElement = document.getElementById('seconds');
+
+            
             
             let minutes = parseInt(minutesElement.textContent);
             let seconds = parseInt(secondsElement.textContent);
