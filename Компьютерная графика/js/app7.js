@@ -153,86 +153,16 @@ const results =
   new Result("Вы в совершенстве знаете тему", 6)
 ];
 
-//Массив с вопросами
-const questions = 
-[
-  new Question("Что такое промежуточный кадр? ", 
+// Массив с вопросами
+const questions = [
+  new Question("Наименьшим элементом изображения на графическом экране монитора является?", 
   [
-    new Answer("Сцена с ключевым движением", 0),
-    new Answer("Позиция, сделанная в сцене, которая находится между ключами и разбивающими", 1),
-    new Answer("Кадр под определенным углом, обозначенным режиссером", 0),
-    new Answer("Позиция, которая находится в начале и в конце сцены", 0)
-  ]),
-
-  new Question("“Кривая движения” это…", 
-  [
-    new Answer("Линия основной общей позы", 1),
-    new Answer("Диаграмма ритма движения", 0),
-    new Answer("Детальная прорисовка движения героя", 0),
-    new Answer("“Быстрая” раскадровка", 0)
-  ]),
-
-  new Question("Расчет количества рисунков, из которых состоит определенное действие это…", 
-  [
-    new Answer("План", 0),
-    new Answer("Аниматик", 0),
-    new Answer("Тайминг", 1),
-    new Answer("Схема", 0)
-  ]),
-
-  new Question("Выберите верный вид плана:", 
-  [
-    new Answer("Крупный план", 1),
-    new Answer("Подвижный план", 0),
-    new Answer("Плоский план", 0),
-    new Answer("Полуплоский план", 0)
-  ]),
-
-  new Question("Виды восприятия бывают:", 
-  [
-    new Answer("Объективные", 1),
-    new Answer("Субъективные", 1),
-    new Answer("Абстрактные", 0),
-    new Answer("Прямые", 0)
-  ]),
-
-  new Question("Первое, чему должен научится аниматор:", 
-  [
-    new Answer("Как выставлять сцену", 0),
-    new Answer("Сценарное мастерство", 0),
-    new Answer("Походка персонажа", 1),
-    new Answer("Рисовать", 0)
-  ]),
-  new Question("Ракурс это…", 
-  [
-    new Answer("Градус камеры, относительно сцены", 1),
-    new Answer("Градус сцены, относительно камеры", 0),
-    new Answer("Сцена, относительно градуса камеры", 0),
-    new Answer("Градус камеры, относительно кадра", 0)
-  ]),
-  new Question("Расположение персонажа в сцене:", 
-  [
-    new Answer("Расстановка", 0),
-    new Answer("Мизансцена", 1),
-    new Answer("Предсцена", 0),
-    new Answer("Установка", 0)
-  ]),
-  new Question("Техника, которую используют для того, чтобы подготовить зрителя к действию, которое вот-вот произойдет:", 
-  [
-    new Answer("Преддействие", 0),
-    new Answer("Подготовка", 1),
-    new Answer("Вотдейство", 0),
-    new Answer("Вход", 0)
-  ]),
-  new Question("Чем определяется уровень камеры:", 
-  [
-    new Answer("Градус сцены", 0),
-    new Answer("Линия горизонта", 1),
-    new Answer("Драматургия", 0),
-    new Answer("Положение персонажа", 0)
+    new Answer("курсор", 0),
+    new Answer("символ", 0),
+    new Answer("линия", 0),
+    new Answer("пиксель", 1),
   ])
 ];
-
 
 //Сам тест
 const quiz = new Quiz(1, questions, results);
@@ -246,10 +176,11 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Показать результат";
+  nextButton.innerHTML = "Далее";
+  quiz.score = quiz.score + score12;
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz8.html?score=" + score12 + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -283,7 +214,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = (quiz.current + 1) + " / " + quiz.questions.length;
+    pagesElem.innerHTML = "5 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -296,7 +227,18 @@ function Update()
 
 function Init()
 {
-  //Находим все кнопки
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  
+  // Получение значений переменных
+  var score = parseInt(urlParams.get('score'));;
+  var timeMinute = urlParams.get('timeMinute');
+  var timeSecond = urlParams.get('timeSecond');
+
+  quiz.score = score;
+  document.getElementById('minutes').textContent = timeMinute;
+  document.getElementById('seconds').textContent = timeSecond;
+//Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
   for(let i = 0; i < btns.length; i++)
@@ -345,9 +287,14 @@ function Click(index)
 
 }
 // Функция для обновления таймера
+
         function updateTimer() {
+          
+
             const minutesElement = document.getElementById('minutes');
             const secondsElement = document.getElementById('seconds');
+
+            
             
             let minutes = parseInt(minutesElement.textContent);
             let seconds = parseInt(secondsElement.textContent);

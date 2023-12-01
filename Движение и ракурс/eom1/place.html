@@ -199,7 +199,15 @@
           </div>
         </div>
       </div>
-
+      <script>
+        function changeBorderColor(blockNumber) {
+          var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
+          var blockText = getterBlock.querySelector('p');
+      
+          getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+          blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
+        }
+      </script>
 
 
 

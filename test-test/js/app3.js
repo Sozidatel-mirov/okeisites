@@ -177,9 +177,10 @@ function Update()
   {
     if (quiz.current >= quiz.questions.length - 1) {
   nextButton.innerHTML = "Далее";
+  quiz.score = quiz.score + score12;
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz4.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz4.html?score=" + score12 + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -213,7 +214,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = "4 / 10";
+    pagesElem.innerHTML = "3 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -238,6 +239,7 @@ function Init()
   document.getElementById('minutes').textContent = timeMinute;
   document.getElementById('seconds').textContent = timeSecond;
 //Находим все кнопки
+  //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
   for(let i = 0; i < btns.length; i++)

@@ -153,16 +153,16 @@ const results =
   new Result("Вы в совершенстве знаете тему", 6)
 ];
 
-//Массив с вопросами
-const questions = 
-[
-  new Question("Кто является основоположниками рок музыки?", 
-  [
-    new Answer("Daft Punk и ABBA", 0),
-    new Answer("Metallica и Bon Jovi", 0),
-    new Answer("The Beatles и The Rolling Stones", 1),
-    new Answer("Pink Floyd и Marduk", 0)
-  ])
+// Массив с вопросами
+const questions = [
+  new Question(
+    "Какой жанр поп музыки исполнитери считают 'проверенным'? Или какой жанр входит в понятие поп музыка?",
+    [
+      new Answer("Диско", 1),
+      new Answer("Электро", 0),
+      new Answer("Хард рок", 0),
+      new Answer("Поп рок", 0)
+    ])
 ];
 
 //Сам тест
@@ -177,10 +177,11 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Показать результат";
+  nextButton.innerHTML = "Далее";
+  quiz.score = quiz.score + score12;
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz4.html?score=" + score12 + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -214,7 +215,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = (8) + " / " + quiz.questions.length;
+    pagesElem.innerHTML = "3 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -227,6 +228,18 @@ function Update()
 
 function Init()
 {
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  
+  // Получение значений переменных
+  var score = parseInt(urlParams.get('score'));;
+  var timeMinute = urlParams.get('timeMinute');
+  var timeSecond = urlParams.get('timeSecond');
+
+  quiz.score = score;
+  document.getElementById('minutes').textContent = timeMinute;
+  document.getElementById('seconds').textContent = timeSecond;
+//Находим все кнопки
   //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
@@ -276,9 +289,14 @@ function Click(index)
 
 }
 // Функция для обновления таймера
+
         function updateTimer() {
+          
+
             const minutesElement = document.getElementById('minutes');
             const secondsElement = document.getElementById('seconds');
+
+            
             
             let minutes = parseInt(minutesElement.textContent);
             let seconds = parseInt(secondsElement.textContent);
