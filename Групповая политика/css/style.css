@@ -3,19 +3,33 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    min-height: auto;
-    min-width: auto
+    height: auto;
+    width: auto;
 }
 
+html{
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    width: auto;
+}
 body {
     background-size: cover;
-    margin: 10px 10px 0px 10px;
+    margin: 1vw 1vw 0 1vw;
     min-height: auto;
     min-width: auto;
+    
 }
-
+#hg{
+    
+    font-size: 2vw;
+    
+    
+}
 header {
-    margin: 12px 0px;
+    margin: 1vw 0;
 }
 
 .container {
@@ -26,35 +40,41 @@ header {
     
 }
 #tema {
+    margin: 0 20px;
     font-size: 36px;
-    color: #000;
+    color: rgb(0, 0, 0);
 
 }
 .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+   
+}
+.inner2{
+    margin-left: 40%;
+    height: auto;
+    width: auto;
+    position: static;
 }
 #log{
-    width:50px;
-     height:34px; 
+    width:70px;
+     height:40px; 
     }
-nav {
-    display: flex;
-}
+
 ul{
     font-size: 24px;
 }  
-
-nav > a {
+.inner1{
+    display: flex;
+    
+}
+.inner1>a{
     border-left: 3px solid #473a53;
     padding-left: 9px;
     margin: 0px 10px;
     text-decoration: none;
-    color: #000;
-}
-
+    color: #000;}
 .lines {
     background: #fff;
     padding: 15px 0px;
@@ -64,7 +84,7 @@ nav > a {
 
 .lines__views > h2 {
     color: #cccccc;
-    font-size: 43px;
+    font-size: 35px;
 }
 
 .lines__views > p {
