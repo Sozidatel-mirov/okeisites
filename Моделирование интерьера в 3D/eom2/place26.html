@@ -89,12 +89,14 @@
   
   <div class="block" >
     <h2>Виртуальный тренажер: Разработка модели интерьера</h2>
+    
     <div class="place__header">
-        <p>Упорядочьте шаги разработки 3D-модели интерьера в правильном порядке:</p>
-        <span>8/10</span>
+        <p>Упорядочьте шаги создания 3D-модели:</p>
+        <span>10/10</span>
     </div>
     <hr>
     <div class="place__body">
+        
         <div class="containero">
             <div class="placeholders">
                 <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)">1</div>
@@ -103,10 +105,10 @@
                 <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)">4</div>
             </div>
             <div class="tiles">
-                <div class="tile tile2" id="tile1" draggable="true" ondragstart="drag(event)"> Планирование расположения мебели и элементов интерьера</div>
-                <div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)"> Создание базовой 3D-структуры помещения</div>
-                <div class="tile tile4" id="tile3" draggable="true" ondragstart="drag(event)">Применение текстур и эффектов к 3D-модели</div>
-                <div class="tile tile1" id="tile4" draggable="true" ondragstart="drag(event)">Настройка освещения и теней</div>
+                <div class="tile tile2" id="tile1" draggable="true" ondragstart="drag(event)"> 3D-изображение созданной модели с применением эффектов и текстур</div>
+                <div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)"> Определение формы и распределения элементов интерьера на основе предварительного плана</div>
+                <div class="tile tile4" id="tile3" draggable="true" ondragstart="drag(event)">Настройка освещения</div>
+                <div class="tile tile1" id="tile4" draggable="true" ondragstart="drag(event)">Рендеринг</div>
             </div>
         </div>
         <script>
@@ -167,22 +169,21 @@
                 });
             }
         </script>
- <a href="place25.html"><button class="place__btn"  onclick="next()">Далее</button></a>
-</div>
 </div>
   
-
-
-
-
-<div>
-
-<div class="line">
-<div id="timer" class="timer">00:00</div>
-<button onclick="checkAnswers()" class="place__back">Ответить</button>
-<a href="place23.html"><button class="place__back" >На шаг назад</button></a>
-
+   
+    </div>
 </div>
+            
+      
+        
+      
+      <div class="line">
+        <div id="timer" class="timer">00:00</div>
+        <button onclick="checkAnswers()" class="place__back">Ответить</button>
+        <a href="place25.html"><button class="place__back" >На шаг назад</button></a>
+        
+  </div>
 </body>
 
 </html>
