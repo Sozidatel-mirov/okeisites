@@ -12,9 +12,10 @@
 		<link rel="stylesheet" href="../fonts/font.css">
 	</head>
 	<body>
-		<div class="block" hidden>
+		
+        <div class="block" hidden>
 			<a href="../index.html" class="back">На Главную</a>	
-			   <h2>Интерактивный тренажер по выполнению заданий</h2>
+			   <h2>Движение и ракурс</h2>
 			<main class="main">
 			
 				
@@ -52,31 +53,32 @@
 		   
 		</div>
 	<div class="block" >
-		
-		<h2>Основы векторной компьютерной графики</h2>
+		<h2>Растровая компьютерная графика</h2>
 			<div class="place__header">
-				<p>Соотнесите программы и методы для создания изображений с их описанием</p>
+				<p>Соотнесите форматы изображений с их описанием</p>
 	
-				<span>7/10</span>
+				<span>4/10</span>
 			</div>
 			<hr>
 			<div class="place__body">
 				<a href="../index.html" class="back">На Главную</a>
 				<div class="containerp">
 					<div class="column" id="column1" >
-						<div class="item" id="item1" draggable="true">Постепенное переход между цветами или оттенками<div class="dot dot-right"></div></div>
-						<div class="item" id="item2" draggable="true">Преобразование растрового изображения в векторное<div class="dot dot-right"></div></div>
-						<div class="item" id="item3" draggable="true">Метод представления графической информации в виде последовательности элементов, описанных математическими формулами<div class="dot dot-right"></div></div>
-						<div class="item" id="item4" draggable="true">Метод представления изображения в виде точек, расположенных в сетке<div class="dot dot-right"></div></div>
-					</div>
-					<div class="column" id="column2">
-						
-						<div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Векторная графика</div>
-						<div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Растровая графика</div>					
-						<div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Градиент</div>
-						<div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Векторизация</div>
-						
+						<div class="item" id="item2" draggable="true">Сжатый формат для графики<div class="dot dot-right"></div></div>
+						<div class="item" id="item3" draggable="true">Формат для хранения растровой графики<div class="dot dot-right"></div></div>
+						<div class="item" id="item4" draggable="true">формат хранения растровых графических изображений с большой глубиной цвета<div class="dot dot-right"></div></div>
+					
+						<div class="item" id="item1" draggable="true">Формат файла для векторных изображений<div class="dot dot-right"></div></div>
 						</div>
+					<div class="column" id="column2">
+						<div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>BMP</div>
+						<div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>PNG</div>
+						<div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>TIFF</div>
+						<div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>SVG</div>
+						
+						
+						
+					</div>
 					<svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
 				</div>
 			
@@ -103,8 +105,7 @@ function checkAnswers() {
     const pairs = [
         ['item1', 'itemA'],
         ['item2', 'itemB'],
-        ['item3', 'itemC'],
-        ['item4', 'itemD']
+        ['item3', 'itemC']
     ];
 
     pairs.forEach(pair => {
@@ -196,11 +197,11 @@ function checkAnswers() {
 		</div>
 		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
 		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn" id="nextButton" style="position: fixed; bottom: 80px; right: 50px;">Далее</button>
+		<button class="place__btn" id="nextButton" style="position: fixed; bottom: 90px; right: 50px;">Далее</button>
 		
 		
 
-		<script type="text/javascript" src="../js/app2.js"></script></footer>
+		<script type="text/javascript" src="../js/app3.js"></script></footer>
 		
 
 </body></html>

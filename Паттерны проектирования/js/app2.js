@@ -155,12 +155,12 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("Паттерн проектирования, который используется для гарантии существования только одного экземпляра класса", 
+  new Question("Паттерн проектирования, который используется для единообразного создания объектов разных типов в зависимости от условий.", 
   [
-    new Answer("Observer", 0),
-    new Answer("Singleton", 1),
-    new Answer("Factory", 0),
-    new Answer("Adapter", 0)
+    new Answer("Singleton", 0),
+    new Answer("Factory", 1),
+    new Answer("Adapter", 0),
+    new Answer("Observer", 0)
   ])
 ];
 
@@ -177,9 +177,10 @@ function Update()
   {
     if (quiz.current >= quiz.questions.length - 1) {
   nextButton.innerHTML = "Далее";
+  quiz.score = quiz.score + score12;
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz1.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz7.html?score=" + score12 + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -213,7 +214,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML =  "1 / 10";
+    pagesElem.innerHTML = "3 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -226,6 +227,18 @@ function Update()
 
 function Init()
 {
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  
+  // Получение значений переменных
+  var score = parseInt(urlParams.get('score'));;
+  var timeMinute = urlParams.get('timeMinute');
+  var timeSecond = urlParams.get('timeSecond');
+
+  quiz.score = score;
+  document.getElementById('minutes').textContent = timeMinute;
+  document.getElementById('seconds').textContent = timeSecond;
+//Находим все кнопки
   //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
@@ -275,9 +288,14 @@ function Click(index)
 
 }
 // Функция для обновления таймера
+
         function updateTimer() {
+          
+
             const minutesElement = document.getElementById('minutes');
             const secondsElement = document.getElementById('seconds');
+
+            
             
             let minutes = parseInt(minutesElement.textContent);
             let seconds = parseInt(secondsElement.textContent);

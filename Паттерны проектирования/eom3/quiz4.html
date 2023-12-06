@@ -130,11 +130,11 @@
 	<a href="../index.html" class="back">На Главную</a>
   
 	<div class="block" >
-	  <h2>Основы векторной компьютерной графики</h2>
+	  <h2>Паттерны проектирования</h2>
 	  <div class="place__header">
-		<p> Какова правильная последовательность этапов обработки RAW-файла в программе Adobe Lightroom?</p>
+		<p>Какова правильная последовательность этапов применения паттерна "Наблюдатель" (Observer) в разработке программного обеспечения?</p>
 				   
-		<span>8/10</span>
+		<span>5/10</span>
 	  </div>
 		  <hr>
 			<div class="place__body">
@@ -146,11 +146,12 @@
 					<div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)">4</div>
 				</div>
 				<div class="tiles">
-					<div class="tile tile1" id="tile1" draggable="true" ondragstart="drag(event)">Коррекция экспозиции</div>
-					<div class="tile tile3" id="tile3" draggable="true" ondragstart="drag(event)">Устранение шумов</div>
-					<div class="tile tile4" id="tile4" draggable="true" ondragstart="drag(event)">Изменение баланса белого</div>
 					
-					<div class="tile tile2" id="tile2" draggable="true" ondragstart="drag(event)">Применение кривых и настроек цветов</div>
+					<div class="tile tile3" id="tile3" draggable="true" ondragstart="drag(event)">Уведомление наблюдателей о событиях</div>
+					<div class="tile tile4" id="tile4" draggable="true" ondragstart="drag(event)">Изменение состояния субъекта</div>
+					<div class="tile tile2" id="tile2" draggable="true" ondragstart="drag(event)">Добавление, удаление или обновление наблюдателей</div>
+				
+					<div class="tile tile1" id="tile1" draggable="true" ondragstart="drag(event)">Регистрация наблюдателей</div>
 				</div>
 				
 			</div>
@@ -251,7 +252,7 @@ console.log('Score:', score12);
 		
 		
 
-		<script type="text/javascript" src="../js/app7.js"></script></footer>
+		<script type="text/javascript" src="../js/app4.js"></script></footer>
 		
 
 </body></html>

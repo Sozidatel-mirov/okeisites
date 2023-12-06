@@ -155,12 +155,84 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("Паттерн проектирования, который используется для гарантии существования только одного экземпляра класса", 
+  new Question("Что представляют собой пиксели в растровой графике?",
   [
-    new Answer("Observer", 0),
-    new Answer("Singleton", 1),
-    new Answer("Factory", 0),
-    new Answer("Adapter", 0)
+    new Answer("Математические функции", 0),
+    new Answer("Векторы направления", 0),
+    new Answer("Отдельные точки на изображении", 1),
+    new Answer("Слои редактирования", 0)
+  ]),
+
+  new Question("Какой формат изображения обычно используется для фотографий и реалистичных изображений?",
+  [
+    new Answer("GIF", 0),
+    new Answer("PNG", 0),
+    new Answer("JPEG", 1),
+    new Answer("SVG", 0)
+  ]),
+
+  new Question("Какое из следующих действий приведет к потере качества изображения в растровой графике?",
+  [
+    new Answer("Изменение размера векторного изображения", 0),
+    new Answer("Добавление новых слоев", 0),
+    new Answer("Изменение разрешения растрового изображения", 1),
+    new Answer("Применение цветовых фильтров", 0)
+  ]),
+
+  new Question("Какой инструмент используется для удаления заднего фона с изображения в растровой графике?",
+  [
+    new Answer("Карандаш", 0),
+    new Answer("Градиент", 0),
+    new Answer("Волшебная палочка", 1),
+    new Answer("Штамп", 0)
+  ]),
+
+  new Question("Какие изображения можно масштабировать без потери качества?",
+  [
+    new Answer("Векторные изображения", 1),
+    new Answer("Растровые изображения", 0),
+    new Answer("GIF-изображения", 0),
+    new Answer("PNG-изображения", 0)
+  ]),
+
+  new Question("Какое разрешение (dpi) обычно рекомендуется для печати высококачественных изображений?",
+  [
+    new Answer("72 dpi", 0),
+    new Answer("300 dpi", 1),
+    new Answer("600 dpi", 0),
+    new Answer("1000 dpi", 0)
+  ]),
+
+  new Question("Какой формат изображения поддерживает прозрачность и анимацию?",
+  [
+    new Answer("JPEG", 0),
+    new Answer("BMP", 0),
+    new Answer("PNG", 0),
+    new Answer("GIF", 1)
+  ]),
+
+  new Question("Какой инструмент используется для создания плавных переходов между цветами в растровой графике?",
+  [
+    new Answer("Волшебная палочка", 0),
+    new Answer("Градиент", 1),
+    new Answer("Эйрбраш", 0),
+    new Answer("Овал", 0)
+  ]),
+
+  new Question("Каким образом можно управлять цветами в растровом изображении?",
+  [
+    new Answer("Слои", 0),
+    new Answer("Карандаш", 0),
+    new Answer("Цветовая палитра", 1),
+    new Answer("Волшебная палочка", 0)
+  ]),
+
+  new Question("Какой формат лучше всего подходит для изображений, содержащих много цветов и деталей при минимальных потерях качества?",
+  [
+    new Answer("JPEG", 0),
+    new Answer("GIF", 0),
+    new Answer("BMP", 0),
+    new Answer("PNG", 1)
   ])
 ];
 
@@ -176,10 +248,10 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Далее";
+  nextButton.innerHTML = "Показать результат";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz1.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -213,7 +285,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML =  "1 / 10";
+    pagesElem.innerHTML = (quiz.current + 1) + " / " + quiz.questions.length;
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
