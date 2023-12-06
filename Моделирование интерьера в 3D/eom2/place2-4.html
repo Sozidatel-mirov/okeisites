@@ -7,6 +7,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
+  <style>
+    .containero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .placeholders {
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .placeholder {
+        position: relative;
+        width: 350px;
+    height: 150px;
+    border: 2px solid #888;
+    margin: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #cecece;
+    box-sizing: content-box;
+    display: flex; /* Добавьте это свойство */
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    }
+
+    .tiles {
+        display: flex;
+       
+    }
+
+    .tile {
+        width: 350px;
+        border-radius: 10px;
+    height: 150px;
+    border: 2px solid #888;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-sizing: content-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 7px #cecece;
+    }
+
+    button {
+        background-color: #fff;
+        border: 2px solid #888;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .correct {
+        background-color: #8cff66; /* Зелёный цвет при правильном ответе */
+    }
+
+    .incorrect {
+        background-color: #ff6666; /* Красный цвет при неправильном ответе */
+    }
+
+    .unused {
+        background-color: #ff6666; /* Красный цвет для неиспользованных плашек и мест */
+    }
+</style>
 </head>
 
 <body>
@@ -14,83 +89,92 @@
     <a href="../index.html" class="back">На Главную</a>
     
     <div class="block">
-      <h2>Виртуальный тренажер: Маркетинговые исследования в рекламе</h2>
+      <h2>Виртуальный тренажер: Разработка модели интерьера</h2>
       <div class="place__header">
-<p></p>
-          <span>4/4</span>
-      </div>
-      <hr>
-      <div class="place__body">
-          <p>
-          </p>
-         
-          <h3>Практическая часть</h3><br>
-
-          <h3 style="text-align: center;">Проведение анализа конкурентов</h3>
-<p>
-  <strong>Цель:</strong> Изучить и провести анализ сайтов конкурентов методом SWOT.<br> Результаты представить в виде таблицы
-Анализируют конкурентов в трех случаях: 
-<br><br>
-<strong>Этапы:</strong><br>
-1. Определиться с целью исследования.<br><br>
-2. Выбрать минимум двух конкурентов похожие товары.<br><br>
-3. Провести анализ сайтов этих конкурентов по следующим критериям:<br>
-- ассортимент товаров (услуг);<br>
-- цены на товары (услуги);<br>
-- система скидок (баллов, бонусов, акции и т.д.);<br>
-- система заказа товара (услуги) он-лайн;<br>
-- система возврата товара (отказа от услуги);<br>
-- создание личного кабинета;<br>
-- система подписки на новости;<br>
-- сроки доставки товаров (оказания услуги);<br>
-- способы оплаты;<br>
-- наличие он-лайн помощника;<br>
-- дизайн сайта;<br>
-- структура сайа (насколько всё понятно, легко или трудно найти нужную информацию);<br><br>
-4. Предоставить отчет об анализе в виде таблицы.<br><br>
-Требования к заполнению таблицы: <br>
-Информация в таблицу заносится комплексно по всем критериям в разрезе каждой компании (т.е. проводится анализ по каждому критерию, выявляются, например, сильные (слабые) стороны., в таблицу заносится обощенный вывод по анализу).
-
-</p><br>
-<div>
-<table border="1" style=" width: 1000px;">
-              <thead></thead>
-              <tbody>
-
-                  <tr">
-                      <td>Компания          </td>
-                      <td>S(сильные стороны)</td>
-                      <td>W(слабые стороны) </td>
-                      <td>O(возможности)    </td>
-                      <td>T(угрозы)         </td>
-                  </tr>
-                  <tr>
-                      <td><input></td>
-                      <td><input></td>
-                      <td><input></td>
-                      <td><input></td>
-                       <td><input></td>
-                  </tr>
-                  <tr>
-                      <td><input></td>
-                      <td><input></td>
-                      <td><input></td>
-                      <td><input></td>
-                      <td><input></td>
-                  </tr>
-              </tbody>
-            </table> 
-</div><br>
-  <p>5. Продемонстрируйте преподавателю отчёт для оценки</p>
-
-      </div>
-  </div>
-
+Сопоставьте следующие элементы дизайна интерьера с их описаниями:</p>
+          <span>4/10</span>
           
-          <div>
-        
+        </div>
+        <hr>
+        <div class="place__body">
+    
+            <div class="containero">
+                <div class="placeholders">
+                    <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)">Этот элемент добавляет комфорт и уют в помещение, а также может регулировать уровень освещения</div>
+                    <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)">Этот элемент помогает выбрать основные цвета, которые будут использоваться в интерьере</div>
+                    <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)">Эти элементы используются для добавления цвета и текстуры к мебели и общему интерьеру</div>
+                    <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)">Такая планировка предполагает отсутствие физических барьеров между различными функциональными зонами помещения</div>
+                </div>
+                <div class="tiles">
+                    <div class="tile tile2" id="tile1" draggable="true" ondragstart="drag(event)">Шторы</div>
+                    <div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)">Палитра цветов</div>
+                    <div class="tile tile4" id="tile3" draggable="true" ondragstart="drag(event)">Акцентные подушки</div>
+                    <div class="tile tile1" id="tile4" draggable="true" ondragstart="drag(event)">Открытая планировка</div>
+                </div>
+            </div>
+            <script>
+              function allowDrop(ev) {
+                  ev.preventDefault();
+              }
+      
+              function drag(ev) {
+                  ev.dataTransfer.setData("text", ev.target.id);
+              }
+      
+              function drop(ev) {
+                  ev.preventDefault();
+                  var data = ev.dataTransfer.getData("text");
+                  var draggedElement = document.getElementById(data);
+                  var placeholder = ev.target;
+                  placeholder.appendChild(draggedElement);
+      
+                  draggedElement.style.position = 'absolute';
+                  draggedElement.style.top = '0';
+                  draggedElement.style.left = '0';
+      
+                  var rect = placeholder.getBoundingClientRect();
+                  var tileRect = draggedElement.getBoundingClientRect();
+                  draggedElement.style.top = (rect.top - tileRect.top) + 'px';
+                  draggedElement.style.left = (rect.left - tileRect.left) + 'px';
+              }
+      
+              function checkAnswers() {
+                  var placeholders = document.querySelectorAll('.placeholder');
+                  var tiles = document.querySelectorAll('.tile');
+      
+                  // Сначала перекрашиваем все плашки и места в красный
+                  tiles.forEach(function(tile) {
+                      tile.classList.add('incorrect');
+                  });
+      
+                  placeholders.forEach(function(placeholder) {
+                      placeholder.classList.add('incorrect');
+                  });
+      
+                  // Затем перекрашиваем правильные в зелёный
+                  placeholders.forEach(function(placeholder, index) {
+                      var tile = placeholder.querySelector('.tile');
+      
+                      if (tile && tile.id === 'tile' + (index + 1) && tile.parentElement) {
+                          tile.classList.remove('incorrect');
+                          tile.classList.add('correct');
+                          placeholder.classList.remove('incorrect');
+                      }
+                  });
+      
+                  // Перекрашиваем неиспользованные плашки в красный
+                  tiles.forEach(function(tile) {
+                      if (!tile.parentElement) {
+                          tile.classList.add('unused');
+                      }
+                  });
+              }
+          </script>
         <a href="place21.html"><button  class="place__btn" onclick="next()">Далее</button></a>
       </div>
+    </div>
+          
+            
       
       <div class="line">
         <div id="timer" class="timer">00:00</div>
