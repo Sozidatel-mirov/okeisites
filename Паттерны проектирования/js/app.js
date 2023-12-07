@@ -153,82 +153,14 @@ const results =
   new Result("Вы в совершенстве знаете тему", 6)
 ];
 
-//Массив с вопросами
-const questions = 
-[
+// Массив с вопросами
+const questions = [
   new Question("Паттерн проектирования, который используется для гарантии существования только одного экземпляра класса", 
   [
     new Answer("Observer", 0),
     new Answer("Singleton", 1),
     new Answer("Factory", 0),
     new Answer("Adapter", 0)
-  ]),
-
-  new Question("Паттерн проектирования, который используется для приведения несовместимых интерфейсов двух классов к единому интерфейсу? ", 
-  [
-    new Answer("Observer", 0),
-    new Answer("Singleton", 0),
-    new Answer("Adapter", 1),
-    new Answer("Factory", 0)
-  ]),
-
-  new Question("Паттерн проектирования, который используется для единообразного создания объектов разных типов в зависимости от условий.", 
-  [
-    new Answer("Singleton", 0),
-    new Answer("Factory", 1),
-    new Answer("Adapter", 0),
-    new Answer("Observer", 0)
-  ]),
-
-  new Question("Паттерн проектирования, который используется для оповещения подписанных объектах об изменениях другого объекта", 
-  [
-    new Answer("Observer", 1),
-    new Answer("Singleton", 0),
-    new Answer("Adapter", 0),
-    new Answer("Factory", 0)
-  ]),
-
-  new Question("Что из перечисленного является преимуществом при использовании паттернов проектирования?", 
-  [
-    new Answer("Усложнение кода", 0),
-    new Answer("Ограничение свободы действий", 0),
-    new Answer("Улучшение повторного использования кода", 1),
-    new Answer("Сложность понимания", 0)
-  ]),
-new Question("Что из перечисленного является недостатком при использовании паттернов проектирования?", 
-  [
-    new Answer("Улучшение читаемости кода", 0),
-    new Answer("Затратность внедрения", 1),
-    new Answer("Сокрытие сложности", 0),
-    new Answer("Облегчение тестирования", 0)
-  ]),
-  new Question("Каких типов паттернов в классификации не существует:", 
-  [
-    new Answer("Порождающие", 0),
-    new Answer("Структурные", 0),
-    new Answer("Поведенческие", 0),
-    new Answer("Логические", 1)
-  ]),
-  new Question("Какая категория паттернов проектирования отвечает за создание объектов и структур данных?", 
-  [
-    new Answer("Порождающие", 1), 
-    new Answer("Структурные", 0),
-    new Answer("Поведенческие", 0),
-    new Answer("Логические", 0)
-  ]),
-  new Question("Какая категория паттернов проектирования отвечает за организацию классов и объектов в более сложные структуры?", 
-  [
-    new Answer("Порождающие", 0),
-    new Answer("Структурные", 1),
-    new Answer("Поведенческие", 0),
-    new Answer("Логические", 0)
-  ]),
-  new Question("Какая категория паттернов проектирования отвечает за взаимодействие между объектами и управление потоком выполнения программы?", 
-  [
-    new Answer("Порождающие", 0),
-    new Answer("Структурные", 0),
-    new Answer("Поведенческие", 1),
-    new Answer("Логические", 0)
   ])
 ];
 
@@ -244,10 +176,10 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Показать результат";
+  nextButton.innerHTML = "Далее";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "quiz1.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -281,7 +213,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = (quiz.current + 1) + " / " + quiz.questions.length;
+    pagesElem.innerHTML =  "1 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
