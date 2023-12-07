@@ -2,6 +2,7 @@
 * {
     padding: 0;
 margin: 0 ;
+margin-top: 3px;
     box-sizing: border-box;
 }
 
@@ -47,7 +48,7 @@ margin: 0 ;
     box-shadow: 0px 0px 7px #cecece;
     border-radius: 10px;
     border-color: white;
-    min-height: 50px;
+    min-height: 150px;
     min-width: 300px;
     flex: 1;
     justify-content: space-between;
@@ -56,11 +57,11 @@ margin: 0 ;
     white-space: normal !important;
 }
 #column1 .item{
-    padding: 30px 90px 30px 30px;  
+    padding: 30px 50px 30px 30px;  
     margin: 15px 20px;
 }
 #column2 .item{
-    padding: 30px 30px 30px 90px; 
+    padding: 30px 30px 30px 60px; 
     margin: 15px 20px;
 }
 
@@ -102,14 +103,14 @@ margin: 0 ;
 .block {
     background: #fff;
     box-shadow: 0px 0px 0px #b5b5b5;
-    padding: 5px 65px 5px 5px;
+    padding: 5px 5px 5px 5px;
     height: auto; 
     margin: 0 auto;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
     min-height: auto;
     margin-left: 45px;
     margin-right: 20px;
-    width: 100%;
+    
 
 }
 
