@@ -155,12 +155,12 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("Сведение музыки - это...",
+  new Question("К ранним электронным инструментам так же относят: звуковой крест (фр. Croix Sonore), изобретенный в 1926-м году русским композитором ..., изобретенный французским музыкантом Морисом Мартено в период с 1919-го по 1928-й годы.",
       [
-        new Answer("многозначное понятие, характеризующее роды и виды музыкального творчества в связи с их происхождением, условиями исполнения и восприятием.", 0),
-        new Answer("камерное вокальное произведение для голоса с инструментальным сопровождением.", 0),
-        new Answer("стадия создания из отдельных записанных треков конечной записи, следующий после звукозаписи этап создания фонограммы, заключающийся в отборе и редактировании исходных записанных треков, объединении их в единый проект и обработке эффектами.", 1),
-        new Answer("совокупность элементов речи, музыки, шумовых спецэффектов, которые посредством ассоциаций в обобщенном виде создают представление о явлении, материальном объекте, характере человека, историческом событии и т.п.", 0)
+        new Answer("Николаем Обуховым, и Волны Мартено", 0),
+        new Answer("Николаем Обуховым", 0),
+        new Answer("Львом Термином", 1),
+        new Answer("Янис Ксенакисом", 0)
       ])
 ];
 
@@ -176,10 +176,10 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Далее";
+  nextButton.innerHTML = "Показать результат";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz1.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -213,7 +213,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML =  "1 / 10";
+    pagesElem.innerHTML = "10 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -226,6 +226,17 @@ function Update()
 
 function Init()
 {
+  var queryString = window.location.search;
+			var urlParams = new URLSearchParams(queryString);
+			
+			// Получение значений переменных
+			var score = parseInt(urlParams.get('score'));;
+			var timeMinute = urlParams.get('timeMinute');
+			var timeSecond = urlParams.get('timeSecond');
+	
+      quiz.score = score;
+			document.getElementById('minutes').textContent = timeMinute;
+			document.getElementById('seconds').textContent = timeSecond;
   //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
@@ -275,9 +286,14 @@ function Click(index)
 
 }
 // Функция для обновления таймера
+
         function updateTimer() {
+          
+
             const minutesElement = document.getElementById('minutes');
             const secondsElement = document.getElementById('seconds');
+
+            
             
             let minutes = parseInt(minutesElement.textContent);
             let seconds = parseInt(secondsElement.textContent);
