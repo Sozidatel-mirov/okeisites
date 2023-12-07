@@ -155,13 +155,13 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("Музыкальный жанр - это...",
-  [
-    new Answer("совокупность элементов речи, музыки, шумовых спецэффектов, которые посредством ассоциаций в обобщенном виде создают представление о явлении, материальном объекте, характере человека, историческом событии и т.п.", 0),
-    new Answer("многозначное понятие, характеризующее роды и виды музыкального творчества в связи с их происхождением, условиями исполнения и восприятием.", 1),
-    new Answer("стадия создания из отдельных записанных треков конечной записи, следующий после звукозаписи этап создания фонограммы, заключающийся в отборе и редактировании исходных записанных треков, объединении их в единый проект и обработке эффектами.", 0),
-    new Answer("живая история народной души, явленная в слове и переложенная на музыку.", 0)
-  ])
+  new Question("Очень сильное влияние на развитие русского романса оказал ...",
+      [
+        new Answer("Есенин", 0),
+        new Answer("Пушкин", 1),
+        new Answer("Маяковский", 0),
+        new Answer("Достоевский", 0)
+      ])
 ];
 
 //Сам тест
@@ -176,11 +176,10 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Далее";
-  quiz.score = quiz.score + score12;
+  nextButton.innerHTML = "Показать результат";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz5.html?score=" + score12 + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -214,7 +213,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML = "5 / 10";
+    pagesElem.innerHTML = "10 / 10";
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
@@ -228,17 +227,17 @@ function Update()
 function Init()
 {
   var queryString = window.location.search;
-  var urlParams = new URLSearchParams(queryString);
-  
-  // Получение значений переменных
-  var score = parseInt(urlParams.get('score'));;
-  var timeMinute = urlParams.get('timeMinute');
-  var timeSecond = urlParams.get('timeSecond');
-
-  quiz.score = score;
-  document.getElementById('minutes').textContent = timeMinute;
-  document.getElementById('seconds').textContent = timeSecond;
-//Находим все кнопки
+			var urlParams = new URLSearchParams(queryString);
+			
+			// Получение значений переменных
+			var score = parseInt(urlParams.get('score'));;
+			var timeMinute = urlParams.get('timeMinute');
+			var timeSecond = urlParams.get('timeSecond');
+	
+      quiz.score = score;
+			document.getElementById('minutes').textContent = timeMinute;
+			document.getElementById('seconds').textContent = timeSecond;
+  //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
   for(let i = 0; i < btns.length; i++)

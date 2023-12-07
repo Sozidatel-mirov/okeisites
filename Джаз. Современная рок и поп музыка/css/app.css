@@ -47,14 +47,14 @@ h2  {
     transform: rotate(-90deg);
     display: block;
     position: fixed;
-    left: -60px;
+    left: -50px;
     z-index: 1500;
     top: 40%;
     font-size: 1.2em;
     text-align: center;
     padding: 10px 20px;
     border: 1px solid #fff;
-
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -242,9 +242,6 @@ h2  {
     font-size: 19px;
     border-radius: 10px;
     float: right;
-    position: fixed;
-    bottom: 75px;
-    right: 20px;
 }
 
 .place__line {

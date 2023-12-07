@@ -112,15 +112,7 @@
         document.getElementById('timer').textContent = timeMinute + ":" + timeSecond;
         document.getElementById('correctCount').textContent = score;
         document.getElementById('incorrectCount').textContent = 10 - score;
-		if((score/2)<2)
-		{
-			document.getElementById('balls').textContent = 2;
-		}
-		else{
-			document.getElementById('balls').textContent = Math.round(score/2);
-		}
-        
-		
+        document.getElementById('balls').textContent = Math.round(score/2);
         
     </script>
 </body>
