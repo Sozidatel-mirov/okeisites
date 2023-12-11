@@ -267,7 +267,7 @@ td,th {
     position: absolute;
     z-index: 9999;
     height: 1vw;
-    top: 8vw;
+    top: 7vw;
     left: 24vw;
     font-size: 2dvb;
     color: #7d7d7d;
@@ -309,4 +309,53 @@ td,th {
     z-index: 9999;
     color: #fff;
     font-size: 3dvb;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .engoergegr {
+        position: absolute;
+        top: 1.6vw;
+        left: 2vw;
+        z-index: 9999;
+        color: #fff;
+        font-size: 1.6vw;;
+    }
+
+    .modals__text {
+    
+        position: absolute;
+        z-index: 9999;
+        height: 1.2vw;
+        top: 7vw;
+        left: 24vw;
+        font-size: 1vw;
+        color: #7d7d7d;
+    }
+    
+    .ilehufrierg {
+        
+        position: absolute;
+        z-index: 9999;
+        height: 2vw;
+        top: 7vw;
+        left: 24vw;
+        font-size: 1.2vw;
+        width: 20vw;
+    }
+
+    .dish__text > h3 {
+        border-bottom: 0.2vw solid rgb(71, 58, 83);
+        padding-bottom: 0.6vw;
+        width: 30vw;
+        font-size: 1vw;
+    }
+    .inner1>a{
+        border-left: 0.2vw solid #473a53;
+        padding-left: 1vw;
+        margin: 0 1vw;
+        text-decoration: none;
+        color: #000;
+    font-size: 2vw;}
 }
