@@ -155,12 +155,12 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("Паттерн проектирования, который используется для единообразного создания объектов разных типов в зависимости от условий.", 
+  new Question("Какие из нижеперечисленный полей IP пакета изменяются при прохождении через маршрутизатор? ", 
   [
-    new Answer("Singleton", 0),
-    new Answer("Factory", 1),
-    new Answer("Adapter", 0),
-    new Answer("Observer", 0)
+    new Answer("Длина", 0),
+    new Answer("Контрольная сумма", 1),
+    new Answer("Смещение фрагмента", 0),
+    new Answer("Идентификатор", 0)
   ])
 ];
 

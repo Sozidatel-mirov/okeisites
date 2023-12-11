@@ -155,12 +155,12 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("Паттерн проектирования, который используется для оповещения подписанных объектах об изменениях другого объекта", 
+  new Question("С помощью какой утилиты можно узнать Ethernet адрес сетевого адаптера конкретного компьютера? ", 
   [
-    new Answer("Observer", 1),
-    new Answer("Singleton", 0),
-    new Answer("Adapter", 0),
-    new Answer("Factory", 0)
+    new Answer("ipconfig", 1),
+    new Answer("route", 0),
+    new Answer("ping", 0),
+    new Answer("nbtstat", 0)
   ])
 ];
 
