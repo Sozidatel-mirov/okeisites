@@ -30,12 +30,12 @@
 				<div class="item-result row-results">
 					<div class="item-result_desc">
 						<div class="item-result_text">Выполнено задание</div>
-						<div class="item-result_title" id="language-I-check-completed">Сетевые протоколы и коммуникации</div>
+						<div class="item-result_title" id="language-I-check-completed">Паттерны проектирования</div>
 					</div>
 					<div class="item-result_desc">
 						<div class="wrap-item-result_desc">
 							<div class="item-result_text">Тема</div>
-							<div class="item-result_title">Сетевые протоколы и коммуникации</div>
+							<div class="item-result_title">Паттерны проектирования</div>
 						</div>
 					</div>
 				</div>
@@ -112,7 +112,15 @@
         document.getElementById('timer').textContent = timeMinute + ":" + timeSecond;
         document.getElementById('correctCount').textContent = score;
         document.getElementById('incorrectCount').textContent = 10 - score;
-        document.getElementById('balls').textContent = Math.round(score/2);
+		if((score/2)<2)
+		{
+			document.getElementById('balls').textContent = 2;
+		}
+		else{
+			document.getElementById('balls').textContent = Math.round(score/2);
+		}
+        
+		
         
     </script>
 </body>
