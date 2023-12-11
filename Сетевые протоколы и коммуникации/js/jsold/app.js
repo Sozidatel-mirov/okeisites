@@ -153,14 +153,82 @@ const results =
   new Result("Вы в совершенстве знаете тему", 6)
 ];
 
-// Массив с вопросами
-const questions = [
+//Массив с вопросами
+const questions = 
+[
   new Question("При проверке правильности конфигурации TCP – IP вы даёте команду ping и указываете IP адрес удалённого хоста. Результат, удалённый хост доступен. Какое следующее действие следует предпринять?", 
   [
     new Answer("print имя_удалённого_компьютера»", 1),
     new Answer("print IP_адрес_шлюза_по_умолчанию»", 0),
     new Answer("print 127.0.0.1", 0),
     new Answer("print локальный_IP_адрес»", 0)
+  ]),
+
+  new Question("Что из нижеперечисленного верно относительно протокола UDP? ", 
+  [
+    new Answer("Обеспечивает ненадёжную передачу данных", 1),
+    new Answer("Принятые данные восстанавливаются в исходной последовательности", 0),
+    new Answer("Обеспечивает надёжную передачу данных", 0),
+    new Answer("подтверждения принятых данных посылаются квитанции", 0)
+  ]),
+
+  new Question("Какие из нижеперечисленный полей IP пакета изменяются при прохождении через маршрутизатор? ", 
+  [
+    new Answer("Длина", 0),
+    new Answer("Контрольная сумма", 1),
+    new Answer("Смещение фрагмента", 0),
+    new Answer("Идентификатор", 0)
+  ]),
+
+  new Question("С помощью какой утилиты можно узнать Ethernet адрес сетевого адаптера конкретного компьютера? ", 
+  [
+    new Answer("ipconfig", 1),
+    new Answer("route", 0),
+    new Answer("ping", 0),
+    new Answer("nbtstat", 0)
+  ]),
+
+  new Question("Сеть 130.15.0.0 разбита на 8 подсетей маской 255,255,224,0. Какое максимальное количество хостов может быть в каждой подсети? ", 
+  [
+    new Answer("255", 0),
+    new Answer("30", 0),
+    new Answer("8190", 1),
+    new Answer("8192", 0)
+  ]),
+new Question("Какую информацию, содержащуюся в приходящем IP пакете, анализирует маршрутизатор. Чтобы направить его в требуемую подсеть? ", 
+  [
+    new Answer("флаг инкапсулированного протокола", 0),
+    new Answer("IP адрес назначения", 1),
+    new Answer("IP адрес источника", 0),
+    new Answer("IP адрес и маску подсети назначения", 0)
+  ]),
+  new Question("На каком уровне модели ISO/OSI работает протокол FTP? ", 
+  [
+    new Answer("сетевом уровне", 0),
+    new Answer("канальном уровне", 0),
+    new Answer("физическом уровне", 0),
+    new Answer("уровне приложения", 1)
+  ]),
+   new Question("Протокол ARP работает на: ", 
+  [
+    new Answer("сетевом уровне", 1),
+    new Answer("канальном уровне", 0),
+    new Answer("физическом уровне", 0),
+    new Answer("уровне приложения", 0)
+  ]),
+  new Question("Какую из нижеперечисленный функций выполняет протокол IP?", 
+  [
+    new Answer("коррекция ошибок", 0),
+    new Answer("маршрутизация", 1),
+    new Answer("установка соединения", 0),
+    new Answer("исправление ошибок", 0)
+  ]),
+  new Question("При помощи какого параметра протокол UDP определяет, для какого приложения предназначен?", 
+  [
+    new Answer("Номер последовательности", 0),
+    new Answer("NetBIOS имя", 0),
+    new Answer("IP – адрес", 1),
+    new Answer("Номер порта", 0)
   ])
 ];
 
@@ -176,10 +244,10 @@ function Update()
   if(quiz.current < quiz.questions.length) 
   {
     if (quiz.current >= quiz.questions.length - 1) {
-  nextButton.innerHTML = "Далее";
+  nextButton.innerHTML = "Показать результат";
   nextButton.addEventListener("click", function () {
     // Перенаправить на страницу с результатами
-    window.location.href = "quiz1.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
+    window.location.href = "result.html?score=" + quiz.score + "&timeMinute=" + timeMinute + "&timeSecond=" + timeSecond; // Замените на фактический URL вашей страницы с результатами
   });
 } else {
   // Для других случаев (не последний вопрос) оставьте оригинальный текст "Далее" и обработчик события
@@ -213,7 +281,7 @@ function Update()
     }
     
     //Выводим номер текущего вопроса
-    pagesElem.innerHTML =  "1 / 10";
+    pagesElem.innerHTML = (quiz.current + 1) + " / " + quiz.questions.length;
 
     //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
