@@ -1,55 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site</title>
-  <link rel="stylesheet" href="../css/place.css">
- 
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site</title>
+        <link rel="stylesheet" href="../css/place.css">
+      </head>
 
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block" style="height: 900px; margin-bottom: 10%">
-    <h2>Сетевые протоколы и коммуникации</h2>
+  <div class="block">
+    <h2>Тренажер: Работа с растровой графикой.</h2>
         <div class="place__header">
-            <p>Соотнесите, что можно выполнить в какой вкладке в компьютере или ноутбуке</p>
-
+            <p>Соотнесите основные форматы файлов растровых изображений с их расширениями:</p>
             <span>5/10</span>
         </div>
         <hr>
         <div class="place__body">
-
-            <div class="containerp" >
+            <div class="containerp">
                 <div class="column" id="column1" >
-                    <div class="item" id="item1" draggable="true">
-                        IP Configuration
-                        <div class="dot dot-right"></div>
-                    </div>
-                    <div class="item" id="item2" draggable="true">
-                        Terminal
-                        <div class="dot dot-right"></div>
-                    </div>
-                    <div class="item" id="item3" draggable="true">
-                        Command Promt
-                        <div class="dot dot-right"></div>
-                    </div>
-                    <div class="item" id="item4" draggable="true">
-                        Telnet / SSH Client
-                        <div class="dot dot-right"></div>
-                    </div>
-     
-                  
+                    <div class="item" id="item1" draggable="true">JPEG<div class="dot dot-right"></div></div>
+                    <div class="item" id="item2" draggable="true">PNG<div class="dot dot-right"></div></div>
+                    <div class="item" id="item3" draggable="true">GIF<div class="dot dot-right"></div></div>
+                    <div class="item" id="item4" draggable="true">BMP<div class="dot dot-right"></div></div>
                 </div>
+                
                 <div class="column" id="column2">
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Выполнить подключение, используя удаленный доступ</div>
-                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Выполнить эхо-запрос</div>
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Выполнить подключение по консольному порту</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Задать IP-адрес, шлюз, маску подсети</div>
-                  
+                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Расширение файла, предназначенного для хранения анимированных изображений и поддерживающего прозрачность</div>
+                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Формат сжатия с потерей качества, хорошо подходит для фотографий</div>
+                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Расширение файла, часто используемое в изображениях высокого качества с поддержкой прозрачности</div>
+                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Несжатый формат с поддержкой высокого качества, но с большим размером файла</div>
+                   
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
             </div>
@@ -63,10 +46,10 @@
         
                 function checkAnswers() {
                     const pairs = [
-                        ['item1', 'itemD'],
+                        ['item1', 'itemB'],
                         ['item2', 'itemC'],
-                        ['item3', 'itemB'],
-                        ['item4', 'itemA']
+                        ['item3', 'itemA'],
+                        ['item4', 'itemD'],
                     ];
         
                     pairs.forEach(pair => {
@@ -87,6 +70,7 @@
                             element2.style.backgroundColor = '#ff8d8d';
                         }
                     });
+                    document.getElementById('clek1').hidden = false;
                 }
         
                 let draggedItem = null;
@@ -104,13 +88,6 @@
                 document.addEventListener('dragover', (event) => {
                     event.preventDefault();
                 });
-                document.addEventListener('dragstart', (event) => {
-        // Изменено условие, чтобы учитывать родительский элемент .item
-        if (event.target.classList.contains('item')) {
-            draggedItem = event.target;
-            event.dataTransfer.setData('text/plain', null);
-        }
-    });
         
                 document.addEventListener('drop', (event) => {
                     event.preventDefault();
@@ -137,7 +114,7 @@
                     }
                 });
             </script>
-    <a href="place2-6.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    <a href="place2-4.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
 </div>
       
@@ -146,7 +123,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-4.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-3.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>

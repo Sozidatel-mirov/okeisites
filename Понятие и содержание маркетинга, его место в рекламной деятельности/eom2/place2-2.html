@@ -47,6 +47,7 @@
           let connections = {};
   
           function checkAnswers() {
+            document.getElementById('clek1').hidden = false;
               const pairs = [
                   ['item1', 'itemA'],
                   ['item2', 'itemB'],
@@ -115,7 +116,7 @@
               }
           });
       </script>
-      <a href="place2-3.html"><button  class="place__btn" onclick="next()">Далее</button></a>
+      <a href="place2-3.html"><button  class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
   </div></div>
       

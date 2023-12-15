@@ -74,6 +74,7 @@
                             element2.style.backgroundColor = '#ff8d8d';
                         }
                     });
+                    document.getElementById('clek1').hidden = false;
                 }
         
                 let draggedItem = null;
@@ -117,7 +118,7 @@
                     }
                 });
             </script>
-    <a href="place24.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    <a href="place24.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
 </div>
       
@@ -126,7 +127,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place22.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-5.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>
