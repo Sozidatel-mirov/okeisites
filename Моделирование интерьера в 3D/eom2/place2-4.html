@@ -92,7 +92,7 @@
       <h2>Виртуальный тренажер: Разработка модели интерьера</h2>
       <div class="place__header">
 Сопоставьте следующие элементы дизайна интерьера с их описаниями:</p>
-          <span>4/10</span>
+          <span>6/10</span>
           
         </div>
         <hr>
@@ -168,9 +168,10 @@
                           tile.classList.add('unused');
                       }
                   });
+                  document.getElementById('clek1').hidden = false;
               }
           </script>
-        <a href="place21.html"><button  class="place__btn" onclick="next()">Далее</button></a>
+        <a href="place21.html"><button  class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
       </div>
     </div>
           
@@ -178,7 +179,7 @@
       
       <div class="line">
         <div id="timer" class="timer">00:00</div>
-        
+        <button onclick="checkAnswers()" class="place__back">Ответить</button>
         <a href="place2-3.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>

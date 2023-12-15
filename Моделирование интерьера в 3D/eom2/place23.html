@@ -17,7 +17,7 @@
     <h2>Виртуальный тренажер: Разработка модели интерьера</h2>
         <div class="place__header">
             <p> Сопоставьте типы 3D-моделей с их описаниями:</p>
-<span>7/10</span>
+<span>9/10</span>
            
         </div>
         <hr>
@@ -47,6 +47,7 @@
                 let connections = {};
         
                 function checkAnswers() {
+                    document.getElementById('clek1').hidden = false;
                     const pairs = [
                         ['item1', 'itemA'],
                         ['item2', 'itemB'],
@@ -115,7 +116,7 @@
                     }
                 });
             </script>
-    <a href="place24.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    <a href="place26.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
 </div>
       

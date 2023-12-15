@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
- 
+  
 </head>
 
 <body>
@@ -16,29 +16,26 @@
   <div class="block" >
     <h2>Основы компьютерной графики</h2>
         <div class="place__header">
-            <p>Установите соответствие между форматом и описанием</p>
-            <span>14/17</span>
+            <p>Соотнесите виды компьютерной грфики с их описанием</p>
+            <span>11/17</span>
+           
         </div>
         <hr>
         <div class="place__body">
-
             <div class="containerp">
                 <div class="column" id="column1" >
-                    <div class="item" id="item1" draggable="true">Хранение и отображение в среде Windows<div class="dot dot-right"></div></div>
-                    <div class="item" id="item2" draggable="true">Векторный формат, используется для обмена чертежами между САПР<div class="dot dot-right"></div></div>
-                    <div class="item" id="item5" draggable="true">в этом формате сохраняются документы приложения CorelDraw в среде Windows<div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true">Чаще всего в этом формате хранятся фотографии<div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true">Растровый формат, используется в Adobe Photoshop по умолчанию<div class="dot dot-right"></div></div>
-                   
+                    <div class="item" id="item1" draggable="true">Двухмерная (2D)<div class="dot dot-right"></div></div>
+                    <div class="item" id="item2" draggable="true">Векторная<div class="dot dot-right"></div></div>
+                    <div class="item" id="item3" draggable="true">Растровая<div class="dot dot-right"></div></div>
+                    <div class="item" id="item4" draggable="true">Фрактальная<div class="dot dot-right"></div></div>
+                    <div class="item" id="item5" draggable="true">Трехмерная (3D)<div class="dot dot-right"></div></div>
                 </div>
-     
-                
                 <div class="column" id="column2">
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>.bmp</div>
-                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>.dxf</div>
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>.jpeg</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>.psd</div>
-                    <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>.cdr</div>
+                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>состоит из множества квадратов — пикселей. Такое изображение невозможно увеличить без потери качества: оно начинает видоизменяться, проявляются неровные края и отдельные пиксели. Эта графика создаётся в цветовом пространстве RGB и часто имеет красивый градиент, сложные переходы, интересную заливку, много цвета и почти фотографический реализм.</div>
+                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>связывает искусство и математику, это результат работы математических алгоритмов. Простейший пример — калейдоскоп: механизм проектирует некий рисунок, выстраивая его без участия человека. </div>
+                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div> простая картинка, которая выглядит плоской, вследствие того, что в нем применяются только два измерения – ширина и высота.</div>
+                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>графика состоит из опорных точек и соединяющих их кривых: такие изображения можно масштабировать без потери качества. Изображения используют для создания инфографики, иконок и других элементов интерфейса, логотипов, персонажей фирменного стиля, лендингов, сайтов и приложений.</div>
+                    <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>Каждая точка имеет свои координаты на каждой из трёх осей. Применяется в различных индустриях: от архитектуры до медицинской промышленности.</div>
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
             </div>
@@ -52,10 +49,10 @@
         
                 function checkAnswers() {
                     const pairs = [
-                        ['item1', 'itemA'],
-                        ['item2', 'itemB'],
-                        ['item3', 'itemC'],
-                        ['item4', 'itemD'],
+                        ['item1', 'itemC'],
+                        ['item2', 'itemD'],
+                        ['item3', 'itemA'],
+                        ['item4', 'itemB'],
                         ['item5', 'itemE']
                     ];
         
@@ -77,6 +74,7 @@
                             element2.style.backgroundColor = '#ff8d8d';
                         }
                     });
+                    document.getElementById('clek1').hidden = false;
                 }
         
                 let draggedItem = null;
@@ -120,7 +118,7 @@
                     }
                 });
             </script>
-    <a href="place22.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    <a href="place2-9.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
 </div>
       
@@ -129,7 +127,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-13.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-8.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>

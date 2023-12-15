@@ -17,7 +17,7 @@
     <h2>Виртуальный тренажер: Разработка модели интерьера</h2>
         <div class="place__header">
             <p>Соотнесите виды 3D-моделей интерьера с их характеристиками:</p>
-<span>5/10</span>
+<span>7/10</span>
         </div>
        
         <div class="place__body">
@@ -49,6 +49,7 @@
                 let connections = {};
         
                 function checkAnswers() {
+                    document.getElementById('clek1').hidden = false;
                     const pairs = [
                         ['item1', 'itemC'],
                         ['item2', 'itemA'],
@@ -116,7 +117,7 @@
                     }
                 });
             </script>
-    <a href="place22.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    <a href="place22.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
 </div>
       
@@ -125,7 +126,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-3.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-4.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>

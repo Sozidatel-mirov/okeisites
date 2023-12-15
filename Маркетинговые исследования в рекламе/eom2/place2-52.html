@@ -18,7 +18,7 @@
         <div class="place__header">
             <p>Соотнесите верные определения</p>
 
-            <span>5/10</span>
+            <span>4/10</span>
         </div>
       <hr>
       <div class="place__body">
@@ -52,6 +52,7 @@
           let connections = {};
   
           function checkAnswers() {
+            document.getElementById('clek1').hidden = false;
               const pairs = [
                   ['item1', 'itemB'],
                   ['item2', 'itemD'],
@@ -78,6 +79,8 @@
                       element2.style.backgroundColor = '#ff8d8d';
                   }
               });
+
+              
           }
   
           let draggedItem = null;
@@ -121,7 +124,7 @@
               }
           });
       </script>
-        <a href="place2-5.html"><button style="position: fixed; bottom: 75px; right: 20px;" class="place__btn" onclick="next()">Далее</button></a>
+        <a href="place2-5.html"><button style="position: fixed; bottom: 75px; right: 20px;" id="clek1" hidden class="place__btn" onclick="next()">Далее</button></a>
       </div>
 </div>
       
@@ -129,6 +132,7 @@
       
       <div class="line">
         <div id="timer" class="timer">00:00</div>
+        <button onclick="checkAnswers()" class="place__back">Ответить</button>
         <a href="place2-51.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>

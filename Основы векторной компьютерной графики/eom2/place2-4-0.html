@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site</title>
-  <link rel="stylesheet" href="../css/place.css">
-  
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site</title>
+        <link rel="stylesheet" href="../css/place.css">
+      </head>
 
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block" >
-    <h2>Основы композиционного построения кадра</h2>
+  <div class="block">
+    <h2>Тренажер: Работа с векторной графикой.</h2>
         <div class="place__header">
-            <p>Соотнесите углы обзора в анимации с их описанием</p>
+            <p>Соедините термин с его определением:</p>
+            
 
-            <span>9/10</span>
+            <span>5/10</span>
         </div>
         <hr>
         <div class="place__body">
             <div class="containerp">
                 <div class="column" id="column1" >
-                    <div class="item" id="item1" draggable="true">Низкий угол обзора<div class="dot dot-right"></div></div>
-                    <div class="item" id="item2" draggable="true">Высокий угол обзора<div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true">Боковой угол обзора<div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true">Бэйкшот<div class="dot dot-right"></div></div>
+                    <div class="item" id="item1" draggable="true">Вектор<div class="dot dot-right"></div></div>
+                    <div class="item" id="item2" draggable="true">Безразмерный<div class="dot dot-right"></div></div>
+                    <div class="item" id="item3" draggable="true">Редактор векторной графики<div class="dot dot-right"></div></div>
+                    <div class="item" id="item4" draggable="true">Кривая Безье<div class="dot dot-right"></div></div>
+                    
                 </div>
+                
                 <div class="column" id="column2">
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Этот ракурс может использоваться для создания интимности или подчеркивания изоляции</div>
-                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Он может придать крутость, уязвимость или беспомощность объектам или персонажам. Это может быть эффективным при создании напряженных сцен или подчеркивании драматических моментов</div>
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Данный угол обзора может использоваться для передачи статичности сцены или создания эффекта нейтральности. Также, он может быть эффективен при съемке разговоров между персонажами</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>С ним создается впечатление могущества, силы или героизма. Этот ракурс может использоваться для выделения важных персонажей или событий</div>
+                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Adobe Illustrator</div>
+                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Способ представления графической информации в виде направленных линий</div>
+                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Инструмент для создания гладких кривых на плоскости</div>
+                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Графический объект с масштабируемой графикой</div>
+                  
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
             </div>
@@ -47,10 +49,10 @@
         
                 function checkAnswers() {
                     const pairs = [
-                        ['item1', 'itemD'],
-                        ['item3', 'itemC'],
-                        ['item2', 'itemB'],
-                        ['item4', 'itemA']
+                        ['item1', 'itemB'],
+                        ['item2', 'itemD'],
+                        ['item3', 'itemA'],
+                        ['item4', 'itemC'],
                     ];
         
                     pairs.forEach(pair => {
@@ -71,6 +73,7 @@
                             element2.style.backgroundColor = '#ff8d8d';
                         }
                     });
+                    document.getElementById('clek1').hidden = false;
                 }
         
                 let draggedItem = null;
@@ -114,7 +117,7 @@
                     }
                 });
             </script>
-    <a href="place2-10.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    <a href="place2-4.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
 </div>
       
@@ -123,7 +126,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-8.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-3.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>

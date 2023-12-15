@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
- 
+  
 </head>
 
 <body>
@@ -16,30 +16,28 @@
   <div class="block" >
     <h2>Тренажер: Работа с векторной графикой.</h2>
         <div class="place__header">
+            <p>Сопоставьте вид инструмента с его функцией:</p>
+           
 
-            <p>Подберите правильное определение:</p>
-
-
-        <span>7/10</span>
+            <span>7/10</span>
+           
         </div>
-       
+        <hr>
         <div class="place__body">
-
             <div class="containerp">
                 <div class="column" id="column1" >
-                    <div class="item" id="item1" draggable="true">Растр<div class="dot dot-right"></div></div>
-                    <div class="item" id="item2" draggable="true">Интерполяция<div class="dot dot-right"></div></div>
-                    <div class="item" id="item3" draggable="true">Векторизация<div class="dot dot-right"></div></div>
-                    <div class="item" id="item4" draggable="true">Сглаживание<div class="dot dot-right"></div></div>
-                   
-                </div>
-     
+                    <div class="item" id="item1" draggable="true">Перо<div class="dot dot-right"></div></div>
+                    <div class="item" id="item2" draggable="true">Кисть<div class="dot dot-right"></div></div>
+                    <div class="item" id="item3" draggable="true">Ластик<div class="dot dot-right"></div></div>
+                    <div class="item" id="item4" draggable="true">Градиент<div class="dot dot-right"></div></div>
                 
+                </div>
                 <div class="column" id="column2">
-                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Процесс преобразования растрового изображения в векторное</div>
-                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Метод уменьшения видимых ступенчатых краев на изображении</div>
-                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Сетка из пикселей, используемая для хранения графической информации</div>
-                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Алгоритм добавления дополнительных точек для улучшения качества изображения</div>
+                    <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Создание постепенного перехода между двумя или более цветами</div>
+                    <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Удаление части изображения</div>
+                    <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Рисование произвольных форм и линий</div>
+                    <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div> Создание и редактирование кривых</div>
+                   
                 </div>
                 <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
             </div>
@@ -53,11 +51,13 @@
         
                 function checkAnswers() {
                     const pairs = [
-                        ['item1', 'itemC'],
-                        ['item2', 'itemD'],
-                        ['item3', 'itemA'],
-                        ['item4', 'itemB'],
+                        ['item1', 'itemB'],
+                        ['item2', 'itemA'],
+                        ['item3', 'itemD'],
+                        ['item4', 'itemC'],
+              
                     ];
+        
                     pairs.forEach(pair => {
                         const item1 = pair[0];
                         const item2 = pair[1];
@@ -76,6 +76,7 @@
                             element2.style.backgroundColor = '#ff8d8d';
                         }
                     });
+                    document.getElementById('clek1').hidden = false;
                 }
         
                 let draggedItem = null;
@@ -119,7 +120,7 @@
                     }
                 });
             </script>
-    <a href="place22.html"><button class="place__btn"  onclick="next()">Далее</button></a>
+    <a href="place2-5.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
 </div>
       
@@ -128,7 +129,7 @@
       <div class="line">
         <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-6.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-4.html"><button class="place__back" >На шаг назад</button></a>
         
   </div>
 </body>
