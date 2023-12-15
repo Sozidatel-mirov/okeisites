@@ -269,17 +269,20 @@ function Click(index)
     if(correct >= 0)
     {
       btns[correct].className = "button button_correct";
+      document.getElementById('clek1').hidden = false;
     }
 
     if(index != correct) 
     {
       btns[index].className = "button button_wrong";
+      document.getElementById('clek1').hidden = false;
     } 
   }
   else
   {
     //Иначе просто подсвечиваем зелёным ответ пользователя
     btns[index].className = "button button_correct";
+    document.getElementById('clek1').hidden = false;
   }
 
   //Ждём секунду и обновляем тест
