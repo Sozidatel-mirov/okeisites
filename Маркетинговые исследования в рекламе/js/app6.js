@@ -268,18 +268,18 @@ function Click(index)
   {
     if(correct >= 0)
     {
-      btns[correct].className = "button button_correct";
+      btns[correct].className = "button button_correct";document.getElementById('nextButton').hidden = false;
     }
 
     if(index != correct) 
-    {
+    {document.getElementById('nextButton').hidden = false;
       btns[index].className = "button button_wrong";
     } 
   }
   else
   {
     //Иначе просто подсвечиваем зелёным ответ пользователя
-    btns[index].className = "button button_correct";
+    btns[index].className = "button button_correct";document.getElementById('nextButton').hidden = false;
   }
 
   //Ждём секунду и обновляем тест
