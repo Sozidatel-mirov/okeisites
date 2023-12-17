@@ -155,7 +155,7 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("8. Переживание неудовлетворенности собой - это:", 
+  new Question("Переживание неудовлетворенности собой - это:", 
   [
     new Answer("стыд", 0),
     new Answer("гнев", 1),

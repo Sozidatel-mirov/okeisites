@@ -155,7 +155,7 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("10. Фаза стресса:", 
+  new Question("Фаза стресса:", 
   [
     new Answer("фаза возбуждения", 0),
     new Answer("фаза истерики", 1),

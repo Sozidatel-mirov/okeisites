@@ -155,7 +155,7 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("7. Отрицательные эмоции обусловлены", 
+  new Question("Отрицательные эмоции обусловлены", 
   [
     new Answer("характером", 0),
     new Answer("неустойчивостью", 1),
