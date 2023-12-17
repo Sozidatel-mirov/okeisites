@@ -864,7 +864,7 @@ margin: 0 ;
     text-align: center;
     padding: 10px 20px;
     border: 1px solid #fff;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 .place__header {
     display: flex;
