@@ -132,7 +132,7 @@
 	<div class="block">
 	  <h2>Администрирование Windows Server 2019</h2>
 	  <div class="place__header">
-		<p head__content>Разместите действия по добавлению нового пользователя в Active Directory на Windows Server 2019 в правильном порядке</p>
+		<p class="head__content">Разместите действия по добавлению нового пользователя в Active Directory на Windows Server 2019 в правильном порядке</p>
 				   
 		<span>8/10</span>
 	  </div>
@@ -232,6 +232,7 @@ console.log('Score:', score12);
 							tile.classList.add('unused');
 						}
 					});
+					document.getElementById('nextButton').hidden = false;
 					document.getElementById('clek').hidden = true;
 	document.getElementById('clek1').hidden = false;
 				}
@@ -247,7 +248,7 @@ console.log('Score:', score12);
 		</div>
 		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
 		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn" id="nextButton">Далее</button>
+		<button class="place__btn" id="nextButton" hidden>Далее</button>
 		
 		
 

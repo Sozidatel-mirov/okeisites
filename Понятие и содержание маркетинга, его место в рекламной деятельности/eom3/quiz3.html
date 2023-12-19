@@ -55,7 +55,7 @@
 	<div class="block" >
 		<h2>Понятие и содержание маркетинга</h2>
 			<div class="place__header">
-				<p>Соотнесите маркетиговые понятия с их определениями</p>
+				<p class="head__content">Соотнесите маркетиговые понятия с их определениями</p>
 	
 				<span>4/10</span>
 			</div>
@@ -132,7 +132,7 @@ function checkAnswers() {
         // Если все ответы верны, записываем единицу в вашу переменную (например, score)
         score12++;
     }
-	
+	document.getElementById('nextButton').hidden = false;
 	console.log('Текущий score:', score12);
 	document.getElementById('clek').hidden = true;
 	document.getElementById('clek1').hidden = false;}
@@ -193,7 +193,7 @@ function checkAnswers() {
 		</div>
 		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
 		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn" id="nextButton" style="position: fixed; bottom: 90px; right: 25px;">Далее</button>
+		<button class="place__btn" id="nextButton" hidden >Далее</button>
 		
 		
 

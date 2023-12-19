@@ -55,7 +55,7 @@
 		
 		<h2>Служба каталогов</h2>
 			<div class="place__header">
-				<p>Соотнесите понятия службы каталогов с их описанием</p>
+				<p class="head__content">Соотнесите понятия службы каталогов с их описанием</p>
 	
 				<span>7/10</span>
 			</div>
@@ -135,7 +135,7 @@ function checkAnswers() {
         // Если все ответы верны, записываем единицу в вашу переменную (например, score)
         score12++;
     }
-	
+	document.getElementById('nextButton').hidden = false;
 	console.log('Текущий score:', score12);
 	document.getElementById('clek').hidden = true;
 	document.getElementById('clek1').hidden = false;}
@@ -196,7 +196,7 @@ function checkAnswers() {
 		</div>
 		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
 		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn" id="nextButton" style="position: fixed; bottom: 80px; right: 25px;">Далее</button>
+		<button class="place__btn" hidden  id="nextButton" >Далее</button>
 		
 		
 

@@ -155,7 +155,7 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("7. Отрицательные эмоции обусловлены", 
+  new Question("Отрицательные эмоции обусловлены", 
   [
     new Answer("характером", 0),
     new Answer("неустойчивостью", 1),
@@ -268,18 +268,18 @@ function Click(index)
   {
     if(correct >= 0)
     {
-      btns[correct].className = "button button_correct";
+      btns[correct].className = "button button_correct";document.getElementById('nextButton').hidden = false;
     }
 
     if(index != correct) 
     {
-      btns[index].className = "button button_wrong";
+      btns[index].className = "button button_wrong";document.getElementById('nextButton').hidden = false;
     } 
   }
   else
   {
     //Иначе просто подсвечиваем зелёным ответ пользователя
-    btns[index].className = "button button_correct";
+    btns[index].className = "button button_correct";document.getElementById('nextButton').hidden = false;
   }
 
   //Ждём секунду и обновляем тест

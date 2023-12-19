@@ -155,7 +155,7 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("5. Какая эмоция является положительное:", 
+  new Question("Какая эмоция является положительное:", 
   [
     new Answer("печаль", 0),
     new Answer("злость", 0),

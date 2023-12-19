@@ -155,7 +155,7 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("3. Чувства, связанные с познавательное деятельностью, называются такими чувствами", 
+  new Question("Чувства, связанные с познавательное деятельностью, называются такими чувствами", 
   [
     new Answer("практическими", 0),
     new Answer("интеллектуальными", 1),
@@ -270,18 +270,18 @@ function Click(index)
   {
     if(correct >= 0)
     {
-      btns[correct].className = "button button_correct";
+      btns[correct].className = "button button_correct";document.getElementById('nextButton').hidden = false;
     }
 
     if(index != correct) 
     {
-      btns[index].className = "button button_wrong";
+      btns[index].className = "button button_wrong";document.getElementById('nextButton').hidden = false;
     } 
   }
   else
   {
     //Иначе просто подсвечиваем зелёным ответ пользователя
-    btns[index].className = "button button_correct";
+    btns[index].className = "button button_correct";document.getElementById('nextButton').hidden = false;
   }
 
   //Ждём секунду и обновляем тест

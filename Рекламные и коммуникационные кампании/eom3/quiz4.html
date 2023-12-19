@@ -132,7 +132,7 @@
 	<div class="block" >
 	  <h2>Рекламные и коммуникационные кампании</h2>
 	  <div class="place__header">
-		<p>Какова правильная последовательность этапов разработки рекламной кампании в цифровом маркетинге?</p>
+		<p class="head__content">Какова правильная последовательность этапов разработки рекламной кампании в цифровом маркетинге?</p>
 				   
 		<span>5/10</span>
 	  </div>
@@ -232,7 +232,7 @@ console.log('Score:', score12);
 						if (!tile.parentElement) {
 							tile.classList.add('unused');
 						}
-					});
+					});document.getElementById('nextButton').hidden = false;
 					document.getElementById('clek').hidden = true;
 	document.getElementById('clek1').hidden = false;
 				}
@@ -248,7 +248,7 @@ console.log('Score:', score12);
 		</div>
 		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
 		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn" id="nextButton" style="position: fixed; bottom: 80px; right: 25px;">Далее</button>
+		<button class="place__btn" hidden  id="nextButton" >Далее</button>
 		
 		
 

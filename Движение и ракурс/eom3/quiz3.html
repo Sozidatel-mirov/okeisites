@@ -55,7 +55,7 @@
 	<div class="block" >
 		<h2>Администрирование Windows Server 2019</h2>
 			<div class="place__header">
-				<p>Соотнесите ракурсы с их описанием</p>
+				<p class="head__content">Соотнесите ракурсы с их описанием</p>
 	
 				<span>4/10</span>
 			</div>
@@ -106,6 +106,7 @@ function checkAnswers() {
     ];
 
     pairs.forEach(pair => {
+		document.getElementById('nextButton').hidden = false;
         const item1 = pair[0];
         const item2 = pair[1];
 
@@ -194,7 +195,7 @@ function checkAnswers() {
 		</div>
 		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
 		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn" id="nextButton" style="position: fixed; bottom: 90px; right: 50px;">Далее</button>
+		<button class="place__btn" id="nextButton" hidden>Далее</button>
 		
 		
 

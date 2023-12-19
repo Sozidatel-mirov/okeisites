@@ -155,7 +155,7 @@ const results =
 
 // Массив с вопросами
 const questions = [
-  new Question("2. Эмоциональное состояние, сопереживание к другому объекту это", 
+  new Question("Эмоциональное состояние, сопереживание к другому объекту это", 
   [
     new Answer("настроение", 0),
     new Answer("амбивалентность", 0),
@@ -269,18 +269,18 @@ function Click(index)
   {
     if(correct >= 0)
     {
-      btns[correct].className = "button button_correct";
+      btns[correct].className = "button button_correct";document.getElementById('nextButton').hidden = false;
     }
 
     if(index != correct) 
     {
-      btns[index].className = "button button_wrong";
+      btns[index].className = "button button_wrong";document.getElementById('nextButton').hidden = false;
     } 
   }
   else
   {
     //Иначе просто подсвечиваем зелёным ответ пользователя
-    btns[index].className = "button button_correct";
+    btns[index].className = "button button_correct";document.getElementById('nextButton').hidden = false;
   }
 
   //Ждём секунду и обновляем тест

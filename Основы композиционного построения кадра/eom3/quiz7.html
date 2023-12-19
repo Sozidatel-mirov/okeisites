@@ -132,7 +132,7 @@
 	<div class="block" >
 	  <h2>Основы композиционного построения кадра</h2>
 	  <div class="place__header">
-		<p>Какова правильная последовательность действий при создании композиции в векторном графическом редакторе?</p>
+		<p class="head__content">Какова правильная последовательность действий при создании композиции в векторном графическом редакторе?</p>
 				   
 		<span>8/10</span>
 	  </div>
@@ -231,7 +231,7 @@ console.log('Score:', score12);
 						if (!tile.parentElement) {
 							tile.classList.add('unused');
 						}
-					});
+					});document.getElementById('nextButton').hidden = false;
 					document.getElementById('clek').hidden = true;
 	document.getElementById('clek1').hidden = false;
 				}
@@ -247,7 +247,7 @@ console.log('Score:', score12);
 		</div>
 		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
 		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn" id="nextButton" style="position: fixed; bottom: 80px; right: 50px;">Далее</button>
+		<button class="place__btn" id="nextButton" hidden >Далее</button>
 		
 		
 
