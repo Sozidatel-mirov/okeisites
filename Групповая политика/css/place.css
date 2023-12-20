@@ -174,7 +174,7 @@ video{
 .containerp {
    
     display: flex;
-        justify-content: space-between;
+    justify-content: space-evenly;
         margin: 0 auto;
         position: relative;
         
@@ -189,10 +189,9 @@ video{
 
 .item {
     position: relative;
-    width: 90%;
+    max-width: 90%;
     background-color: #f7f7f7;
     border: 0.1vw solid #ccc;
-    margin: 1vw 0;
     text-align: center;
     cursor: pointer;
     overflow: hidden;
@@ -207,11 +206,12 @@ video{
 }
 #column1 .item{
     padding: 3vw 6vw 3vw 3vw;
-    margin: 0.6vw 2vw;
+    margin: 0.6vw 1.5vw;
+    width: 55%;
 }
 #column2 .item {
     padding: 3vw 3vw 3vw 8vw;
-    margin: 0.6vw 15vw;
+    margin: 0.6vw 1.5vw;
     width: 55%;
 }
 
@@ -526,3 +526,68 @@ transform: translate(-50%, 0);
 {
     background: #B3B3B3;
 }
+
+#container > header.header__result-page > div {
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    cursor: auto;
+    -webkit-box-direction: normal;
+    color: #5a335a;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 1vw;
+    font-size: 1vw;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: 0.2vw solid #5a335a;
+}
+#curResultPage > div > div.resultpage {
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    cursor: auto;
+    color: #5a335a;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: Roboto,sans-serif;
+    background-image: none;
+    margin: 0 auto;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 100%;
+    padding: 1vw;
+    min-height: calc(100% - 85px);
+}
+.item-result_text
+{ -webkit-font-smoothing: antialiased;
+user-select: none;
+cursor: auto;
+-webkit-box-direction: normal;
+text-align: left;
+color: #5a335a;
+box-sizing: border-box;
+-webkit-tap-highlight-color: transparent;
+border: 0;
+font: inherit;
+vertical-align: baseline;
+font-size: 2vw;
+padding: 1vw;}  

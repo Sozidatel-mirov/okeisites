@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
+ 
 </head>
 
 <body>
@@ -17,19 +18,17 @@
     <div class="place__header">
         <p>Расположите этапы включения политики защиты заставки и установки тайм-аута экранной заставки </p>
 
-        <div class="spanline"><span>6/13</span></div>
+        <div class="spanline"><span>3/13</span></div>
     </div>
-  
-    <div class="place__body">
-
-        <div class="containero">
-                <div class="bloks" id="tiles1">
-                <div class="tile" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)">1</div>
-                <div class="tile" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)">2</div>
-                <div class="tile" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)">3</div>
-                <div class="tile" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)">4</div>
-            </div>
-                <div class="bloks" id="tiles2">
+          <div class="place__body">
+            <div class="containero">
+                <div class="placeholders">
+                    <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)">1</div>
+                    <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)">2</div>
+                    <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)">3</div>
+                    <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)">4</div>
+                </div>
+                <div class="tiles">
                 <div class="tile" id="tile2" draggable="true" ondragstart="drag(event)">Перейдите к настройкам экранной заставки</div>
                 <div class="tile" id="tile3" draggable="true" ondragstart="drag(event)">Включите политику "Защита заставки с помощью пароля"</div>
                 <div class="tile" id="tile4" draggable="true" ondragstart="drag(event)">Установите тайм-аут экранной заставки</div>
