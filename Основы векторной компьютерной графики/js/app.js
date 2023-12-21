@@ -157,10 +157,10 @@ const results =
 const questions = [
   new Question("Какими форматами являются  форматы  GIF, JPEG?", 
   [
-    new Answer("векторными", 0),
-    new Answer("растровыми", 1),
-    new Answer("точечными", 0),
-    new Answer("цветными", 0)
+    new Answer("Векторными", 0),
+    new Answer("Растровыми", 1),
+    new Answer("Точечными", 0),
+    new Answer("Цветными", 0)
   ])
 ];
 
