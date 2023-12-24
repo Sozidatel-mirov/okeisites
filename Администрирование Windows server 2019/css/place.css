@@ -184,35 +184,37 @@ video{
         display: flex;
         flex-direction: column;
         align-items: stretch;
+        width: 50%;
         
 }
 
+
 .item {
-    position: relative;
-    max-width: 90%;
+    position: relative; 
     background-color: #f7f7f7;
     border: 0.1vw solid #ccc;
+    margin: 1vw 0;
     text-align: center;
     cursor: pointer;
     overflow: hidden;
     box-shadow: 0 0 0.7vw #cecece;
     border-radius: 1vw;
     border-color: white;
+    min-height: 5vw;
+    min-width: 5vw;
     flex: 1;
     justify-content: space-between;
-    font-size: 1.1vw;
+    font-size: 1.5vw;
     white-space: pre-line;
     white-space: normal !important;
 }
 #column1 .item{
-    padding: 3vw 6vw 3vw 3vw;
-    margin: 0.6vw 1.5vw;
-    width: 55%;
+    padding: 3vw 5vw 3vw 3vw;  
+    margin: 1vw 1.5vw;
 }
-#column2 .item {
-    padding: 3vw 3vw 3vw 8vw;
-    margin: 0.6vw 1.5vw;
-    width: 55%;
+#column2 .item{
+    padding: 3vw 3vw 3vw 6vw; 
+    margin: 1vw 1.5vw;
 }
 
 .dot {
@@ -500,17 +502,6 @@ transform: translate(-50%, 0);
     font-size: 1.4vw;
 }
 
-.buttons__content> div {
-    box-shadow: 0 0 0.7 #cecece;
-    min-width: 650px;
-    min-height: 105px;
-    margin: 50px 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 100px;
-    
-}
 
 .button_wrong 
 {
@@ -575,7 +566,7 @@ transform: translate(-50%, 0);
     flex-direction: column;
     width: 100%;
     padding: 1vw;
-    min-height: calc(100% - 85px);
+    
 }
 .item-result_text
 { -webkit-font-smoothing: antialiased;
