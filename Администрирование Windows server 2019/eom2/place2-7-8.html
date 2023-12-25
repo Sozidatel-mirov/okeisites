@@ -94,12 +94,13 @@
     const target = event.target;
 
     if (target.classList.contains('item') && target !== draggedItem) {
-        const isDraggingRightToLeft = target.offsetLeft < draggedItem.offsetLeft;
+        const draggedRect = draggedItem.getBoundingClientRect();
+        const targetRect = target.getBoundingClientRect();
 
-        const startX = isDraggingRightToLeft ? draggedItem.offsetLeft : draggedItem.offsetLeft + draggedItem.clientWidth;
-        const startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
-        const endX = isDraggingRightToLeft ? target.offsetLeft + target.clientWidth : target.offsetLeft;
-        const endY = target.offsetTop + target.clientHeight / 2;
+        const startX = ((draggedRect.right - lines.getBoundingClientRect().left) / lines.clientWidth) * 100 + '%';
+        const startY = ((draggedRect.top + draggedRect.height / 2 - lines.getBoundingClientRect().top) / lines.clientHeight) * 100 + '%';
+        const endX = ((targetRect.left - lines.getBoundingClientRect().left) / lines.clientWidth) * 100 + '%';
+        const endY = ((targetRect.top + targetRect.height / 2 - lines.getBoundingClientRect().top) / lines.clientHeight) * 100 + '%';
 
         if (!connections[target.id] && !connections[draggedItem.id]) {
             connections[draggedItem.id] = target.id;
@@ -107,14 +108,15 @@
 
             const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
 
-            line.setAttribute("x1", startX.toString());
-            line.setAttribute("y1", startY.toString());
-            line.setAttribute("x2", endX.toString());
-            line.setAttribute("y2", endY.toString());
+            line.setAttribute("x1", startX);
+            line.setAttribute("y1", startY);
+            line.setAttribute("x2", endX);
+            line.setAttribute("y2", endY);
             lines.appendChild(line);
         }
     }
 });
+
             </script>
     <a href="place2-7.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
