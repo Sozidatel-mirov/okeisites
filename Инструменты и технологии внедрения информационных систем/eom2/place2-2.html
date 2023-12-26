@@ -18,13 +18,11 @@
         <div class="place__header">
             <p>Соотнесите основные элементы управления интерфейса с их описанием</p>
 
-            <span>2/10</span>
+            <div class="spanline"><span>2/10</span> </div>
         </div>
       <hr>
       <div class="place__body">
-        
-        <p></p>
-        
+
       
       
         <div class="containerp" >
@@ -42,7 +40,7 @@
               <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Элемент пользовательского интерфейса, тип окна, который используется для обеспечения связи и взаимодействия между пользователем и программным обеспечением</div>
               <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>Это часть пользовательского интерфейса, элементы , котороц обеспечивают возможность переходов между окнами</div>
           </div>
-          <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+          <svg id="lines" class="line1"></svg>
       </div>
   
       <div class="button-container">
@@ -125,18 +123,17 @@
           });
       </script>
       <a href="place2-4.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
-      </div>
-
+    </div>
 </div>
       
-        
-      
-      <div class="line">
-        <div id="timer" class="timer">00:00</div>
-        <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="../eom2.html"><button class="place__back" >На шаг назад</button></a>
-        
   </div>
+  </div>
+  <div class="line">
+   
+    <a href="../eom2.html" class="place__back" id="place__back2" >На шаг назад</a>
+    <button onclick="checkAnswers()" class="place__back">Ответить</button>
+  </div>
+  
 </body>
 
 </html>

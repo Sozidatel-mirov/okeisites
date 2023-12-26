@@ -7,103 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
-  <style>
-    .containero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 50px;
-    }
-
-    .placeholders {
-        display: flex;
-        box-sizing: border-box;
-    }
-
-    .placeholder {
-        position: relative;
-        width: 300px;
-    height: 150px;
-    border: 2px solid #888;
-    margin: 10px;
-    background-color: #ddd;
-    border-radius: 10px;
-    box-shadow: 0px 0px 7px #cecece;
-    box-sizing: content-box;
-    display: flex; /* Добавьте это свойство */
-    justify-content: center; /* Выравнивание по горизонтали */
-    align-items: center; /* Выравнивание по вертикали */
-    }
-
-    .tiles {
-        display: flex;
-       
-    }
-
-    .tile {
-        width: 300px;
-        border-radius: 10px;
-    height: 150px;
-    border: 2px solid #888;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    transition: background-color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    box-sizing: content-box;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0px 0px 7px #cecece;
-    }
-
-    button {
-        background-color: #fff;
-        border: 2px solid #888;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 20px;
-    }
-
-    .correct {
-        background-color: #8cff66; /* Зелёный цвет при правильном ответе */
-    }
-
-    .incorrect {
-        background-color: #ff6666; /* Красный цвет при неправильном ответе */
-    }
-
-    .unused {
-        background-color: #ff6666; /* Красный цвет для неиспользованных плашек и мест */
-    }
-    .placehs{
-        display: flex;
-        box-sizing: border-box;
-    }
-    .placeh{
-    position: relative;
-   min-width: 150px;
-    min-height: 30px;
-    border-radius: 10px;
-    margin: 0px 90px;
-    cursor: pointer;
-    background-color: #fff;
-    transition: background-color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    box-sizing: content-box;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    }
-</style>
+  
 </head>
 
 <body>
@@ -114,9 +18,9 @@
     <div class="place__header">
         <p>Укажите последовательность шагов создания объектов для порождающих паттернов.</p>
 
-        <span>8/10</span>
+        <div class="spanline"><span>8/10</span> </div>
     </div>
-    <hr>
+   
     <div class="place__body">
         
         <div class="containero">
@@ -136,10 +40,10 @@
                 <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
             </div>
             <div class="tiles">
-                <div class="tile tile2" id="tile3" draggable="true" ondragstart="drag(event)">Клонирование объекта для создания новых экземпляров.</div>
-                <div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)">Создание объектов пошагово.</div>
-                <div class="tile tile4" id="tile1" draggable="true" ondragstart="drag(event)">Создание семейства взаимосвязанных объектов.</div>
-                <div class="tile tile1" id="tile4" draggable="true" ondragstart="drag(event)">Обеспечение глобальной точки доступа к экземпляру класса.</div>
+                <div class="tile  " id="tile3" draggable="true" ondragstart="drag(event)">Клонирование объекта для создания новых экземпляров.</div>
+                <div class="tile  " id="tile2" draggable="true" ondragstart="drag(event)">Создание объектов пошагово.</div>
+                <div class="tile  " id="tile1" draggable="true" ondragstart="drag(event)">Создание семейства взаимосвязанных объектов.</div>
+                <div class="tile  " id="tile4" draggable="true" ondragstart="drag(event)">Обеспечение глобальной точки доступа к экземпляру класса.</div>
             </div>
         </div>
         <script>
@@ -212,9 +116,9 @@
 <div>
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
+       
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place23.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place23.html"class="place__back" id="place__back2" >На шаг назад</a>
         
   </div>
 </body>

@@ -17,10 +17,10 @@
     <h2>Основы компьютерной графики</h2>
         <div class="place__header">
             <p>Соотнесите виды компьютерной грфики с их описанием</p>
-            <span>11/17</span>
+            <div class="spanline"><span>11/17</span> </div>
            
         </div>
-        <hr>
+       
         <div class="place__body">
             <div class="containerp">
                 <div class="column" id="column1" >
@@ -37,7 +37,7 @@
                     <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>графика состоит из опорных точек и соединяющих их кривых: такие изображения можно масштабировать без потери качества. Изображения используют для создания инфографики, иконок и других элементов интерфейса, логотипов, персонажей фирменного стиля, лендингов, сайтов и приложений.</div>
                     <div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>Каждая точка имеет свои координаты на каждой из трёх осей. Применяется в различных индустриях: от архитектуры до медицинской промышленности.</div>
                 </div>
-                <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+                <svg id="lines" class="line1" ></svg>
             </div>
         
             <div class="button-container">
@@ -125,9 +125,9 @@
         
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
+         
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-8.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-8.html"class="place__back" id="place__back2" >На шаг назад</a>
         
   </div>
 </body>

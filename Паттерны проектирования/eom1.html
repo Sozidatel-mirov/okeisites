@@ -10,12 +10,13 @@
 </head>
 
 <body>
-  <a href="index.html" class="back" >На Главную</a>
-  <div class="container">
+  
     <div class="block">
+      <a href="index.html" class="back">На Главную</a>
       <h2>Назначение и виды паттернов. Принципы проектирования</h2>
+      <div class="place__header">
       <p>Изучите материал о паттернах проектирования, принципах SOLID. Чтобы перейти к учебному материалу, кликните на
-        каждую из иконок.</p>
+        каждую из иконок.</p></div>
       <div class="inner">
         <a href="#openModal" class="getter__block" onclick="changeBorderColor(1)">
           <img src="image/11.png">
@@ -100,7 +101,7 @@
             - быстро разрастается иерархия классов<br>
 
           <p><strong>Пример предпочтительности композиции и агрегации наследованию</strong></p>
-          <img src="image/data/composition.PNG" width="800" /><br>
+          <img src="image/data/composition.PNG"  /><br>
           <p>Предположим, вам нужно смоделировать модельный ряд автопроизводителя. У вас есть легковые автомобили и
             грузовики. Причём, они бывают с электрическим двигателем, и с двигателем на бензине. К тому же, они
             отличаются режимами навигации — есть модели с ручным управлением и автопилотом.
@@ -128,17 +129,17 @@
           <h3 class="modal-title">Принципы SOLID. Разбор ситуаций:</h3>
         </div>
         <div class="modal-body">
-          <img src="image/data/SOLID.PNG" width="700">
+          <img src="image/data/SOLID.PNG">
 
-          <img src="image/data/S.PNG" width="800">
+          <img src="image/data/S.PNG" >
 
-          <img src="image/data//O.PNG" width="800">
+          <img src="image/data//O.PNG" >
 
-          <img src="image/data/L.PNG" width="800">
+          <img src="image/data/L.PNG" >
 
-          <img src="image/data/I.PNG" width="800">
+          <img src="image/data/I.PNG" >
 
-          <img src="image/data/D.PNG" width="800">
+          <img src="image/data/D.PNG" >
         </div>
       </div>
     </div>
@@ -152,7 +153,7 @@
           <h3 class="modal-title">Урок по паттернам проектирования:</h3>
         </div>
         <div class="modal-body" style="display: flex; justify-content: center;">
-          <video width="800" controls="controls" poster="video/duel.jpg">
+          <video  controls="controls" poster="video/duel.jpg">
             <source src="video/PatternIntroduction.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
           </video>
         </div>
@@ -163,8 +164,7 @@
     function changeBorderColor(blockNumber) {
       var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
       var blockText = getterBlock.querySelector('p');
-  
-      getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+      getterBlock.style.border = '0.2vw solid rgb(179, 179, 181)';
       blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
     }
   </script>

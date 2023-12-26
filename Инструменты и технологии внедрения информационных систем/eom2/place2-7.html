@@ -7,81 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
-  <style>
-    .containero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 50px;
-    }
-
-    .placeholders {
-        display: flex;
-        box-sizing: border-box;
-    }
-
-    .placeholder {
-        position: relative;
-        width: 200px;
-    height: 150px;
-    border: 2px solid #888;
-    margin: 10px;
-    background-color: #ddd;
-    border-radius: 10px;
-    box-shadow: 0px 0px 7px #cecece;
-    box-sizing: content-box;
-    display: flex; /* Добавьте это свойство */
-    justify-content: center; /* Выравнивание по горизонтали */
-    align-items: center; /* Выравнивание по вертикали */
-    }
-
-    .tiles {
-        display: flex;
-       
-    }
-
-    .tile {
-        width: 200px;
-        border-radius: 10px;
-    height: 150px;
-    border: 2px solid #888;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    transition: background-color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    box-sizing: content-box;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0px 0px 7px #cecece;
-    }
-
-    button {
-        background-color: #fff;
-        border: 2px solid #888;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 20px;
-    }
-
-    .correct {
-        background-color: #8cff66; /* Зелёный цвет при правильном ответе */
-    }
-
-    .incorrect {
-        background-color: #ff6666; /* Красный цвет при неправильном ответе */
-    }
-
-    .unused {
-        background-color: #ff6666; /* Красный цвет для неиспользованных плашек и мест */
-    }
-</style>
+  
 </head>
 
 <body>
@@ -92,7 +18,7 @@
         <div class="place__header">
             <p>Выберите верные элементы управления интерфейса</p>
 
-            <span>10/10</span>
+            <div class="spanline"><span>10/10</span> </div>
         </div>
         <hr>
         <div class="place__body">
@@ -102,22 +28,26 @@
                     <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
                     <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
                     <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                    <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                    <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                    <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+
+                </div>
+                <div class="placeholders">
+                    <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                    <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                    <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                    
                 </div>
                 <div class="tiles">
-                    <div class="tile tile1" id="tile2" draggable="true" ondragstart="drag(event)">Кнопка</div>
-                    <div class="tile tile4" id="tile55" draggable="true" ondragstart="drag(event)">Элемент управления</div>
-                    <div class="tile tile4" id="tile551" draggable="true" ondragstart="drag(event)">Сообщение</div>
-                    <div class="tile tile4" id="tile6" draggable="true" ondragstart="drag(event)">Меню</div>
+                    <div class="tile" id="tile2" draggable="true" ondragstart="drag(event)">Кнопка</div>
+                    <div class="tile" id="tile55" draggable="true" ondragstart="drag(event)">Элемент управления</div>
+                    <div class="tile" id="tile551" draggable="true" ondragstart="drag(event)">Сообщение</div>
+                    <div  class="tile" id="tile6" draggable="true" ondragstart="drag(event)">Меню</div>
                 </div>
                 <div class="tiles">
-                    <div class="tile tile4" id="tile1" draggable="true" ondragstart="drag(event)">Ссылка</div>
-                    <div class="tile tile4" id="tile5" draggable="true" ondragstart="drag(event)">Поле ввода</div>     
-                    <div class="tile tile2" id="tile3" draggable="true" ondragstart="drag(event)">Вкладка</div>
-                    <div class="tile tile3" id="tile4" draggable="true" ondragstart="drag(event)">Выпадающий список</div>
-                    <div class="tile tile4" id="tile556" draggable="true" ondragstart="drag(event)">Ошибка</div>
+                    <div  class="tile" id="tile1" draggable="true" ondragstart="drag(event)">Ссылка</div>
+                    <div  class="tile" id="tile5" draggable="true" ondragstart="drag(event)">Поле ввода</div>     
+                    <div  class="tile" id="tile3" draggable="true" ondragstart="drag(event)">Вкладка</div>
+                    <div class="tile" id="tile4" draggable="true" ondragstart="drag(event)">Выпадающий список</div>
+                    <div class="tile" id="tile556" draggable="true" ondragstart="drag(event)">Ошибка</div>
                     
                 </div>
             </div>
@@ -200,9 +130,9 @@
         
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
+        
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-71.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-71.html" class="place__back" id="place__back2" >На шаг назад</a>
         
   </div>
 </body>

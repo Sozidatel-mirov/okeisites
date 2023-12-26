@@ -17,10 +17,10 @@
     <h2>Виртуальный тренажер: Работа с порождающими паттернами</h2>
         <div class="place__header">
             <p>Сопоставьте порождающие паттерны с их основными целями:</p>
-            <span>10/10</span>
+            <div class="spanline"><span>10/10</span> </div>
            
         </div>
-        <hr>
+         
         <div class="place__body">
             <div class="containerp">
                 <div class="column" id="column1" >
@@ -39,7 +39,7 @@
                     <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Клонирование объектов для создания новых экземпляров.</div>
                 </div>
                
-                <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+                <svg id="lines" class="line1"  ></svg>
             </div>
         
             <div class="button-container">
@@ -124,9 +124,9 @@
         
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
+  
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place25.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place25.html"class="place__back" id="place__back2" >На шаг назад</a>
         
   </div>
 </body>

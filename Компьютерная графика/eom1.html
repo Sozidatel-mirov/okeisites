@@ -11,12 +11,11 @@
 
 <body>
   <a href="index.html" class="back">На главную</a>
-  <div class="container">
     <div class="block">
-      <h2>Введение в компьютерную графику. Основные направления компьютерной графики
-      </h2>
+      <h2>Введение в компьютерную графику. Основные направления компьютерной графики</h2>
+      <div class="place__header">
       <p>Изучите материал о компьютерной графике. Чтобы перейти к учебному материалу, кликните на
-        каждую из иконок.</p>
+        каждую из иконок.</p></div>
       <div class="inner">
         <a href="#openModal" class="getter__block" onclick="changeBorderColor(1)">
           <img src="image/11.png">
@@ -198,7 +197,7 @@
             средство MS Graph, диаграммы MS Excel.
 
           </p>
-          <img src="image/data/m2_1.jpg" width="100%">
+          <img src="image/data/m2_1.jpg">
         </div>
       </div>
     </div>
@@ -224,7 +223,7 @@
       var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
       var blockText = getterBlock.querySelector('p');
   
-      getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+      getterBlock.style.border = '0.2vw solid rgb(179, 179, 181)';
       blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
     }
   </script>

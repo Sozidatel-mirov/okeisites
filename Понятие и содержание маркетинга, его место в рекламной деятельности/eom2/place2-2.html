@@ -18,9 +18,9 @@
     <div class="place__header">
       <p>Соотнесите понятия в соответствии с их определениями</p>
 
-      <span>2/10</span>
+      <div class="spanline"><span>2/10</span></div>
   </div>
-  <hr>
+  
   <div class="place__body">
 
       <div class="containerp" >
@@ -36,7 +36,7 @@
               <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Философия бизнеса, выраженная в виде определения, данного Институтом маркетинга, которая начинается с выявления запросов потребителя</div>
               <div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>Группа лиц, до которых конкретный носитель доводит обращение рекламодателя</div>
           </div>
-          <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+          <svg id="lines" class="line1"  ></svg>
       </div>
   
       <div class="button-container">
@@ -121,9 +121,9 @@
   </div></div>
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
+        
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="../eom2.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="../eom2.html" class="place__back" id="place__back2" >На шаг назад </a>
         
   </div>
 </body>

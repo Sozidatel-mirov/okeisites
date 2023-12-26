@@ -15,9 +15,9 @@
     <h2>Виртуальный тренажер: Разработка модели интерьера</h2>
         <div class="place__header">
             <p>Сопоставьте используемые программы для 3D-моделирования интерьера с их описанием:</p>
-<span>8/10</span>
+            <div class="spanline"><span>8/10</span> </div>
         </div>
-        <hr>
+       
         <div class="place__body">
             <div class="containerp">
                 <div class="column" id="column1" >
@@ -32,7 +32,7 @@
                     <div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Инструмент для проектирования интерьеров с простым и интуитивно понятным интерфейсом</div>
 
                 </div>
-                <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+                <svg id="lines" class="line1"  ></svg>
             </div>
         
             <div class="button-container">
@@ -118,9 +118,8 @@
         
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place21.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place21.html" class="place__back" id="place__back2" >На шаг назад</a>
         
   </div>
 </body>

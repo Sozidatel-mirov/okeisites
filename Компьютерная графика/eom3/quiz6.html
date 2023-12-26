@@ -3,7 +3,7 @@
 	<head>
 		<title>Quiz</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="../css/app.css">
+ 
 		<link rel="stylesheet" type="text/css" href="../css/place.css">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -57,7 +57,7 @@
 			<div class="place__header">
 				<p class="head__content">Соотнесите системы для работы с графикой с их определениями</p>
 	
-				<span>7/10</span>
+				<div class="spanline"><span>7/10</span> </div>
 			</div>
 			<hr>
 			<div class="place__body">
@@ -76,7 +76,7 @@
 						<div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>Maya</div>
 						
 						</div>
-					<svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+					<svg id="lines" class="line1   "></svg>
 				</div>
 			
 				<div class="button-container">
@@ -185,20 +185,20 @@ function checkAnswers() {
     location.reload(true); // true - для обновления с использованием кэширования
 }
 				</script>
-		
 		</div>
 	</div>
-    <footer><div class="place__line" style="bottom: 0; position: fixed; width: 100%;">
+	<footer><div class="line" >
 		<div class="timer">
 		<p id="timer"><span id="minutes">00</span>:<span id="seconds">00</span></p>
 		
 		</div>
-		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
-		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn"  hidden id="nextButton" >Далее</button>
+			<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
+			<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
 		
+		<button class="place__btn" id="nextButton"  hidden>Далее</button>
 		
-
+	
+	
 		<script type="text/javascript" src="../js/app2.js"></script></footer>
 		
 

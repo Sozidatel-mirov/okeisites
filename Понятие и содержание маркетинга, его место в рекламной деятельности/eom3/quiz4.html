@@ -10,81 +10,6 @@
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="HandheldFriendly" content="true"/>
 		<link rel="stylesheet" href="../fonts/font.css">
-		<style>
-			.containero {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-				margin-top: 50px;
-			}
-		
-			.placeholders {
-				display: flex;
-				box-sizing: border-box;
-			}
-		
-			.placeholder {
-				position: relative;
-				width: 300px;
-			height: 150px;
-			border: 2px solid #888;
-			margin: 10px;
-			background-color: #ddd;
-			border-radius: 10px;
-			box-shadow: 0px 0px 7px #cecece;
-			box-sizing: content-box;
-			display: flex; /* Добавьте это свойство */
-			justify-content: center; /* Выравнивание по горизонтали */
-			align-items: center; /* Выравнивание по вертикали */
-			}
-		
-			.tiles {
-				display: flex;
-			   
-			}
-		
-			.tile {
-				width: 300px;
-				border-radius: 10px;
-			height: 150px;
-			border: 2px solid #888;
-			margin: 10px;
-			cursor: pointer;
-			background-color: #fff;
-			transition: background-color 0.3s;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 18px;
-			box-sizing: content-box;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			box-shadow: 0px 0px 7px #cecece;
-			}
-		
-			button {
-				background-color: #fff;
-				border: 2px solid #888;
-				padding: 10px 20px;
-				cursor: pointer;
-				font-size: 16px;
-				margin-top: 20px;
-			}
-		
-			.correct {
-				background-color: #8cff66; /* Зелёный цвет при правильном ответе */
-			}
-		
-			.incorrect {
-				background-color: #ff6666; /* Красный цвет при неправильном ответе */
-			}
-		
-			.unused {
-				background-color: #ff6666; /* Красный цвет для неиспользованных плашек и мест */
-			}
-		</style>
 		</head>
 	<body>
 		
@@ -134,9 +59,9 @@
 	  <div class="place__header">
 		<p class="head__content">Какова правильная последовательность этапов разработки маркетингового плана для продвижения нового продукта на рынке?</p>
 				   
-		<span>5/10</span>
+		<div class="spanline"><span>5/10</span> </div>
 	  </div>
-		  <hr>
+		   
 			<div class="place__body">
 			  <div class="containero">
 				<div class="placeholders">
@@ -147,11 +72,11 @@
 				</div>
 				<div class="tiles">
 					
-					<div class="tile tile3" id="tile3" draggable="true" ondragstart="drag(event)">Проведение маркетинговых исследований</div>
-					<div class="tile tile4" id="tile4" draggable="true" ondragstart="drag(event)">Анализ рынка и конкурентов</div>
-					<div class="tile tile2" id="tile2" draggable="true" ondragstart="drag(event)">Определение целевой аудитории</div>
+					<div class="tile  " id="tile3" draggable="true" ondragstart="drag(event)">Проведение маркетинговых исследований</div>
+					<div class="tile  " id="tile4" draggable="true" ondragstart="drag(event)">Анализ рынка и конкурентов</div>
+					<div class="tile  " id="tile2" draggable="true" ondragstart="drag(event)">Определение целевой аудитории</div>
 				
-					<div class="tile tile1" id="tile1" draggable="true" ondragstart="drag(event)">Разработка маркетинговых стратегий и тактик</div>
+					<div class="tile  " id="tile1" draggable="true" ondragstart="drag(event)">Разработка маркетинговых стратегий и тактик</div>
 				</div>
 				
 			</div>
@@ -241,17 +166,18 @@ console.log('Score:', score12);
 }
 			</script>
 
-    <footer><div class="place__line" style="bottom: 0; position: fixed; width: 100%; left: 0px;">
-		<div class="timer">
-		<p id="timer"><span id="minutes">00</span>:<span id="seconds">00</span></p>
-		
-		</div>
+   	
+</div>
+</div>
+<footer><div class="line" >
+	<div class="timer">
+	<p id="timer"><span id="minutes">00</span>:<span id="seconds">00</span></p>
+	
+	</div>
 		<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
 		<button onclick="restartPage()" class="place__back" id="clek1" hidden>Повторить</button>
-		<button class="place__btn" id="nextButton" hidden >Далее</button>
-		
-		
-
+	
+	<button class="place__btn" id="nextButton"  hidden>Далее</button>
 		<script type="text/javascript" src="../js/app4.js"></script></footer>
 		
 

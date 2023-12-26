@@ -7,123 +7,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
   <link rel="stylesheet" href="../css/place.css">
-  <style>
-    
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 50px;
-    }
-
-    .placeholders {
-        display: flex;
-        box-sizing: border-box;
-        text-align: left;
-    }
-    .placeholder {
-        position: relative;
-        width: 200px;
-    height: 20px;
-    border: 2px solid #888;
-    margin: 2px;
-    background-color: #ddd;
-    border-radius: 6px;
-    box-shadow: 0px 0px 5px #cecece;
-    box-sizing: content-box;
-    display: flex; /* Добавьте это свойство */
-    justify-content: center; /* Выравнивание по горизонтали */
-    align-items: center; /* Выравнивание по вертикали */
-    }
-
-    .tiles {
-        display: flex;
-       
-    }
-
-    .tile {
-        width: 200px;
-        border-radius: 5px;
-    height: 20px;
-    border: 2px solid #888;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    transition: background-color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    box-sizing: content-box;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0px 0px 5px #cecece;
-    }
-
-    button {
-        background-color: #fff;
-        border: 2px solid #888;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 20px;
-    }
-
-    .correct {
-        background-color: #8cff66; /* Зелёный цвет при правильном ответе */
-    }
-
-    .incorrect {
-        background-color: #ff6666; /* Красный цвет при неправильном ответе */
-    }
-
-    .unused {
-        background-color: #ff6666; /* Красный цвет для неиспользованных плашек и мест */
-    }
-    </style>
+  
 </head>
 
 <body>
   <a href="../index.html" class="back">На Главную</a>
   
-  <div class="block" style="height: 600px; margin-bottom: 10%">
+  <div class="block" >
     <h2>Маркетинговые исследования в рекламе</h2>
         <div class="place__header">
             <p>Выберите из предложенных вариантов слова и вставьте их в предложение</p>
 
-            <span>7/10</span>
+            <div class="spanline"><span>7/10</span> </div>
         </div>
-      <hr>
+     
       <div class="place__body">
 
-        <div class="container" style="margin-top: 250px;">
+        <div class="containero">
             <div class="placeholders">
-              <p><strong  style="font-size: 20px;">Анализ рынка </strong> </p><p style="font-size: 20px;"> – это сбор и </p><div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-              <p style="font-size: 20px;"> информации о рынках (продавцов, </p><div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-              <p style="font-size: 20px;">, поставщиков финансовых и других услуг, поставщиков сырья и 
-                 23
-                 товаров) с целью повышения </p>
+              <p><strong  >Анализ рынка </strong> </p><p > – это сбор и </p><div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+              <p > информации о рынках (продавцов, </p><div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+               <p >, поставщиков </p></div>
+            <div class="placeholders">
+                
+              <p > финансовых и других услуг, поставщиков сырья и  23 товаров) с целью повышения </p><div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <p >компании или продукта</p> </div>
+                   <div class="placeholders"> <p> и повышения уровня</p> <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div><p > конечного потребителя.</p>
+                  </div>
                 
                     
                     
                     
-            </div>
-            <div class="placeholders">
+           
                 
-                   <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                   <p style="font-size: 20px;">компании или продукта и повышения уровня</p> <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div><p style="font-size: 20px;"> конечного потребителя.</p>
-                  
-                      
-                      
-                      
-              </div>
+                   
+                
             <div class="tiles">
-                <div class="tile tile1" id="tile4" draggable="true" ondragstart="drag(event)">удовлетворенности</div>
-                <div class="tile tile2" id="tile3" draggable="true" ondragstart="drag(event)">конкурентоспособности</div>
-                <div class="tile tile3" id="tile2" draggable="true" ondragstart="drag(event)">покупателей</div>
-                <div class="tile tile4" id="tile1" draggable="true" ondragstart="drag(event)">структурирование</div>
+                <div class="tile" id="tile4" draggable="true" ondragstart="drag(event)">удовлетворенности</div>
+                <div class="tile" id="tile3" draggable="true" ondragstart="drag(event)">конкурентоспособности</div>
+                <div class="tile" id="tile2" draggable="true" ondragstart="drag(event)">покупателей</div>
+                <div class="tile" id="tile1" draggable="true" ondragstart="drag(event)">структурирование</div>
                 
             </div>
             
@@ -192,9 +115,9 @@
       </div></div>
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
+         
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-7-0.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-7-0.html"class="place__back" id="place__back2" >На шаг назад</a>
         
   </div>
 </body>

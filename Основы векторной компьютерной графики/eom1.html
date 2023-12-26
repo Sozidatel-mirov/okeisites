@@ -10,12 +10,14 @@
 </head>
 
 <body>
-  <a href="index.html" class="back">На Главную</a>
-  <div class="container">
-    <div class="block" style="width: 100%;">
+  
+    <div class="block">
+      <a href="index.html" class="back">На Главную</a>
       <h2>Векторная графика. Интерфейс Adobe Illustrator.</h2>
+      <div class="place__header">
       <p>Изучите материал о векторной графике и интерфейс Adobe Illustrator. Чтобы перейти к учебному материалу, кликните на
         каждую из иконок.</p>
+      </div>
       <div class="inner">
         <a href="#openModal" class="getter__block" onclick="changeBorderColor(1)">
           <img src="image/11.png">
@@ -54,11 +56,11 @@
 разнообразные линии, называемые векторами, или контурами. Каждый
 контур представляет собой независимый объект, который можно
 редактировать: перемещать, масштабировать, изменять.</p>
- <img src="image/data/slide6-l.png" width="700"><br>
+ <img src="image/data/slide6-l.png" ><br>
 
          
 			<br><br>
-          <p><strong><h1 style="text-align:center;">Достоинство и недостатки растровой графики</h1></strong> <br>
+          <p><strong><h1>Достоинство и недостатки растровой графики</h1></strong> <br>
 		   <p><strong>Достоинство:</strong> <br>
             1.	Размер, занимаемой описательной частью, не зависит от реальной величины объекта, что позволяет, используя минимальное количество информации, описать сколько угодно раз большой объект файлом минимального размера<br>
             2.	В связи с тем, что информация об объекте хранится в описательной форме, можно бесконечно увеличить графический примитив, например, дугу окружности, и она останется гладкой. С другой стороны, если кривая представлена в виде ломаной линии, увеличение покажет, что она на самом деле не кривая.<br>
@@ -75,7 +77,7 @@
             <p>Форматы векторной графики: .cdr, .ai, .cmx, .eps, .fla, .svg, .swf, .wmf.<br>
 К программным средствам создания и обработки векторной графики относятся следующие ГР: CorelDraw, Adobe Illustrator, а также векторизаторы (трассировщики) - специализированные пакеты преобразования растровых изображений в векторные.</p>
             <br>
-			<p><strong><h1 style="text-align:center;">Растровая и векторная графика (сравнительная таблица)</h1></strong> <br>
+			<p><strong><h1>Растровая и векторная графика (сравнительная таблица)</h1></strong> <br>
 			 <table>
                 <thead></thead>
                 <tbody>
@@ -157,7 +159,7 @@
         </div>
 		  <br>
         <div class="modal-body">
-          <img src="image/data/Рисунок11.png" width="700"><br>
+          <img src="image/data/Рисунок11.png" ><br>
 		  <br>
 		  <p><strong>Интерфейс:</strong> <br>
             1.	Панель инструментов<br>
@@ -167,20 +169,18 @@
 			5.	Рабочая область <br>
 			<br>
 		  <br>
-		  <img src="image/data/Рисунок44.png" width="150" style="display: block;
-    margin-left: auto;
-    margin-right: auto" />
+		  <img src="image/data/Рисунок44.png" />
 		  <p><strong><h1 style="text-align:center;">Инструменты</h1></strong> <br>
 			<br>
-			<p><img src="image/data/Рисунок22.png" width="80"><strong>  - Инструмент «Выделение»</strong> 
+			<p><img src="image/data/Рисунок22.png" ><strong>  - Инструмент «Выделение»</strong> 
 <p>−	Позволяет выделять объекты и группы объектов щелчком одним мыши на них или обводя необходимые объекты;<br>
 −	При зажатой клавише <strong>Alt</strong> в момент перетаскивания объекта, позволяет скопировать объект.</p>
 <br>
 
-			<p><img src="image/data/Рисунок55.png" width="80"><strong>  - Инструмент «Частичное выделение»</strong> 
+			<p><img src="image/data/Рисунок55.png" ><strong>  - Инструмент «Частичное выделение»</strong> 
 <p>Инструмент «Частичное выделение» дает возможность выделять и редактировать узлы объекта или части обводки</p>
 <br>
-<p><img src="image/data/Рисунок66.png" width="80"><strong>  - Группа инструментов «Перо»</strong> 
+<p><img src="image/data/Рисунок66.png" ><strong>  - Группа инструментов «Перо»</strong> 
 <p>Инструмент Перо + предназначен для добавления опорной точки на контуре, а Перо– для удаления опорной точки</p>
 <br>
   
@@ -209,7 +209,7 @@
       var getterBlock = document.querySelector('.inner').querySelectorAll('.getter__block')[blockNumber - 1];
       var blockText = getterBlock.querySelector('p');
   
-      getterBlock.style.border = '2px solid rgb(179, 179, 181)';
+      getterBlock.style.border = '0.2vw solid rgb(179, 179, 181)';
       blockText.style.color = '#b3b3b5'; // Замените 'your_desired_color' на желаемый цвет текста
     }
   </script>
