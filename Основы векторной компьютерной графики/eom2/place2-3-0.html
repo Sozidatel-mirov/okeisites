@@ -95,29 +95,31 @@
                 });
         
                 document.addEventListener('drop', (event) => {
-                    event.preventDefault();
-                    const target = event.target;
-                    if (target.classList.contains('item') && target !== draggedItem) {
-                        // Проверка, что плашки из разных столбцов
-                        if (target.parentElement.id !== draggedItem.parentElement.id && !connections[target.id] && !connections[draggedItem.id]) {
-                            connections[draggedItem.id] = target.id;
-                            connections[target.id] = draggedItem.id;
-        
-                            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        
-                            let startX = draggedItem.offsetLeft + draggedItem.clientWidth;
-                            let startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
-                            let endX = target.offsetLeft;
-                            let endY = target.offsetTop + target.clientHeight / 2;
-        
-                            line.setAttribute("x1", startX.toString()); // начало линии с края плашки
-                            line.setAttribute("y1", startY.toString());
-                            line.setAttribute("x2", endX.toString()); // конец линии с края плашки
-                            line.setAttribute("y2", endY.toString());
-                            lines.appendChild(line);
-                        }
-                    }
-                });
+    event.preventDefault();
+    const target = event.target;
+
+    if (target.classList.contains('item') && target !== draggedItem) {
+        const isDraggingRightToLeft = target.offsetLeft < draggedItem.offsetLeft;
+
+        const startX = isDraggingRightToLeft ? draggedItem.offsetLeft : draggedItem.offsetLeft + draggedItem.clientWidth;
+        const startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
+        const endX = isDraggingRightToLeft ? target.offsetLeft + target.clientWidth : target.offsetLeft;
+        const endY = target.offsetTop + target.clientHeight / 2;
+
+        if (!connections[target.id] && !connections[draggedItem.id]) {
+            connections[draggedItem.id] = target.id;
+            connections[target.id] = draggedItem.id;
+
+            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+
+            line.setAttribute("x1", startX.toString());
+            line.setAttribute("y1", startY.toString());
+            line.setAttribute("x2", endX.toString());
+            line.setAttribute("y2", endY.toString());
+            lines.appendChild(line);
+        }
+    }
+});
             </script>
     <a href="place2-3.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
