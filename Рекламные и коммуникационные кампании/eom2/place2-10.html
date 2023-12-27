@@ -18,9 +18,9 @@
     <div class="place__header">
         <p>Расположите этапы создания анимации в правильном порядке</p>
 
-        <span>10/10</span>
+        <div class="spanline"><span>10/10</span> </div>
     </div>
-    <hr>
+     
     <div class="place__body">
 
         <div class="containerp">
@@ -53,7 +53,7 @@
                 <div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>Реклама</div>
                 <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Прямой маркетинг</div>
             </div>
-            <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+            <svg id="lines" class="line1" ></svg>
         </div>
     
         <div class="button-container">
@@ -142,15 +142,17 @@ document.addEventListener('drop', (event) => {
 });
         </script>
    
+   
+      
+           <a href="place2-6.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
 </div>
       
-        
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
+        
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-9.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-4.html"  class="place__back" id="place__back2">На шаг назад </a>
         
   </div>
 </body>

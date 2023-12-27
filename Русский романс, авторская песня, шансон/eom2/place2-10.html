@@ -18,9 +18,9 @@
     <div class="place__header">
         <p>Сопоставьте правильно термины и понятия</p>
 
-        <span>10/10</span>
+        <div class="spanline"><span>5/10</span> </div>
     </div>
-    <hr>
+     
     <div class="place__body">
 
         <div class="containerp">
@@ -50,7 +50,7 @@
                 <div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>Камерное вокальное произведение для голоса с инструментальным сопровождением</div>
                 
             </div>
-            <svg id="lines" class="line1" width="100%" height="100%" style="top: 0; left: 0;"></svg>
+            <svg id="lines" class="line1"></svg>
         </div>
     
         <div class="button-container">
@@ -69,85 +69,79 @@
                 ];
     
                 pairs.forEach(pair => {
-                    const item1 = pair[0];
-                    const item2 = pair[1];
-    
-                    const element1 = document.getElementById(item1);
-                    const element2 = document.getElementById(item2);
-    
-                    element1.style.backgroundColor = '#f7f7f7';
-                    element2.style.backgroundColor = '#f7f7f7';
-    
-                    if (connections[item1] === item2 && connections[item2] === item1) {
-                        element1.style.backgroundColor = '#8dff8d';
-                        element2.style.backgroundColor = '#8dff8d';
-                    } else {
-                        element1.style.backgroundColor = '#ff8d8d'; // Неверный ответ, красный цвет
-                        element2.style.backgroundColor = '#ff8d8d';
+                            const item1 = pair[0];
+                            const item2 = pair[1];
+            
+                            const element1 = document.getElementById(item1);
+                            const element2 = document.getElementById(item2);
+            
+                            element1.style.backgroundColor = '#f7f7f7';
+                            element2.style.backgroundColor = '#f7f7f7';
+            
+                            if (connections[item1] === item2 && connections[item2] === item1) {
+                                element1.style.backgroundColor = '#8dff8d';
+                                element2.style.backgroundColor = '#8dff8d';
+                            } else {
+                                element1.style.backgroundColor = '#ff8d8d'; // Неверный ответ, красный цвет
+                                element2.style.backgroundColor = '#ff8d8d';
+                            }
+                        });
+                        document.getElementById('clek1').hidden = false;
                     }
-                });
+            
+                    let draggedItem = null;
+                    let lines = document.getElementById('lines');
+            
+                    document.addEventListener('drag', (event) => {
+                        event.preventDefault();
+                    });
+            
+                    document.addEventListener('dragstart', (event) => {
+                        draggedItem = event.target;
+                        event.dataTransfer.setData('text/plain', null);
+                    });
+            
+                    document.addEventListener('dragover', (event) => {
+                        event.preventDefault();
+                    });
+            
+                    document.addEventListener('drop', (event) => {
+        event.preventDefault();
+        const target = event.target;
+    
+        if (target.classList.contains('item') && target !== draggedItem) {
+            const isDraggingRightToLeft = target.offsetLeft < draggedItem.offsetLeft;
+    
+            const startX = isDraggingRightToLeft ? draggedItem.offsetLeft : draggedItem.offsetLeft + draggedItem.clientWidth;
+            const startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
+            const endX = isDraggingRightToLeft ? target.offsetLeft + target.clientWidth : target.offsetLeft;
+            const endY = target.offsetTop + target.clientHeight / 2;
+    
+            if (!connections[target.id] && !connections[draggedItem.id]) {
+                connections[draggedItem.id] = target.id;
+                connections[target.id] = draggedItem.id;
+    
+                const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    
+                line.setAttribute("x1", startX.toString());
+                line.setAttribute("y1", startY.toString());
+                line.setAttribute("x2", endX.toString());
+                line.setAttribute("y2", endY.toString());
+                lines.appendChild(line);
             }
-    
-            let draggedItem = null;
-            let lines = document.getElementById('lines');
-    
-            document.addEventListener('drag', (event) => {
-                event.preventDefault();
-            });
-    
-            document.addEventListener('dragstart', (event) => {
-                draggedItem = event.target;
-                event.dataTransfer.setData('text/plain', null);
-            });
-    
-            document.addEventListener('dragover', (event) => {
-                event.preventDefault();
-            });
-            document.addEventListener('dragstart', (event) => {
-    // Изменено условие, чтобы учитывать родительский элемент .item
-    if (event.target.classList.contains('item')) {
-        draggedItem = event.target;
-        event.dataTransfer.setData('text/plain', null);
-    }
-});
-    
-document.addEventListener('drop', (event) => {
-    event.preventDefault();
-    const target = event.target;
-
-    if (target.classList.contains('item') && target !== draggedItem) {
-        const isDraggingRightToLeft = target.offsetLeft < draggedItem.offsetLeft;
-
-        const startX = isDraggingRightToLeft ? draggedItem.offsetLeft : draggedItem.offsetLeft + draggedItem.clientWidth;
-        const startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
-        const endX = isDraggingRightToLeft ? target.offsetLeft + target.clientWidth : target.offsetLeft;
-        const endY = target.offsetTop + target.clientHeight / 2;
-
-        if (!connections[target.id] && !connections[draggedItem.id]) {
-            connections[draggedItem.id] = target.id;
-            connections[target.id] = draggedItem.id;
-
-            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-
-            line.setAttribute("x1", startX.toString());
-            line.setAttribute("y1", startY.toString());
-            line.setAttribute("x2", endX.toString());
-            line.setAttribute("y2", endY.toString());
-            lines.appendChild(line);
         }
-    }
-});
-        </script>
-   
+    });
+                </script>
+    <a href="place2-4.html"><button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
     </div>
 </div>
       
         
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
+       
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="place2-9.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="place2-3.html" class="place__back" id="place__back2">На шаг назад </a>
         
   </div>
 </body>

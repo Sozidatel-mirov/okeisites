@@ -18,7 +18,7 @@
     <div class="place__header">
       <p>Соотнесите изображения со средствами выразительности, при помощи которых на них изображены эмоции</p>
                  
-      <span>2/10</span>
+      <div class="spanline"><span>2/10</span></div>
     </div>
         <hr>
         <div class="place__body">
@@ -144,9 +144,10 @@ document.addEventListener('drop', (event) => {
       </div>
       
       <div class="line">
-        <div id="timer" class="timer">00:00</div>
+        
         <button onclick="checkAnswers()" class="place__back">Ответить</button>
-        <a href="../eom2.html"><button class="place__back" >На шаг назад</button></a>
+        <a href="../eom2.html" class="place__back" id="place__back2" >На шаг назад</a>
+        
         
   </div>
 </body>
