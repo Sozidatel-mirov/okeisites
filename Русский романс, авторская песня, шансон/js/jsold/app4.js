@@ -323,7 +323,7 @@ function Click(index)
     if(index != correct) 
     {
       btns[index].className = "button button_wrong";
-      document.getElementById('clek1').hidden = false;
+      document.getElementById('clek1').hidden = true;
     } 
   }
   else

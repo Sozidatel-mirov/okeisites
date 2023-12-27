@@ -159,7 +159,7 @@ const questions = [
       [
         new Answer("Ритмическое", 1),
         new Answer("Мелодическое", 0),
-        new Answer("Тесктовое", 0),
+        new Answer("Текстовое", 0),
         new Answer("Магическое", 0)
       ])
 ];

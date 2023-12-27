@@ -1,0 +1,8 @@
+{
+    "lang": "ru",
+    "name": "ОКЭИ",
+    "icons": [{
+        "src": "image/icon/icon.png",
+        "sizes": "60x60"
+    }]
+}
