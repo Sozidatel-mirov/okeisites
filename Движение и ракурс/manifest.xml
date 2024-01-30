@@ -1,0 +1,24 @@
+<course>
+    <title> ФГОС 55.02.02 МДК 02.01 Основы художественной постановки</title>
+    <description/>
+    <language>ru</language>
+    <code>301121129</code>
+    <fgos_title>ФГОС СПО 55.02.02 </fgos_title>
+    <fgos_text>Анимация и анимационное кино (по видам)</fgos_text>
+    <mdk_title>МДК 02.01 </mdk_title>
+    <mdk_text>Основы художественной постановки</mdk_text>
+    <structure>
+        <item0>
+            <name>Движение и ракурс</name>
+            <code>01_01</code>
+        </item0>
+        <item1>
+            <name>Движение и ракурс</name>
+            <code>02_01</code>
+        </item1>
+        <item2>
+            <name>Движение и ракурс</name>
+            <code>03_01</code>
+        </item2>
+    </structure>    
+</course>
