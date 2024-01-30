@@ -1,0 +1,25 @@
+<course>
+    <title> ФГОС 09.02.06 МДК.02.01 Администрирование сетевых операционных систем</title>
+    <description/>
+    <language>ru</language>
+    <code>301121129</code>
+    <fgos_title>ФГОС СПО 09.02.06 </fgos_title>
+    <fgos_text>Сетевое и системное администрирование</fgos_text>
+    <mdk_title>МДК.02.01</mdk_title>
+    <mdk_text>Администрирование сетевых операционных систем</mdk_text>
+    <structure>
+        <item0>
+            <name>Установка и настройка WindowsServer 2019</name>
+            <code>01_01</code>
+        </item0>
+        <item1>
+            <name>Установка и настройка WindowsServer 2019</name>
+            <code>02_01</code>
+        </item1>
+        <item2>
+            <name>Установка и настройка WindowsServer 2019</name>
+            <code>03_01</code>
+        </item2>
+    </structure>
+</course>
+

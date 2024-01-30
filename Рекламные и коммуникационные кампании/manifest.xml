@@ -1,0 +1,25 @@
+<course>
+    <title> ФГОС 42.02.01 МДК.03.01 Маркетинг в рекламе</title>
+    <description/>
+    <language>ru</language>
+    <code>301121129</code>
+    <fgos_title>ФГОС СПО 42.02.01 </fgos_title>
+    <fgos_text>Реклама</fgos_text>
+    <mdk_title>МДК.03.01</mdk_title>
+    <mdk_text>Маркетинг в рекламе</mdk_text>
+    <structure>
+        <item0>
+            <name>Рекламные и коммуникационные кампании</name>
+            <code>01_01</code>
+        </item0>
+        <item1>
+            <name>Рекламные и коммуникационные кампании</name>
+            <code>02_01</code>
+        </item1>
+        <item2>
+            <name>Рекламные и коммуникационные кампании</name>
+            <code>03_01</code>
+        </item2>
+    </structure>
+</course>
+

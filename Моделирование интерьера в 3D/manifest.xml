@@ -1,0 +1,25 @@
+<course>
+    <title> ФГОС 54.02.01 МДК.02.01 Основы проектной и компьютерной графики</title>
+    <description/>
+    <language>ru</language>
+    <code>301121129</code>
+    <fgos_title>ФГОС СПО 54.02.01</fgos_title>
+    <fgos_text>Дизайн (по отраслям)</fgos_text>
+    <mdk_title>МДК.02.01</mdk_title>
+    <mdk_text>Основы проектной и компьютерной графики</mdk_text>
+    <structure>
+        <item0>
+            <name>Моделирование интерьера в 3D</name>
+            <code>01_01</code>
+        </item0>
+        <item1>
+            <name>Моделирование интерьера в 3D</name>
+            <code>02_01</code>
+        </item1>
+        <item2>
+            <name>Моделирование интерьера в 3D</name>
+            <code>03_01</code>
+        </item2>
+    </structure>
+</course>
+
