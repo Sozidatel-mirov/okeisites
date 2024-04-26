@@ -33,23 +33,23 @@
                  <tr>
               <td> <div class="placeholders">
                    <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                   <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                   <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
               </div></td>
                 <td>
               <div class="placeholders">
                    <div class="placeholder" id="placeholder5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                   <div class="placeholder" id="placeholder6" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                   <div class="placeholder" id="placeholder7" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                <div class="placeholder" id="placeholder8" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <div class="placeholder" id="placeholder5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <div class="placeholder" id="placeholder5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                <div class="placeholder" id="placeholder5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
               </div></td>
-              <td>
+              <td style="min-width: 230px;">
                <div class="tiles">
                    <div class="tile  " id="tile1" draggable="true" ondragstart="drag(event)">переносит свою стоимость на готовую продукцию частями в виде амортизационных отчислений </div>
-                   <div class="tile  " id="tile554" draggable="true" ondragstart="drag(event)">изменяют свою натурально-вещественную форму</div>     
-                   <div class="tile  " id="tile3" draggable="true" ondragstart="drag(event)">полностью затрачиваются на изготовление продукции</div>
-                   <div class="tile  " id="tile3" draggable="true" ondragstart="drag(event)">многократно принимает участие в производстве товара</div>
+                   <div class="tile  " id="tile5" draggable="true" ondragstart="drag(event)">изменяют свою натурально-вещественную форму</div>     
+                   <div class="tile  " id="tile6" draggable="true" ondragstart="drag(event)">полностью затрачиваются на изготовление продукции</div>
+                   <div class="tile  " id="tile2" draggable="true" ondragstart="drag(event)">многократно принимает участие в производстве товара</div>
                    
                </div>
               </td>
@@ -101,17 +101,10 @@
                        var tile = placeholder.querySelector('.tile');
        
                        if ((tile && tile.id === 'tile' + (index + 1) && tile.parentElement)
-                   ||(tile && tile.id === 'tile' + (index + 2) && tile.parentElement)
-                   ||(tile && tile.id === 'tile' + (index + 3) && tile.parentElement)
-                   ||(tile && tile.id === 'tile' + (index + 4) && tile.parentElement)
-                   ||(tile && tile.id === 'tile' + (index + 5) && tile.parentElement)
-                   ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
+                       ||(tile && tile.id === 'tile' + (index + 2) && tile.parentElement)
                    ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
                    ||(tile && tile.id === 'tile' + (index - 1) && tile.parentElement)
                    ||(tile && tile.id === 'tile' + (index - 2) && tile.parentElement)
-                   ||(tile && tile.id === 'tile' + (index - 3) && tile.parentElement)
-                   ||(tile && tile.id === 'tile' + (index - 4) && tile.parentElement)
-                   ||(tile && tile.id === 'tile' + (index - 5) && tile.parentElement)
                    ||(tile && tile.id === 'tile' + (index) && tile.parentElement)) {
                            tile.classList.remove('incorrect');
                            tile.classList.add('correct');
