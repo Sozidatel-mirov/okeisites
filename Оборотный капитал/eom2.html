@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="css/place.css">
+   
+</head>
+
+<body>
+  <a href="../index.html" class="back">На Главную</a>
+  
+  <div class="block"  >
+    <h2>Оценка эффективности использования оборотных средств</h2>
+    <div class="place__header">
+      <p>Соотнести вид капитала (оборотный и основной) с признаками, характеризующими его</p>
+
+      <div class="spanline"><span>1/6</span> </div>
+    </div>
+       
+          <div class="place__body">
+         
+           <div class="containero">
+            <table> 
+              <tr>
+                <td>Основной капитал</td>
+                <td>Оборотный капитал</td>
+                <td>Признаки</td>
+                 </tr>
+                 <tr>
+              <td> <div class="placeholders">
+                   <div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                <div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+              </div></td>
+                <td>
+              <div class="placeholders">
+                   <div class="placeholder" id="placeholder5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <div class="placeholder" id="placeholder6" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                   <div class="placeholder" id="placeholder7" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                <div class="placeholder" id="placeholder8" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+              </div></td>
+              <td>
+               <div class="tiles">
+                   <div class="tile  " id="tile1" draggable="true" ondragstart="drag(event)">переносит свою стоимость на готовую продукцию частями в виде амортизационных отчислений </div>
+                   <div class="tile  " id="tile554" draggable="true" ondragstart="drag(event)">изменяют свою натурально-вещественную форму</div>     
+                   <div class="tile  " id="tile3" draggable="true" ondragstart="drag(event)">полностью затрачиваются на изготовление продукции</div>
+                   <div class="tile  " id="tile3" draggable="true" ondragstart="drag(event)">многократно принимает участие в производстве товара</div>
+                   
+               </div>
+              </td>
+              </tr>
+              </table>
+           </div>
+       
+           <script>
+               function allowDrop(ev) {
+                   ev.preventDefault();
+               }
+       
+               function drag(ev) {
+                   ev.dataTransfer.setData("text", ev.target.id);
+               }
+       
+               function drop(ev) {
+                   ev.preventDefault();
+                   var data = ev.dataTransfer.getData("text");
+                   var draggedElement = document.getElementById(data);
+                   var placeholder = ev.target;
+                   placeholder.appendChild(draggedElement);
+       
+                   draggedElement.style.position = 'absolute';
+                   draggedElement.style.top = '0';
+                   draggedElement.style.left = '0';
+       
+                   var rect = placeholder.getBoundingClientRect();
+                   var tileRect = draggedElement.getBoundingClientRect();
+                   draggedElement.style.top = (rect.top - tileRect.top) + 'px';
+                   draggedElement.style.left = (rect.left - tileRect.left) + 'px';
+               }
+       
+               function checkAnswers() {
+                   var placeholders = document.querySelectorAll('.placeholder');
+                   var tiles = document.querySelectorAll('.tile');
+       
+                   // Сначала перекрашиваем все плашки и места в красный
+                   tiles.forEach(function(tile) {
+                       tile.classList.add('incorrect');
+                   });
+       
+                   placeholders.forEach(function(placeholder) {
+                       placeholder.classList.add('incorrect');
+                   });
+       
+                   // Затем перекрашиваем правильные в зелёный
+                   placeholders.forEach(function(placeholder, index) {
+                       var tile = placeholder.querySelector('.tile');
+       
+                       if ((tile && tile.id === 'tile' + (index + 1) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index + 2) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index + 3) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index + 4) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index + 5) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index - 1) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index - 2) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index - 3) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index - 4) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index - 5) && tile.parentElement)
+                   ||(tile && tile.id === 'tile' + (index) && tile.parentElement)) {
+                           tile.classList.remove('incorrect');
+                           tile.classList.add('correct');
+                           placeholder.classList.remove('incorrect');
+                       }
+                   });
+       
+                   // Перекрашиваем неиспользованные плашки в красный
+                   tiles.forEach(function(tile) {
+                       if (!tile.parentElement) {
+                           tile.classList.add('unused');
+                       }
+                   });
+                   document.getElementById('clek1').hidden = false;
+               }
+           </script>
+        </div></div>
+        <a href="eom2/place2-2.html"><button button class="place__btn" id="clek1" hidden onclick="next()">Далее</button></a>
+      </div>
+      
+      <div class="line">
+   
+        <button onclick="checkAnswers()" class="place__back">Ответить</button>
+        
+  </div>
+</body>
+
+</html>

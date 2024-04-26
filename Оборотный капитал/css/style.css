@@ -1,0 +1,313 @@
+
+
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+body {
+    background-size: cover;
+    margin: 1vw 1vw 0 1vw;
+   
+}
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 0.2vw;
+}
+#hg{
+    
+    font-size: 2vw;
+    
+    
+}
+header {
+    margin: 1vw 0;
+}
+
+
+#tema {
+    margin: 0 2vw;
+    font-size: 3vw;
+    color: rgb(0, 0, 0);
+
+}
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.inner2{
+    margin-left: 3vw;
+    position: static;
+}
+#log{
+    width:7vw;
+     height:4vw; 
+    }
+
+    ul {
+        font-size: 2vw;
+        padding: 1vw;
+        
+    } 
+.inner1{
+    display: flex;
+    
+}
+.inner1>a{
+    border-left: 0.2vw solid #473a53;
+    padding-left: 1vw;
+    margin: 0 1vw;
+    text-decoration: none;
+    color: #000;
+font-size: 1vw;}
+.lines {
+    background: #fff;
+    padding: 0;
+    border-bottom: 0.2vw solid #473a53;
+    border-top: 0.2vw solid #473a53;
+}
+
+.lines__views > h2 {
+    color: #cccccc;
+    font-size: 4dvb;
+}
+
+.lines__views > p {
+    font-size: 2vw;
+}
+#imset{
+    width: 25vw;
+}
+#dishk
+{
+margin-right: 1vw;
+}
+.dish {
+    margin-top: 3vw;
+}
+.dish__block{
+    display: block;
+    margin: 1vw;
+}
+.sets{
+    padding-right: 6vw;
+    position:static;
+
+
+}   
+
+
+.dish__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -2vw;
+}
+
+.dish__text {
+    position: sticky;
+}
+
+.dish__text > h3 {
+    border-bottom: 0.2vw solid rgb(71, 58, 83);
+    padding-bottom: 0.5vw;
+    width: 30vw;
+    font-size: 1.5vw;
+}
+
+.dish__text > h4 {
+    width: 30vw;
+    margin: 1vw 0;
+    box-sizing: border-box;
+    padding-right: 10;
+    font-size: 0.9vw;
+}
+hr {
+    margin: 0.3vw 0;
+    border:0.2vw solid #473a53;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1050;
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+    padding: 0;
+    z-index: 9999999;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+
+.modal1 {
+    z-index: 9999999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1050;
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+    padding: 0;
+}
+
+.modal1:target {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+
+.modal-content {
+       position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1vw solid #785a95;
+    border-radius: 0.3rem;
+    outline: 0;
+    margin: 0 10vw 0 10vw;
+    padding: 3vw;
+}
+
+.modal-title {
+    color: #9670ba;
+    font-size: 3vw;
+    font-weight: 700;
+    margin: 1vw 0;
+}
+
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 3.4vw;
+    font-weight: 700;
+    line-height: 0.5;
+    color: #fff;
+    text-shadow: 0 0.1vw 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+    background: #000;
+    padding: 1vw;
+    border-radius: 4vw;
+    width: 2vw;
+    height: 2vw;
+}
+
+.close:focus, .close:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+
+.modal-body > p {
+    font-size: 2.4vw;
+}
+
+td,th {
+    border: 0.1vw solid #000;
+    padding: 1vw;
+    font-size: 2vw;
+}
+
+.eurhgierug {
+    position: relative;
+    background-color: white;
+}
+.placef {
+    display: block;
+    margin: 0.3vw;
+    width: 52vw;
+    height: 10vw;
+    box-sizing: border-box;
+}
+
+.modal__hg {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    background: red;
+    opacity: 0.0000001;
+    top: 0.2vw;
+    right: 4vw;
+}
+
+.modals__text {
+    
+    position: absolute;
+    z-index: 9999;
+    height: 1.2vw;
+    top: 6vw;
+    left: 24vw;
+    font-size: 1vw;
+    color: #7d7d7d;
+}
+
+
+.iehrgie {
+    position: absolute;
+    z-index: 9999;
+    top: 1vw;
+    left: 24vw;
+    font-size: 1.3vw;
+}
+
+.ghgwreg {
+    position: absolute;
+    top: 2vw;
+    left: 16.2vw;
+    height: 5.5vw;
+    width: 5.5vw;
+    z-index: 9999;
+
+}
+
+.engoergegr {
+    position: absolute;
+    top: 0.6vw;
+    left: 2vw;
+    z-index: 9999;
+    color: #fff;
+    font-size: 1.6vw;
+}
+
+
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 0vw;
+    margin-block-end: 0vw;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
