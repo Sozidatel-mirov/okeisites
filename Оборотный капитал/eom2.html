@@ -44,7 +44,7 @@
                    <div class="placeholder" id="placeholder5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
                 <div class="placeholder" id="placeholder5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
               </div></td>
-              <td style="min-width: 250px; width: 250px;">
+              <td style="min-width: 230px;">
                <div class="tiles">
                    <div class="tile  " id="tile1" draggable="true" ondragstart="drag(event)">переносит свою стоимость на готовую продукцию частями в виде амортизационных отчислений </div>
                    <div class="tile  " id="tile5" draggable="true" ondragstart="drag(event)">изменяют свою натурально-вещественную форму</div>     
@@ -92,6 +92,8 @@
                        tile.classList.add('incorrect');
                    });
        
+                   placeholders.forEach(function(placeholder) {
+                   });
        
                    // Затем перекрашиваем правильные в зелёный
                    placeholders.forEach(function(placeholder, index) {
@@ -112,7 +114,6 @@
                    // Перекрашиваем неиспользованные плашки в красный
                    tiles.forEach(function(tile) {
                        if (!tile.parentElement) {
-                           tile.classList.add('unused');
                        }
                    });
                    document.getElementById('clek1').hidden = false;
