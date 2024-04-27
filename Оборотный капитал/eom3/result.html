@@ -30,19 +30,19 @@
 				<div class="item-result row-results">
 					<div class="item-result_desc">
 						<div class="item-result_text">Выполнено задание</div>
-						<div class="item-result_title" id="language-I-check-completed">Рекламные и коммуникационные кампании</div>
+						<div class="item-result_title" id="language-I-check-completed">Оборотный капитал</div>
 					</div>
 					<div class="item-result_desc">
 						<div class="wrap-item-result_desc">
 							<div class="item-result_text">Тема</div>
-							<div class="item-result_title">Рекламные и коммуникационные кампании</div>
+							<div class="item-result_title">Оборотный капитал</div>
 						</div>
 					</div>
 				</div>
 			<div class="item-result row-results">
 				<div class="item-result_desc">
 					<span class="language-Total-questions">Количество шагов</span> 
-					<span id="totalSteps" class="resultpage_desc_element js-answers-total">10</span>
+					<span id="totalSteps" class="resultpage_desc_element js-answers-total">5</span>
 				</div>
 				<div class="item-result_desc">
 					<span class="language-Time-spent">Затраченное время</span> 
@@ -111,13 +111,13 @@
 
         document.getElementById('timer').textContent = timeMinute + ":" + timeSecond;
         document.getElementById('correctCount').textContent = score;
-        document.getElementById('incorrectCount').textContent = 10 - score;
-		if((score/2)<2)
+        document.getElementById('incorrectCount').textContent = 5 - score;
+		if((score)<2)
 		{
 			document.getElementById('balls').textContent = 2;
 		}
 		else{
-			document.getElementById('balls').textContent = Math.round(score/2);
+			document.getElementById('balls').textContent = Math.round(score);
 		}
         
 		
