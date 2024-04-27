@@ -59,116 +59,164 @@
 <a href="../index.html" class="back">На Главную</a>
 
 <div class="block" >
-  <h2>Оборотный капитал</h2>
-  <div class="place__header">
-	<p class="head__content">Определите и проанализируйте структуру оборотных средств предприятия №2 по следующим данным:</p>
-			   
-	<div class="spanline"><span>5/5</span> </div>
-</div>
-	  
-<div class="place__body">
-	<img style="padding-left: 25vw;" src="../image/date/222.png" >
-  <div class="containero">
-	<div class="placeholders">
-				<div class="placeholder" id="placeholder1" ondragover="allowDrop(event)" ondrop="drop(event)">Производственные запасы </div>
-				<div class="placeholder" id="placeholder2" ondragover="allowDrop(event)" ondrop="drop(event)">Незавершенное производство</div>
-				<div class="placeholder" id="placeholder3" ondragover="allowDrop(event)" ondrop="drop(event)">Расходы будущих периодов</div>
-				<div class="placeholder" id="placeholder4" ondragover="allowDrop(event)" ondrop="drop(event)">Готовая продукция</div>
-			</div>
-			<div class="tiles">
-				<div class="tile  " id="tile2" draggable="true" ondragstart="drag(event)">60,1%</div>
-				<div class="tile  " id="tile3" draggable="true" ondragstart="drag(event)"> 17,5%</div>
-				<div class="tile  " id="tile5" draggable="true" ondragstart="drag(event)">3,4%</div>
-				<div class="tile  " id="tile1" draggable="true" ondragstart="drag(event)">19,01%</div>
-				<div class="tile  " id="tile554" draggable="true" ondragstart="drag(event)">36,06%</div>     
-				<div class="tile  " id="tile34" draggable="true" ondragstart="drag(event)">6,15%</div>
-			</div>
+	<h2>Оборотный капитал</h2>
+		<div class="place__header">
+			<p class="head__content">Определите и проанализируйте структуру оборотных средств предприятия №2 по следующим данным:</p>
+
+			<div class="spanline"><span>5/5</span> </div>
 		</div>
-	
-		<script>
-			function allowDrop(ev) {
-				ev.preventDefault();
-			}
-	
-			function drag(ev) {
-				ev.dataTransfer.setData("text", ev.target.id);
-			}
-	
-			function drop(ev) {
-				ev.preventDefault();
-				var data = ev.dataTransfer.getData("text");
-				var draggedElement = document.getElementById(data);
-				var placeholder = ev.target;
-				placeholder.appendChild(draggedElement);
-	
-				draggedElement.style.position = 'absolute';
-				draggedElement.style.top = '0';
-				draggedElement.style.left = '0';
-	
-				var rect = placeholder.getBoundingClientRect();
-				var tileRect = draggedElement.getBoundingClientRect();
-				draggedElement.style.top = (rect.top - tileRect.top) + 'px';
-				draggedElement.style.left = (rect.left - tileRect.left) + 'px';
-			}
-	
-			function checkAnswers() {
-				var placeholders = document.querySelectorAll('.placeholder');
-				var tiles = document.querySelectorAll('.tile');
-	
-				// Сначала перекрашиваем все плашки и места в красный
-				tiles.forEach(function(tile) {
-					tile.classList.add('incorrect');
-				});
-	
-				placeholders.forEach(function(placeholder) {
-					placeholder.classList.add('incorrect');
-				});
-	
-				// Затем перекрашиваем правильные в зелёный
-				placeholders.forEach(function(placeholder, index) {
-					var tile = placeholder.querySelector('.tile');
-	
-					if ((tile && tile.id === 'tile' + (index + 1) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index + 2) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index + 3) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index + 4) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index + 5) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index - 1) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index - 2) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index - 3) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index - 4) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index - 5) && tile.parentElement)
-				||(tile && tile.id === 'tile' + (index) && tile.parentElement)) {
-						tile.classList.remove('incorrect');
-						tile.classList.add('correct');
-						placeholder.classList.remove('incorrect');
-					}
-				});
-	
-				// Перекрашиваем неиспользованные плашки в красный
-				tiles.forEach(function(tile) {
-					if (!tile.parentElement) {
-						tile.classList.add('unused');
-					}
-				});
-				document.getElementById('clek1').hidden = false;
-			}
-		</script>
-	
-</div>
-</div>
-	<footer><div class="line" >
-		<div class="timer">
-		<p id="timer"><span id="minutes">00</span>:<span id="seconds">00</span></p>
+		<img style="padding-left: 25vw;" src="../image/date/222.png" >
+		<div class="place__body">
+			<a href="../index.html" class="back">На Главную</a>
+			<div class="containerp">
+				<div style="height: 500px;" class="column" id="column1" >
+					<div class="item" id="item1" draggable="true">Производственные запасы <div class="dot dot-right"></div></div>
+					<div class="item" id="item2" draggable="true">Незавершенное производство <div class="dot dot-right"></div></div>
+					<div class="item" id="item3" draggable="true">Расходы будущих периодов <div class="dot dot-right"></div></div>
+					<div class="item" id="item4" draggable="true">Готовая продукция <div class="dot dot-right"></div></div>
+					<div hidden class="item" id="item5" draggable="true">Лишнее<div class="dot dot-right"></div></div>
+					<div hidden class="item" id="item6" draggable="true">Лишнее<div class="dot dot-right"></div></div>
+					
+				</div>
+				<div class="column" id="column2">
+					<div class="item" id="itemA" draggable="true"><div class="dot dot-left"></div>60,1%</div>
+					<div class="item" id="itemB" draggable="true"><div class="dot dot-left"></div>17,5%</div>
+					<div class="item" id="itemC" draggable="true"><div class="dot dot-left"></div>3,4%</div>
+					<div class="item" id="itemD" draggable="true"><div class="dot dot-left"></div>19,01%</div>
+					<div class="item" id="itemE" draggable="true"><div class="dot dot-left"></div>36,06%</div>
+					<div class="item" id="itemF" draggable="true"><div class="dot dot-left"></div>6,15%</div>
+				</div>
+				<svg id="lines" class="line1"  ></svg>
+			</div>
 		
-		</div>
-	<button class="place__btn" id="nextButton" hidden>Далее</button>
+			<div class="button-container">
+			
+			</div>
 		
+			<script>
+				let connections = {};
+		
+				let correctAnswersCount = 0;
+				let score12 = 0;
+				var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+
+var additionalScore = parseInt(urlParams.get('score')) || 0;
+if(score12 ===0)
+{
+	score12 = additionalScore;
+}
+
+// Функция для проверки ответов
+function checkAnswers() {
+const pairs = [
+	['item1', 'itemA'],
+	['item2', 'itemB'],
+	['item3', 'itemC'],
+	['item4', 'itemD'],
+	['item5', 'itemE'],
+	['item6', 'itemF']
+];
+
+pairs.forEach(pair => {
+	const item1 = pair[0];
+	const item2 = pair[1];
+
+	const element1 = document.getElementById(item1);
+	const element2 = document.getElementById(item2);
+
+	element1.style.backgroundColor = '#f7f7f7';
+	element2.style.backgroundColor = '#f7f7f7';
+
+	if (connections[item1] === item2 && connections[item2] === item1) {
+		element1.style.backgroundColor = '#8dff8d';
+		element2.style.backgroundColor = '#8dff8d';
+
+		// Увеличиваем счетчик правильных ответов
+		correctAnswersCount++;
+		console.log('Текущий score:', correctAnswersCount);
+	} else {
+		element1.style.backgroundColor = '#ff8d8d'; // Неверный ответ, красный цвет
+		element2.style.backgroundColor = '#ff8d8d';
+	}
+});
 
 
-		<script type="text/javascript" src="../js/app9.js"></script></footer>
+// Проверяем, все ли ответы верны
+if (correctAnswersCount === 4) {
+	// Если все ответы верны, записываем единицу в вашу переменную (например, score)
+	score12++;
+}
+document.getElementById('nextButton').hidden = false;
+console.log('Текущий score:', score12);
+document.getElementById('clek').hidden = true;
+document.getElementById('clek1').hidden = false;}
+
+	
+				let draggedItem = null;
+				let lines = document.getElementById('lines');
 		
+				document.addEventListener('drag', (event) => {
+					event.preventDefault();
+				});
+		
+				document.addEventListener('dragstart', (event) => {
+					draggedItem = event.target;
+					event.dataTransfer.setData('text/plain', null);
+				});
+		
+				document.addEventListener('dragover', (event) => {
+					event.preventDefault();
+				});
+				
+		
+				document.addEventListener('drop', (event) => {
+event.preventDefault();
+const target = event.target;
+
+if (target.classList.contains('item') && target !== draggedItem) {
+	const isDraggingRightToLeft = target.offsetLeft < draggedItem.offsetLeft;
+
+	const startX = isDraggingRightToLeft ? draggedItem.offsetLeft : draggedItem.offsetLeft + draggedItem.clientWidth;
+	const startY = draggedItem.offsetTop + draggedItem.clientHeight / 2;
+	const endX = isDraggingRightToLeft ? target.offsetLeft + target.clientWidth : target.offsetLeft;
+	const endY = target.offsetTop + target.clientHeight / 2;
+
+	if (!connections[target.id] && !connections[draggedItem.id]) {
+		connections[draggedItem.id] = target.id;
+		connections[target.id] = draggedItem.id;
+
+		const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+
+		line.setAttribute("x1", startX.toString());
+		line.setAttribute("y1", startY.toString());
+		line.setAttribute("x2", endX.toString());
+		line.setAttribute("y2", endY.toString());
+		lines.appendChild(line);
+	}
+}
+});
+				function restartPage() {
+location.reload(true); // true - для обновления с использованием кэширования
+}
+			</script>
+	
+		
+</div>
+</div>
+<footer><div class="line" >
+<div class="timer">
+<p id="timer"><span id="minutes">00</span>:<span id="seconds">00</span></p>
+
+</div>
+	<button onclick="checkAnswers()" class="place__back" id="clek">Ответить</button>
+
+<button class="place__btn" id="nextButton"  hidden>Далее</button>
+
+
+	
+
+	<script type="text/javascript" src="../js/app9.js"></script></footer>
+	
 
 </body></html>
