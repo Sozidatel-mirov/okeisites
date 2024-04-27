@@ -478,7 +478,7 @@ html{
     
     
     
-    .tile,.placeholder {
+    .tile  {
         
     transition: background-color 0.3s;
     display: flex;
@@ -497,7 +497,25 @@ html{
         white-space: pre-line;
         white-space: normal !important;
     }
-    
+    .placeholder {
+        
+        transition: background-color 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            width: 17vw;
+            height: 10vw;
+         
+            border-radius: 1vw;
+            margin: 0.5vw;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden;
+            font-size: 1.1vw;
+            white-space: pre-line;
+            white-space: normal !important;
+        }
+        
     
     .correct {
         background-color: #8cff66; /* Зелёный цвет при правильном ответе */
